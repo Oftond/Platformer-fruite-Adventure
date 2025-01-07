@@ -1,0 +1,12 @@
+event_inherited();
+sprite_hit = spr_rino_hit;
+sprite_hit_wall = spr_rino_hit_wall;
+sprite_run = spr_rino_run;
+sprite_idle = spr_rino_idle;
+mask_index = sprite_index;
+hit_wall = false;
+name = "rino";
+wait_timer = 50;
+move_spd = 0;
+dir = 1;
+max_spd = 14;

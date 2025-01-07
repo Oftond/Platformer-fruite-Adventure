@@ -1,0 +1,11 @@
+event_inherited();
+max_hp = 2;
+current_hp = max_hp;
+sprite_hit = spr_angrypig_hit;
+mask_index = sprite_index;
+move_spd = 3;
+increase_spd = 4;
+dir = choose(1, -1);
+wait_timer = 0;
+wait_time = 80;
+name = "angrypig";

@@ -1,0 +1,2 @@
+destroy = false;
+off = false;
