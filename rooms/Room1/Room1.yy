@@ -15,14 +15,15 @@
     {"$GMRTileLayer":"","%Name":"TrapsLayerIce","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"TrapsLayerIce","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":21,"TileCompressedData":[
           -28,-2147483648,-4,0,-17,-2147483648,-4,0,-18,-2147483648,-2,0,-19,-2147483648,1,0,-20,-2147483648,1,
           0,-20,-2147483648,-2,0,-6,-2147483648,-4,0,-9,-2147483648,-2,0,-5,-2147483648,-5,0,-9,-2147483648,-5,
-          0,-2,-2147483648,-4,0,-11,-2147483648,-7,0,-14,-2147483648,-7,0,-14,-2147483648,-7,0,-5,-2147483648,
+          0,-2,-2147483648,-4,0,-9,-2147483648,1,7,-3,8,1,9,-8,0,-8,-2147483648,1,17,-3,18,1,19,-8,0,-8,-2147483648,
+          1,27,-3,28,1,29,-8,0,1,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tile_traps","path":"tilesets/tile_traps/tile_traps.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"TrapsLayerSand","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"TrapsLayerSand","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":21,"TileCompressedData":[
           1,-2147483648,-4,0,-17,-2147483648,-4,0,-2,-2147483648,-4,0,-4,-2147483648,-3,0,-4,-2147483648,-4,0,
           -2,-2147483648,-4,0,-4,-2147483648,-3,0,-11,-2147483648,-2,0,1,-2147483648,-7,0,-11,-2147483648,4,0,
           -2147483648,0,-2147483648,-7,0,-10,-2147483648,2,0,-2147483648,-8,0,-10,-2147483648,-13,0,-8,-2147483648,
-          -13,0,-9,-2147483648,-11,0,-9,-2147483648,1,1,-3,2,1,3,-4,0,4,7,8,8,9,-8,-2147483648,1,11,-3,12,1,13,
-          -4,0,4,17,18,18,19,-8,-2147483648,1,21,-3,22,1,23,-4,0,5,27,28,28,29,-2147483648,
+          -13,0,-9,-2147483648,-11,0,-9,-2147483648,-9,0,4,1,2,2,3,-8,-2147483648,-9,0,4,11,12,12,13,-8,-2147483648,
+          -9,0,5,21,22,22,23,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tile_traps","path":"tilesets/tile_traps/tile_traps.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Enemys","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Enemys","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Player","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
@@ -33,8 +34,8 @@
     {"$GMRTileLayer":"","%Name":"CollisionTiles","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"CollisionTiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":21,"TileCompressedData":[
           2,7,8,-19,0,2,27,28,-19,0,2,27,28,-18,0,3,6,27,28,-18,0,3,26,27,28,-18,0,3,26,27,28,-18,0,3,26,27,28,
           -4,0,-4,-2147483648,-3,0,4,6,7,8,0,-3,-2147483648,3,26,27,28,-4,0,-4,-2147483648,-3,0,10,26,27,28,0,
-          -2147483648,0,0,26,27,28,-4,0,-5,-2147483648,-2,0,3,26,27,28,-4,-2147483648,2,26,29,-12,7,3,31,27,29,
-          -4,7,1,31,-42,27,
+          -2147483648,0,0,26,27,28,-4,0,-5,-2147483648,-2,0,3,26,27,28,-4,-2147483648,2,26,29,-6,7,-5,0,4,7,31,
+          27,29,-4,0,1,31,-7,27,-5,0,-4,27,-4,0,-8,27,-5,0,-4,27,-4,0,1,27,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tile_main","path":"tilesets/tile_main/tile_main.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Traps","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Traps","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Menegers","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
