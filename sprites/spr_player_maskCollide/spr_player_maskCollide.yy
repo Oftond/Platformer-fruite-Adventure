@@ -3,7 +3,7 @@
   "%Name":"spr_player_maskCollide",
   "bboxMode":0,
   "bbox_bottom":127,
-  "bbox_left":24,
+  "bbox_left":28,
   "bbox_right":99,
   "bbox_top":32,
   "collisionKind":1,
