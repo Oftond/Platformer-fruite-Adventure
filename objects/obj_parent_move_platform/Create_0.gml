@@ -1,7 +1,5 @@
 move_spd_y = 1;
 move_spd_x = 1;
-dir_y = 0;
-dir_x = 0;
 move_x = 0;
 move_y = 0;
 time = 0;
@@ -12,3 +10,5 @@ left_path_x = 0;
 right_path_x = room_width;
 top_path_y = 0;
 bottom_path_y = room_height;
+dir_y = 0;
+dir_x = 0;

@@ -1,6 +1,5 @@
 event_inherited();
 sprite_hit = spr_bee_hit;
-mask_index = sprite_index;
 dir = 1;
 name = "bee";
 distance_attack = 600;

@@ -1,4 +1,4 @@
-spevent_inherited();
+event_inherited();
 
 if (instance_exists(obj_saw_chain))
 {

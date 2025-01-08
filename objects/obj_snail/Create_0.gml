@@ -1,5 +1,4 @@
 event_inherited();
-mask_index = sprite_index;
 sprite_shell = spr_snail_shell_idle;
 sprite_shell_hit = spr_snail_shell_top_hit;
 

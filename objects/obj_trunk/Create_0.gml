@@ -1,6 +1,5 @@
 event_inherited();
 sprite_hit = spr_trunk_hit;
-mask_index = sprite_index;
 is_shoot = false;
 dir = image_xscale;
 shoot_range = 1000;

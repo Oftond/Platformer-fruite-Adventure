@@ -1,6 +1,5 @@
 event_inherited();
 sprite_hit = spr_plant_hit;
-mask_index = sprite_index;
 count_shoot = 0;
 max_count_shoot = 3;
 is_shoot = false;
