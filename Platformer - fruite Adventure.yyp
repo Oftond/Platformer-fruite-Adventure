@@ -193,7 +193,7 @@
     {"id":{"name":"spr_banny_idle","path":"sprites/spr_banny_idle/spr_banny_idle.yy",},},
     {"id":{"name":"spr_banny_jump","path":"sprites/spr_banny_jump/spr_banny_jump.yy",},},
     {"id":{"name":"spr_banny_run","path":"sprites/spr_banny_run/spr_banny_run.yy",},},
-    {"id":{"name":"spr_bat_ceiling_in","path":"sprites/spr_bat_ceiling_in/spr_bat_ceiling_in.yy",},},
+    {"id":{"name":"spr_bat_ceilling_in","path":"sprites/spr_bat_ceilling_in/spr_bat_ceilling_in.yy",},},
     {"id":{"name":"spr_bat_ceilling_out","path":"sprites/spr_bat_ceilling_out/spr_bat_ceilling_out.yy",},},
     {"id":{"name":"spr_bat_flying","path":"sprites/spr_bat_flying/spr_bat_flying.yy",},},
     {"id":{"name":"spr_bat_hit","path":"sprites/spr_bat_hit/spr_bat_hit.yy",},},
