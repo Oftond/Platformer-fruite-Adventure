@@ -92,6 +92,7 @@
   },
   "name":"Platformer - fruite Adventure",
   "resources":[
+    {"id":{"name":"curv_fly_blueBird","path":"animcurves/curv_fly_blueBird/curv_fly_blueBird.yy",},},
     {"id":{"name":"YaGames","path":"extensions/YaGames/YaGames.yy",},},
     {"id":{"name":"ТЗ","path":"notes/ТЗ/ТЗ.yy",},},
     {"id":{"name":"obj_angrypig","path":"objects/obj_angrypig/obj_angrypig.yy",},},
@@ -108,6 +109,7 @@
     {"id":{"name":"obj_button_getEnvironment","path":"objects/obj_button_getEnvironment/obj_button_getEnvironment.yy",},},
     {"id":{"name":"obj_button_showFullscreenAds","path":"objects/obj_button_showFullscreenAds/obj_button_showFullscreenAds.yy",},},
     {"id":{"name":"obj_button_showRewardVideo","path":"objects/obj_button_showRewardVideo/obj_button_showRewardVideo.yy",},},
+    {"id":{"name":"obj_chamelion_maskAttack","path":"objects/obj_chamelion_maskAttack/obj_chamelion_maskAttack.yy",},},
     {"id":{"name":"obj_chamelion","path":"objects/obj_chamelion/obj_chamelion.yy",},},
     {"id":{"name":"obj_character_parent","path":"objects/obj_character_parent/obj_character_parent.yy",},},
     {"id":{"name":"obj_chechpoint_flag_idle","path":"objects/obj_chechpoint_flag_idle/obj_chechpoint_flag_idle.yy",},},
@@ -209,6 +211,7 @@
     {"id":{"name":"spr_block_part_2","path":"sprites/spr_block_part_2/spr_block_part_2.yy",},},
     {"id":{"name":"spr_blueBird_flying","path":"sprites/spr_blueBird_flying/spr_blueBird_flying.yy",},},
     {"id":{"name":"spr_blueBird_hit","path":"sprites/spr_blueBird_hit/spr_blueBird_hit.yy",},},
+    {"id":{"name":"spr_chamelion_attack_mask","path":"sprites/spr_chamelion_attack_mask/spr_chamelion_attack_mask.yy",},},
     {"id":{"name":"spr_chamelion_attack","path":"sprites/spr_chamelion_attack/spr_chamelion_attack.yy",},},
     {"id":{"name":"spr_chamelion_hit","path":"sprites/spr_chamelion_hit/spr_chamelion_hit.yy",},},
     {"id":{"name":"spr_chamelion_idle","path":"sprites/spr_chamelion_idle/spr_chamelion_idle.yy",},},

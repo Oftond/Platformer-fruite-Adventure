@@ -7,21 +7,39 @@ switch (state)
 	break;
 		
 	case STATES.WALK:
-		if (image_index != sprite_fly)
+		if (sprite_index != sprite_fly)
 		{
 			image_speed = 1;
 			sprite_index = sprite_fly;
+			image_index = 0;
+		}
+	break;
+	
+	case STATES.CEILLING:
+		if (sprite_index != sprite_celling_out)
+		{
+			image_speed = 1;
+			sprite_index = sprite_celling_out;
+			image_index = 0;
+		}
+		if (image_index >= image_number - 1)
+		{
+			state = STATES.WALK;
 		}
 	break;
 	
 	case STATES.HIT:
-		sprite_index = sprite_hit;
+		if (sprite_index != sprite_hit)
+		{
+			image_index = 0;
+			sprite_index = sprite_hit;
+		}
 		image_speed = 1;
 		if (image_index >= image_number - 1)
 		{
 			image_speed = 0;
 			if (!is_death)
-				state = STATES.IDLE;
+				state = STATES.WALK;
 		}
 	break;
 }

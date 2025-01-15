@@ -7,8 +7,12 @@ switch (state)
 	break;
 	
 	case STATES.HIT:
-		sprite_index = sprite_hit;
-		if (image_index >= sprite_get_number(sprite_index) - 1)
+		if (sprite_index != sprite_hit)
+		{
+			image_index = 0;
+			sprite_index = sprite_hit;
+		}
+		if (image_index >= image_number - 1)
 		{
 			image_speed = 0;
 			if (!is_death)

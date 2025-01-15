@@ -33,7 +33,11 @@ switch (state)
 	break;
 	
 	case STATES.HIT:
-		sprite_index = sprite_hit;
+		if (sprite_index != sprite_hit)
+		{
+			image_index = 0;
+			sprite_index = sprite_hit;
+		}
 		image_speed = 1;
 		if (image_index >= image_number - 1)
 		{
