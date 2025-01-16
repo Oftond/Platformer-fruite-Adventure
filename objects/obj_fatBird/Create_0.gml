@@ -9,4 +9,11 @@ dir = choose(1, -1);
 wait_time = 120;
 can_jump = true;
 jump_height = 0;
-name = "duck";
+name = "fat bird";
+
+player_detected = false;
+y_pos_to_fly = y;
+
+curve = curv_fly_fatBird;
+curvPosition = 0;
+curvSpeed = 0.01;

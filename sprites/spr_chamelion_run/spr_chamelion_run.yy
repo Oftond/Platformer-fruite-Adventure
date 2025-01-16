@@ -30,7 +30,7 @@
   ],
   "name":"spr_chamelion_run",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Chamelion",
     "path":"folders/Sprites/Characters/Enemies/Chamelion.yy",
@@ -103,7 +103,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":168,
+    "xorigin":240,
     "yorigin":76,
   },
   "swatchColours":null,

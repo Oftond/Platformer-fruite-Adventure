@@ -93,6 +93,7 @@
   "name":"Platformer - fruite Adventure",
   "resources":[
     {"id":{"name":"curv_fly_blueBird","path":"animcurves/curv_fly_blueBird/curv_fly_blueBird.yy",},},
+    {"id":{"name":"curv_fly_fatBird","path":"animcurves/curv_fly_fatBird/curv_fly_fatBird.yy",},},
     {"id":{"name":"YaGames","path":"extensions/YaGames/YaGames.yy",},},
     {"id":{"name":"ТЗ","path":"notes/ТЗ/ТЗ.yy",},},
     {"id":{"name":"obj_angrypig","path":"objects/obj_angrypig/obj_angrypig.yy",},},

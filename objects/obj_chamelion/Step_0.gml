@@ -1,7 +1,9 @@
 event_inherited();
 
-if (state == STATES.HIT || is_death || state == STATES.ATTACK)
+if (state == STATES.HIT || is_death || state == STATES.ATTACK || attack_timer > 0)
 {
+	if (attack_timer > 0 && state != STATES.ATTACK)
+		attack_timer--;
 	exit;
 }
 
@@ -16,16 +18,17 @@ if (_find_player != noone)
 
 if (_distance_to_player <= detection_distance && _find_player != noone && _check_wall == noone && !detected_player)
 {
-	if (y >= _find_player.y - sprite_get_height(sprite_index) && y <= _find_player.y + sprite_get_height(sprite_index))
+	if (y >= _find_player.y - 20 && y <= _find_player.y + 20)
 	{
 		detected_player = true;
 		state = STATES.ATTACK;
 		var _angle = sign(round(obj_player.x - x)) != 0 ? -sign(round(obj_player.x - x)) : image_xscale;
-		if (image_xscale != -dir)
-		{
-			x += abs((sprite_width / 2)) * _angle;
-		}
 		image_xscale = _angle;
+		if (wait_timer > 0)
+		{
+			dir *= -1;
+			wait_timer = 0;
+		}
 	}
 }
 
@@ -50,7 +53,8 @@ if (wait_timer <= 0 && !detected_player)
 
 if (wait_timer <= 0 && !detected_player)
 {
-	image_xscale = -dir;
+	if (image_xscale != -dir)
+		image_xscale = -dir
 	x += move_x;
 }
 else
@@ -59,7 +63,6 @@ else
 	if (wait_timer <= 0)
 	{
 		dir *= -1;
-		x += abs((sprite_width / 2)) * dir;
 		image_xscale = -dir;
 	}
 }

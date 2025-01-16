@@ -28,6 +28,7 @@ switch (state)
 			{
 				detected_player = false;
 				state = STATES.IDLE;
+				attack_timer = attack_delay;
 			}
 		}
 	break;

@@ -6,13 +6,15 @@ switch (state)
 		image_speed = 1;
 	break;
 	
-	case STATES.JUMP:
-		if (image_index != sprite_jump)
+	case STATES.ATTACK:
+		if (image_index != sprite_ground)
 		{
-			sprite_index = sprite_jump;
+			sprite_index = sprite_ground;
 			image_index = 0;
 			image_speed = 1;
 		}
+		if (image_index >= image_number - 1)
+			image_speed = 0;
 	break;
 	
 	case STATES.FALL:
@@ -22,10 +24,16 @@ switch (state)
 			image_index = 0;
 			image_speed = 1;
 		}
+		if (image_index >= image_number - 1)
+			image_speed = 0;
 	break;
 	
 	case STATES.HIT:
-		sprite_index = sprite_hit;
+		if (sprite_index != sprite_hit)
+		{
+			sprite_index = sprite_hit
+			image_index = 0;
+		}
 		image_speed = 1;
 		if (image_index >= image_number - 1)
 		{
