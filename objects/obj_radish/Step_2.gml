@@ -2,8 +2,25 @@ event_inherited();
 switch (state)
 {
 	case STATES.IDLE:
-		sprite_index = sprite_idle;
-		image_speed = 1;
+		if (is_graunded)
+		{
+			sprite_index = sprite_idle_ground;
+			image_speed = 1;
+		}
+		else
+		{
+			sprite_index = sprite_idle_fly;
+			image_speed = 1;
+		}
+	break;
+	
+	case STATES.WALK:
+		if (sprite_index != sprite_run)
+		{
+			sprite_index = sprite_run;
+			image_index = 0;
+			image_speed = 1;
+		}
 	break;
 	
 	case STATES.HIT:
