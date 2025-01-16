@@ -1,4 +1,4 @@
-if (is_death || (other.name == "turtle" && other.state == STATES.ATTACK))
+if (is_death || (other.name == "turtle" && other.state == STATES.ATTACK) || (other.name == "ghost" && (other.state == STATES.DESAPPEAR || other.state == STATES.APPEAR)))
 {
 	exit;
 }

@@ -9,4 +9,4 @@ dir = choose(1, -1);
 wait_time = 120;
 can_jump = true;
 jump_height = 0;
-name = "duck";
+name = "radish";

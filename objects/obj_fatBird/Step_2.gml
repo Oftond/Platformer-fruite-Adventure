@@ -7,7 +7,7 @@ switch (state)
 	break;
 	
 	case STATES.ATTACK:
-		if (image_index != sprite_ground)
+		if (sprite_index != sprite_ground)
 		{
 			sprite_index = sprite_ground;
 			image_index = 0;
@@ -18,7 +18,7 @@ switch (state)
 	break;
 	
 	case STATES.FALL:
-		if (image_index != sprite_fall)
+		if (sprite_index != sprite_fall)
 		{
 			sprite_index = sprite_fall;
 			image_index = 0;

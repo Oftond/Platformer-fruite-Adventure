@@ -36,7 +36,7 @@ var _check_wall = noone;
 if (_find_player != noone)
 	_check_wall = collision_line(x, y, _find_player.x, _find_player.y, obj_game_manager.collision_tilemap, true, true);
 
-if (_check_wall == noone && (x <= _find_player.x + 20 && x >= _find_player.x - 20) && !player_detected)
+if (_check_wall == noone && (bbox_right >= _find_player.x && bbox_left <= _find_player.x) && !player_detected)
 {
 	if (_find_player.y > y)
 	{

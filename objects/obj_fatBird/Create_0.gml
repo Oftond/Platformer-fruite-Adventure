@@ -7,8 +7,6 @@ sprite_hit = spr_fatBird_hit;
 move_spd = 2;
 dir = choose(1, -1);
 wait_time = 120;
-can_jump = true;
-jump_height = 0;
 name = "fat bird";
 
 player_detected = false;
