@@ -2,7 +2,7 @@ event_inherited();
 switch (state)
 {
 	case STATES.IDLE:
-		if (is_graunded)
+		if (current_hp < max_hp)
 		{
 			sprite_index = sprite_idle_ground;
 			image_speed = 1;
@@ -28,6 +28,15 @@ switch (state)
 		{
 			sprite_index = sprite_hit;
 			image_index = 0;
+			if (current_hp == max_hp - 1)
+			{
+				with (instance_create_layer(x, bbox_top, "Enemys", obj_radish_leafs))
+				{
+					enemy = other;
+					sprite_leaf_right = other.sprite_leafs_right;
+					sprite_leaf_left = other.sprite_leafs_left;
+				}
+			}
 		}
 		image_speed = 1;
 		if (image_index >= image_number - 1)

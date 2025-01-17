@@ -3,8 +3,38 @@ event_inherited();
 if (is_death)
 	exit;
 	
+if (wait_timer > 0)
+{
+	wait_timer--;
+	if (wait_timer <= 0)
+		dir *= -1;
+}
+
 is_graunded = place_meeting(x, y + 1, obj_game_manager.collision_tilemap);
-	
+
+if (!is_graunded && current_hp < max_hp)
+	move_y += grav;
+else if (is_graunded)
+	move_y = 0;
+
+var _sub_pixel = 0.5;
+if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
+{
+	var _pixel_check = _sub_pixel * sign(move_y);
+	while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
+		y += _pixel_check;
+	move_y = 0;
+}
+
+y += move_y;
+
+if (current_hp < max_hp)
+{
+	if (is_graunded)
+		walk();
+	exit;
+}
+
 curvPosition += curvSpeed;
 if (curvPosition >= 1)
 {
