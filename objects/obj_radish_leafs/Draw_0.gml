@@ -15,10 +15,10 @@ var _chennel_x_left = animcurve_get_channel(_curveStruct_left, "X");
 var _value_y_left = animcurve_channel_evaluate(_chennel_y_left, curvPosition);
 var _value_x_left = animcurve_channel_evaluate(_chennel_x_left, curvPosition);
 
-yy_right += _value_y_right;
+yy_right += _value_y_right * 4;
 xx_right += _value_x_right;
 
-yy_left += _value_y_left;
+yy_left += _value_y_left * 4;
 xx_left += _value_x_left;
 
 draw_sprite_ext(sprite_leaf_right, 0, xx_right, yy_right, 1, 1, 0, c_white, alpha);

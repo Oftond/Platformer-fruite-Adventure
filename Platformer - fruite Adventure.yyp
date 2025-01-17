@@ -176,7 +176,6 @@
     {"id":{"name":"scr_enums","path":"scripts/scr_enums/scr_enums.yy",},},
     {"id":{"name":"scr_isMap","path":"scripts/scr_isMap/scr_isMap.yy",},},
     {"id":{"name":"seq_destroy_block","path":"sequences/seq_destroy_block/seq_destroy_block.yy",},},
-    {"id":{"name":"Sequence2","path":"sequences/Sequence2/Sequence2.yy",},},
     {"id":{"name":"spr_achievements","path":"sprites/spr_achievements/spr_achievements.yy",},},
     {"id":{"name":"spr_angrypig_hit","path":"sprites/spr_angrypig_hit/spr_angrypig_hit.yy",},},
     {"id":{"name":"spr_angrypig_idle","path":"sprites/spr_angrypig_idle/spr_angrypig_idle.yy",},},

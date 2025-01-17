@@ -1,7 +1,7 @@
 enemy = undefined;
-xx_right = x + 16;
+xx_right = x + 8;
 yy_right = y;
-xx_left = x - 16;
+xx_left = x - 8;
 yy_left = y;
 sprite_leaf_right = undefined;
 sprite_leaf_left = undefined;
