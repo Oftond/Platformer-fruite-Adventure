@@ -1,12 +1,10 @@
-if (is_death || (other.name == "turtle" && other.state == STATES.ATTACK) || (other.name == "ghost" && (other.state == STATES.DESAPPEAR || other.state == STATES.APPEAR)) || other.name == "skull")
-{
+if (is_death || flashing > 0)
 	exit;
-}
-
+	
 if (other.is_death)
 	exit;
 
-if (move_y >= 0)
+if (move_y >= 0 && !other.is_fire)
 {
 	if ((bbox_bottom - move_y) < (other.bbox_top - other.move_y))
 	{

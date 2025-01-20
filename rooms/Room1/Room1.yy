@@ -33,12 +33,11 @@
     {"$GMRInstanceLayer":"","%Name":"Environment","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Environment","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[],"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"CollisionTiles","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"CollisionTiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
-          -3,27,2,28,75,-25,76,-3,27,2,28,95,-25,96,-3,27,2,28,115,-25,116,-3,27,3,28,156,157,-18,0,3,156,157,
-          6,-3,7,-3,27,3,28,176,177,-18,0,3,176,177,26,-6,27,1,28,-16,0,2,33,34,-4,0,1,26,-6,27,1,28,-16,0,2,53,
-          54,-4,0,1,26,-6,27,1,28,-9,0,2,156,157,-11,0,1,26,-6,27,1,28,-9,0,2,176,177,-7,0,-4,-2147483648,1,26,
-          -6,27,1,28,-6,0,1,6,-6,7,1,8,-4,0,-4,-2147483648,1,26,-6,27,1,28,-4,0,3,156,157,26,-6,27,1,28,-4,0,-2,
-          -2147483648,3,156,157,26,-6,27,1,28,-4,0,3,176,177,26,-6,27,1,28,-4,0,-2,-2147483648,3,176,177,26,-6,
-          27,1,29,-6,7,1,31,-6,27,1,29,-8,7,1,31,-123,27,
+          -3,27,2,28,75,-25,76,-3,27,2,28,95,-25,96,-3,27,2,28,115,-25,116,-3,27,1,28,-22,0,1,6,-3,7,-3,27,1,28,
+          -22,0,1,26,-6,27,1,28,-22,0,1,26,-6,27,1,28,-22,0,1,26,-6,27,1,28,-22,0,1,26,-6,27,1,28,-18,0,-4,-2147483648,
+          1,26,-6,27,1,28,-6,0,1,6,-6,7,1,8,-4,0,-4,-2147483648,1,26,-6,27,1,28,-6,0,1,26,-6,27,1,28,-4,0,-2,-2147483648,
+          -2,0,1,26,-6,27,1,28,-6,0,1,26,-6,27,1,28,-4,0,-2,-2147483648,-2,0,1,26,-6,27,1,29,-6,7,1,31,-6,27,1,
+          29,-8,7,1,31,-123,27,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tile_main","path":"tilesets/tile_main/tile_main.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Traps","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Traps","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Menegers","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
