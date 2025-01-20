@@ -157,6 +157,7 @@
     {"id":{"name":"obj_saw_chain","path":"objects/obj_saw_chain/obj_saw_chain.yy",},},
     {"id":{"name":"obj_saw","path":"objects/obj_saw/obj_saw.yy",},},
     {"id":{"name":"obj_skull","path":"objects/obj_skull/obj_skull.yy",},},
+    {"id":{"name":"obj_slime_part","path":"objects/obj_slime_part/obj_slime_part.yy",},},
     {"id":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},},
     {"id":{"name":"obj_snail_dead","path":"objects/obj_snail_dead/obj_snail_dead.yy",},},
     {"id":{"name":"obj_snail","path":"objects/obj_snail/obj_snail.yy",},},

@@ -2,8 +2,16 @@ event_inherited();
 switch (state)
 {
 	case STATES.IDLE:
-		sprite_index = sprite_idle;
-		image_speed = 1;
+		if (is_fire)
+		{
+			sprite_index = sprite_idle_1;
+			image_speed = 1;
+		}
+		else
+		{
+			sprite_index = sprite_idle_2;
+			image_speed = 1;
+		}
 	break;
 	
 	case STATES.HIT:

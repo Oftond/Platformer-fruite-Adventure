@@ -1,8 +1,14 @@
 event_inherited();
+
 switch (state)
 {
 	case STATES.IDLE:
 		sprite_index = sprite_idle;
+		image_speed = 1;
+	break;
+	
+	case STATES.WALK:
+		sprite_index = sprite_run;
 		image_speed = 1;
 	break;
 	
