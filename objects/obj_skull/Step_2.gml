@@ -1,4 +1,5 @@
 event_inherited();
+
 switch (state)
 {
 	case STATES.IDLE:
@@ -30,7 +31,15 @@ switch (state)
 	break;
 	
 	case STATES.WALL_HIT:
-		if (!is_fire)
+		if (!is_fire && current_hp > 0)
+		{
+			if (sprite_index != sprite_hit_wall_2)
+			{
+				sprite_index = sprite_hit_wall_2;
+				image_index = 0;
+			}
+		}
+		else if (is_fire && current_hp > 0)
 		{
 			if (sprite_index != sprite_hit_wall_1)
 			{
@@ -38,11 +47,11 @@ switch (state)
 				image_index = 0;
 			}
 		}
-		else
+		else if (current_hp <= 0)
 		{
-			if (sprite_index != sprite_hit_wall_2)
+			if (sprite_index != sprite_hit)
 			{
-				sprite_index = sprite_hit_wall_2;
+				sprite_index = sprite_hit;
 				image_index = 0;
 			}
 		}

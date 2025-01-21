@@ -1,28 +1,28 @@
 event_inherited();
 
-if (is_death && state == STATES.WALL_HIT)
+if (is_death || state == STATES.WALL_HIT)
 	exit;
+	
+x += lengthdir_x(move_spd, dir);
+y += lengthdir_y(move_spd, dir);
 
-var _sub_pixel = 0.5;
-if (place_meeting(x + move_spd, y, obj_game_manager.collision_tilemap))
+var _dir_to_change = 0;
+if (place_meeting(x + lengthdir_x(move_spd, dir), y, obj_game_manager.collision_tilemap))
 {
-	wait_timer = wait_time;
-	direction = (direction + 60) % 360;
 	is_fire = !is_fire;
-	var _pixel_check = _sub_pixel * sign(move_spd);
-	while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
-		x += _pixel_check;
-	state = STATES.WALL_HIT;
-	exit;
-}
-
-if (place_meeting(x, y + move_spd, obj_game_manager.collision_tilemap))
-{
-	wait_timer = wait_time;
-	direction = (direction + 60) % 360;
-	is_fire = !is_fire;
-	var _pixel_check = _sub_pixel * sign(move_spd);
-	while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
-		y += _pixel_check;
+	x -= lengthdir_x(move_spd, dir);
+	_dir_to_change = (dir + 60) % 360;
 	state = STATES.WALL_HIT;
 }
+
+if (place_meeting(x, y + lengthdir_y(move_spd, dir), obj_game_manager.collision_tilemap))
+{
+	is_fire = !is_fire;
+	if (_dir_to_change == 0)
+		_dir_to_change = (dir + 60) % 360;
+	y -= lengthdir_x(move_spd, dir);
+	state = STATES.WALL_HIT;
+}
+
+if (_dir_to_change != 0)
+	dir = _dir_to_change;

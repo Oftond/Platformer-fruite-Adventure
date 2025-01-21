@@ -7,3 +7,5 @@ on_arrow = false;
 respown_x = y;
 respown_y = x;
 mask_index = spr_player_maskCollide;
+
+instance_create_layer(x, y, "Menegers", obj_camera);

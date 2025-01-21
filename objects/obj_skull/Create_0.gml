@@ -10,5 +10,4 @@ dir = choose(1, -1);
 wait_time = 120;
 is_fire = true;
 name = "skull";
-direction = irandom(360);
-speed = move_spd;
+dir = irandom(360);
