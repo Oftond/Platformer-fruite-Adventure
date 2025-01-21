@@ -1,21 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_end",
+  "%Name":"obj_player_disappear",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_end",
+  "name":"obj_player_disappear",
   "overriddenProperties":[],
   "parent":{
     "name":"Player",
     "path":"folders/Objects/Characters/Player.yy",
   },
-  "parentObjectId":{
-    "name":"obj_parent_move_platform",
-    "path":"objects/obj_parent_move_platform/obj_parent_move_platform.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_end_idle",
-    "path":"sprites/spr_end_idle/spr_end_idle.yy",
+    "name":"spr_disappearing",
+    "path":"sprites/spr_disappearing/spr_disappearing.yy",
   },
   "spriteMaskId":null,
   "visible":true,

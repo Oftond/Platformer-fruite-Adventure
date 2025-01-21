@@ -153,6 +153,7 @@
     {"id":{"name":"obj_platform_chain","path":"objects/obj_platform_chain/obj_platform_chain.yy",},},
     {"id":{"name":"obj_platform_grey","path":"objects/obj_platform_grey/obj_platform_grey.yy",},},
     {"id":{"name":"obj_player_appear","path":"objects/obj_player_appear/obj_player_appear.yy",},},
+    {"id":{"name":"obj_player_disappear","path":"objects/obj_player_disappear/obj_player_disappear.yy",},},
     {"id":{"name":"obj_player_menu","path":"objects/obj_player_menu/obj_player_menu.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_pointer_maskCollide","path":"objects/obj_pointer_maskCollide/obj_pointer_maskCollide.yy",},},

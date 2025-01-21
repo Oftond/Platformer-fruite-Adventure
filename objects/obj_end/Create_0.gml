@@ -1,0 +1,18 @@
+event_inherited();
+
+is_touch = false;
+wait_time = 10;
+wait_timer = 0;
+
+mask_index = sprite_index;
+
+press = function()
+{
+	if (!is_touch && sprite_index != spr_end_pressed)
+	{
+		sprite_index = spr_end_pressed;
+		is_touch = true;
+		wait_timer = wait_time;
+		instance_destroy(obj_player);
+	}
+}
