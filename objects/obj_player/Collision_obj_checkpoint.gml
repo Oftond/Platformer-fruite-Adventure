@@ -1,3 +1,3 @@
 instance_destroy(other)
-respown_x = other.y;
-respown_y = other.x;
+global.RespownX = other.x_player_respawn;
+global.RespownY = other.y_player_respawn;

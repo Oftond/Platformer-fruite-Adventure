@@ -4,7 +4,7 @@ if (is_death)
 	exit;
 }
 
-if (place_meeting(x + move_spd * dir, y, obj_game_manager.collision_tilemap) && state != STATES.IDLE)
+if ((place_meeting(x + move_spd * dir, y, obj_game_manager.collision_tilemap) || place_empty(x + 100 * dir, y + 50, obj_game_manager.collision_tilemap)) && state != STATES.IDLE)
 {
 	if (wait_timer <= 0 && state != STATES.ATTACK)
 	{

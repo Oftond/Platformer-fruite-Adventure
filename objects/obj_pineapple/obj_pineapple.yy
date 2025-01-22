@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_orange",
-    "path":"sprites/spr_orange/spr_orange.yy",
+    "name":"spr_pineapple",
+    "path":"sprites/spr_pineapple/spr_pineapple.yy",
   },
   "spriteMaskId":null,
   "visible":true,

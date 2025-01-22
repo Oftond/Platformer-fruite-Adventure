@@ -7,7 +7,7 @@ _target_y = clamp(_target_y, 0, room_height - global.CameraHeight);
 finale_cam_x += (_target_x - finale_cam_x) * cam_spd;
 finale_cam_y += (_target_y - finale_cam_y) * cam_spd;
 
-camera_set_view_pos(view_camera[0], finale_cam_x, finale_cam_y)
+camera_set_view_pos(view_camera[0], finale_cam_x, finale_cam_y);
 
 //var _super_near = layer_get_id("Backgrounds_5");
 //var _near = layer_get_id("Backgrounds_4");
