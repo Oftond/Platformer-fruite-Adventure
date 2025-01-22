@@ -1,12 +1,17 @@
 if (is_death)
 {
 	image_angle += 3;
-	if (y > room_height + 30)
+	if (y > room_height + 175)
 	{
 		instance_destroy(self);
 		instance_create_layer(global.RespownX, global.RespownY, "Player", obj_player_appear);
 	}
 	exit;
+}
+else if (y > room_height + 175)
+{
+	instance_destroy(self);
+	instance_create_layer(global.RespownX, global.RespownY, "Player", obj_player_appear);
 }
 
 var _dir = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left)|| keyboard_check(ord("A")));
