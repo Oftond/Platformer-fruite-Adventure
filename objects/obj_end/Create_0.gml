@@ -13,6 +13,6 @@ press = function()
 		sprite_index = spr_end_pressed;
 		is_touch = true;
 		wait_timer = wait_time;
-		instance_destroy(obj_player);
+		obj_game_manager.is_end_level = true;
 	}
 }

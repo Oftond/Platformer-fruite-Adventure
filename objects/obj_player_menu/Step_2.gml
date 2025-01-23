@@ -31,16 +31,4 @@ switch (state)
 		sprite_index = spr_player_wallJump;
 		image_speed = 1;
 	break;
-	
-	case STATES.HIT:
-		if (sprite_index != sprite_hit)
-		{
-			image_index = 0;
-			sprite_index = sprite_hit;
-		}
-		if (image_index >= image_number - 1)
-		{
-			image_speed = 0;
-		}
-	break;
 }

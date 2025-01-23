@@ -1,0 +1,1 @@
+give_score = 10;

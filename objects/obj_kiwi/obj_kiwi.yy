@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cherry",
-    "path":"sprites/spr_cherry/spr_cherry.yy",
+    "name":"spr_kiwi",
+    "path":"sprites/spr_kiwi/spr_kiwi.yy",
   },
   "spriteMaskId":null,
   "visible":true,

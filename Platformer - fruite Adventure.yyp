@@ -141,6 +141,7 @@
     {"id":{"name":"obj_leaderboards","path":"objects/obj_leaderboards/obj_leaderboards.yy",},},
     {"id":{"name":"obj_main_manager","path":"objects/obj_main_manager/obj_main_manager.yy",},},
     {"id":{"name":"obj_melon","path":"objects/obj_melon/obj_melon.yy",},},
+    {"id":{"name":"obj_menu_manager","path":"objects/obj_menu_manager/obj_menu_manager.yy",},},
     {"id":{"name":"obj_mushroom","path":"objects/obj_mushroom/obj_mushroom.yy",},},
     {"id":{"name":"obj_orange","path":"objects/obj_orange/obj_orange.yy",},},
     {"id":{"name":"obj_parent_fruit","path":"objects/obj_parent_fruit/obj_parent_fruit.yy",},},
@@ -382,9 +383,9 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},},
-    {"roomId":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
-    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_level_3","path":"rooms/rm_level_3/rm_level_3.yy",},},
+    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
+    {"roomId":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

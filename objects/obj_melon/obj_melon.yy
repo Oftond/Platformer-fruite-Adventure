@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_kiwi",
-    "path":"sprites/spr_kiwi/spr_kiwi.yy",
+    "name":"spr_melon",
+    "path":"sprites/spr_melon/spr_melon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -29,11 +29,13 @@ enum LANGUAGES
 	ENG
 }
 
+global.IsOnValume = true;
+
 global.Language = LANGUAGES.ENG;
 global.IsPause = false;
 
 global.Score = 0;
-global.CurrentLevel = 0;
+global.CurrentLevel = 1;
 global.NumLevels = 10;
 global.OpenLevels = 1;
 

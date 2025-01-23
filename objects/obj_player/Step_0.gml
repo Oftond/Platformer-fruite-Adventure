@@ -23,7 +23,11 @@ on_wall = place_meeting(x - 1, y, obj_game_manager.collision_tilemap) - place_me
 move_locked_time = max(move_locked_time - 1, 0);
 
 if (place_meeting(x, y + max(1, move_y), obj_end) && bbox_bottom <= obj_end.bbox_top && move_y > 0 && !obj_end.is_touch)
+{
+	move_y = 0;
+	move_y -= jump_spd + 15;
 	obj_end.press();
+}
 
 if (place_meeting(x, y + max(1, move_y), obj_parent_move_platform))
 {
