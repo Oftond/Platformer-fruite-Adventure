@@ -10,3 +10,5 @@ move_x = 0;
 dir = choose(1, -1);
 wait_time = 90;
 name = "trunk";
+
+create_hitBox();

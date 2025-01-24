@@ -5,7 +5,8 @@ follow = obj_player;
 
 finale_cam_x = 0;
 finale_cam_y = 0;
-cam_spd = 0.05;
+cam_spd_x = 0.05;
+cam_spd_y = 0.1;
 
 SetSettingsCamera();
 

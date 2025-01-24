@@ -13,3 +13,5 @@ jump_height = 0;
 jump_spd = 20;
 move_spd = 6;
 name = "duck";
+
+create_hitBox();

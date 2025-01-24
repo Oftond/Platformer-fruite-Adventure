@@ -10,3 +10,5 @@ dir_y = 1;
 detection_distance = 300;
 detected_player = false;
 name = "bat";
+
+create_hitBox();

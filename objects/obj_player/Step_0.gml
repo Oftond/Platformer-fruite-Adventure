@@ -295,6 +295,8 @@ if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
 	move_x = 0;
 }
 
+move_y = clamp(move_y, -30, 30);
+
 x += move_x;
 y += move_y;
 
@@ -307,7 +309,6 @@ if (place_meeting(x, y - 1, obj_block))
 		image_index = 0;
 	}
 }
-
 
 if (place_meeting(x, y + max(1, move_y), obj_falling_platform))
 {

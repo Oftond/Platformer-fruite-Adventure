@@ -10,3 +10,5 @@ move_spd = 0;
 wait_time = 120;
 object_spikes = undefined;
 name = "turtle";
+
+create_hitBox();

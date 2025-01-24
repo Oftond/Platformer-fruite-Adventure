@@ -14,3 +14,5 @@ attack_timer = 0;
 detected_player = false;
 detection_distance = sprite_width;
 name = "chamelion";
+
+create_hitBox();

@@ -13,7 +13,7 @@ switch (state)
 		{
 			if (image_index > 0 && !other.is_jump)
 			{
-				move_y = -25;
+				move_y = -other.jump_height_on;
 				current_jumps--;
 
 				if (jump_timer > 0)

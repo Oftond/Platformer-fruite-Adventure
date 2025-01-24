@@ -8,3 +8,5 @@ shoot_range = 600;
 shoot_timer = 120;
 max_shoot_timer = 120;
 name = "plant";
+
+create_hitBox();

@@ -1,41 +1,6 @@
-if (is_death || (other.name == "turtle" && other.state == STATES.ATTACK) || (other.name == "ghost" && (other.state == STATES.DESAPPEAR || other.state == STATES.APPEAR)) || other.name == "skull")
+if (is_death || (other.name == "turtle" && other.state == STATES.ATTACK) || (other.name == "ghost" && (other.state == STATES.DESAPPEAR || other.state == STATES.APPEAR)) || other.name == "skull" || other.is_death && flashing > 0 || other.state == STATES.HIT)
 {
 	exit;
-}
-
-if (other.is_death)
-	exit;
-
-if (move_y >= 0)
-{
-	if ((bbox_bottom - move_y) < (other.bbox_top - other.move_y))
-	{
-		if (state != STATES.HIT)
-			other.current_hp -= damage;
-		move_y = 0;
-		move_y -= jump_spd + 5;
-		current_jumps = 1;
-		with (other)
-		{
-			if (state != STATES.HIT)
-				image_index = 0;
-			state = STATES.HIT;
-		}
-		exit;
-	}
-}
-
-if (flashing > 0)
-{
-	exit;
-}
-
-with (other)
-{
-	if (state == STATES.HIT)
-	{
-		exit;
-	}
 }
 
 var _x_sign = sign(x - other.x) == 0 ? image_xscale : sign(x - other.x);

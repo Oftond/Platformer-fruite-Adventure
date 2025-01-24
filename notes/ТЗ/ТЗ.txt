@@ -148,6 +148,22 @@ obj_trampoline - подбрасывает игрока в воздух, помо
 высокие уступы
 
 
+Ловушки по сложности:
+
+obj_spikes
+obj_block
+obj_arrow
+obj_trampoline
+obj_falling_platform
+obj_platform_grey
+obj_platform_brown
+obj_fire
+obj_saw
+obj_spiked_ball
+obj_rock_head
+obj_spike_head
+
+
 Также Лед на слое TrapsLayerIce должен распологаться и находиться на уровне (Синий)
 (Позволяет игроку скользить по нему).
 На слое TrapsLayerSand должен распологаться песок (Оранжевый)

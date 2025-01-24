@@ -1,10 +1,10 @@
 event_inherited();
+
 switch (state)
 {
 	case STATES.IDLE:
 		sprite_index = sprite_idle;
 		image_speed = 1;
-		move_spd = 0;
 	break;
 	
 	case STATES.HIT:
@@ -27,7 +27,6 @@ switch (state)
 			image_index = 0;
 			image_speed = 1;
 			sprite_index = sprite_run;
-			move_spd = max_spd;
 		}
 	break;
 }
