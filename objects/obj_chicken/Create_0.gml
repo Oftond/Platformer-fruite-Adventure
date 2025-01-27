@@ -8,11 +8,15 @@ distance_detection = 1000;
 move_spd = 7;
 max_spd = move_spd;
 sprite_attack_hitBox = spr_chicken_getDamage_hitBox;
+is_detected_player = false;
 
 create_hitBox();
 
 dected_player = function()
 {
+	if (is_detected_player)
+		return;
+		
 	var _find_player = instance_nearest(x, y, obj_player);
 	var _distance_to_player = distance_detection + 1;
 	var _check_wall = noone;
@@ -24,18 +28,28 @@ dected_player = function()
 
 	state = STATES.IDLE;
 
-	if (_check_wall == noone && _distance_to_player <= distance_detection)
+	if (_check_wall == noone && _distance_to_player <= distance_detection && (_find_player.y < (bbox_bottom) && _find_player.y > (bbox_top - 15)))
 	{
 		if (place_empty(x + _distance_to_player * sign(_find_player.x - x), y, obj_game_manager.collision_tilemap) && place_empty(x + _distance_to_player * sign(_find_player.x - x), y, obj_block))
 			return;
 		state = STATES.WALK;
-		if (x + 300 <= _find_player.x || x - 300 >= _find_player.x)
+		is_detected_player = true;
+		if (x + 200 <= _find_player.x || x - 200 >= _find_player.x)
 			dir = sign(x - _find_player.x) == 0 ? image_xscale : sign(_find_player.x - x);
 	}
+	else
+		is_detected_player = false;
 }
 
 walk = function()
 {
+	if (is_detected_player && instance_exists(obj_player))
+	{
+		if (x + 200 <= obj_player.x || x - 200 >= obj_player.x)
+			dir = sign(x - obj_player.x) == 0 ? image_xscale : sign(obj_player.x - x);
+		state = STATES.WALK;
+	}
+	
 	if (state == STATES.WALK)
 		move_x = move_spd * dir;
 	else

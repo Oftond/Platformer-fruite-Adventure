@@ -302,12 +302,18 @@ y += move_y;
 
 if (place_meeting(x, y - 1, obj_block))
 {
-	with (instance_place(x, y - 1, obj_block))
+	var _collision_blocks = ds_list_create();
+	var _num_blocks = instance_place_list(x, y - 1, obj_block, _collision_blocks, false);
+	for (var i = 0; i < _num_blocks; i++)
 	{
-		durability--;
-		state = STATES.HIT;
-		image_index = 0;
+		with (instance_place(x, y - 1, _collision_blocks[| i]))
+		{
+			durability--;
+			state = STATES.HIT;
+			image_index = 0;
+		}
 	}
+	ds_list_destroy(_collision_blocks);
 }
 
 if (place_meeting(x, y + max(1, move_y), obj_falling_platform))
@@ -318,8 +324,5 @@ if (place_meeting(x, y + max(1, move_y), obj_falling_platform))
 		_platform.set_fall_time();
 	}
 }
-
-if (place_meeting(x, y, obj_game_manager.collision_tilemap))
-	current_hp -= max_hp;
 
 event_inherited();
