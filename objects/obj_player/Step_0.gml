@@ -113,7 +113,7 @@ if (!is_knockback)
 		
 	if (jump_timer > 0)
 	{
-		move_y = -(jump_spd / max(current_jumps, 1));
+		move_y = -jump_spd;
 		jump_timer--;
 	}
 }
