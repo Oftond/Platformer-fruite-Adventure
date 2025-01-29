@@ -1,10 +1,10 @@
-move_spd_y = 1;
-move_spd_x = 1;
+move_spd_y = 2;
+move_spd_x = 2;
 move_x = 0;
 move_y = 0;
 time = 0;
 max_time = 60;
-wait_time = 90;
+wait_time = 180;
 stop_platform = false;
 left_path_x = 0;
 right_path_x = room_width;

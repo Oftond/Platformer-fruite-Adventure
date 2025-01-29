@@ -295,7 +295,7 @@ if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
 	move_x = 0;
 }
 
-move_y = clamp(move_y, -30, 30);
+move_y = clamp(move_y, -35, 35);
 
 x += move_x;
 y += move_y;

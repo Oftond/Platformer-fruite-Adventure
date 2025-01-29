@@ -1,4 +1,4 @@
-if (is_death || (other.name == "turtle" && other.state == STATES.ATTACK) || (other.name == "ghost" && (other.state == STATES.DESAPPEAR || other.state == STATES.APPEAR)) || other.name == "skull" || other.is_death && flashing > 0 || other.state == STATES.HIT || ((bbox_bottom - move_y) < (other.bbox_top - other.move_y) && move_y >= 0))
+if (is_death || (other.name == "turtle" && other.state == STATES.ATTACK) || (other.name == "ghost" && (other.state == STATES.DESAPPEAR || other.state == STATES.APPEAR)) || other.name == "skull" || other.is_death && flashing > 0 || other.state == STATES.HIT || ((bbox_bottom - move_y) < (other.bbox_top - other.move_y) && move_y >= 0) || is_knockback)
 {
 	exit;
 }

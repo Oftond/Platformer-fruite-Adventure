@@ -12,6 +12,7 @@ if (((x <= left_path_x || x >= right_path_x) || (y <= top_path_y || y >= bottom_
 	stop_platform = true;
 	time = max_time;
 }
+
 if (move_y != 0 || move_x != 0)
 	sprite_index = spr_platform_grey_on;
 else
