@@ -9,6 +9,13 @@ global.RespownX = x;
 global.RespownY = y;
 mask_index = spr_player_maskCollide;
 
+heal = function(_value)
+{
+	current_hp += _value;
+	if (current_hp > max_hp)
+		current_hp = max_hp;
+}
+
 instance_create_layer(x, y, "Menegers", obj_camera);
 
 for (var i = 0; i < current_hp; i++)
