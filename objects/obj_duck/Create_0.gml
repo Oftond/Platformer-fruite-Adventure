@@ -13,5 +13,6 @@ jump_height = 0;
 jump_spd = 20;
 move_spd = 6;
 name = "duck";
+sprite_attack_hitBox = spr_duck_getDamage_hitBox;
 
 create_hitBox();

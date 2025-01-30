@@ -259,6 +259,7 @@
     {"id":{"name":"spr_collect","path":"sprites/spr_collect/spr_collect.yy",},},
     {"id":{"name":"spr_disappearing","path":"sprites/spr_disappearing/spr_disappearing.yy",},},
     {"id":{"name":"spr_duck_fall","path":"sprites/spr_duck_fall/spr_duck_fall.yy",},},
+    {"id":{"name":"spr_duck_getDamage_hitBox","path":"sprites/spr_duck_getDamage_hitBox/spr_duck_getDamage_hitBox.yy",},},
     {"id":{"name":"spr_duck_hit","path":"sprites/spr_duck_hit/spr_duck_hit.yy",},},
     {"id":{"name":"spr_duck_idle","path":"sprites/spr_duck_idle/spr_duck_idle.yy",},},
     {"id":{"name":"spr_duck_jump_anticipation","path":"sprites/spr_duck_jump_anticipation/spr_duck_jump_anticipation.yy",},},
@@ -396,12 +397,12 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
-    {"roomId":{"name":"rm_level_4","path":"rooms/rm_level_4/rm_level_4.yy",},},
-    {"roomId":{"name":"rm_level_3","path":"rooms/rm_level_3/rm_level_3.yy",},},
+    {"roomId":{"name":"rm_level_5","path":"rooms/rm_level_5/rm_level_5.yy",},},
     {"roomId":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
     {"roomId":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},},
+    {"roomId":{"name":"rm_level_3","path":"rooms/rm_level_3/rm_level_3.yy",},},
+    {"roomId":{"name":"rm_level_4","path":"rooms/rm_level_4/rm_level_4.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
-    {"roomId":{"name":"rm_level_5","path":"rooms/rm_level_5/rm_level_5.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
