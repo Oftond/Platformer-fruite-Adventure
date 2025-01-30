@@ -101,6 +101,7 @@
     {"id":{"name":"ImageLoadBar","path":"extensions/ImageLoadBar/ImageLoadBar.yy",},},
     {"id":{"name":"YaGames","path":"extensions/YaGames/YaGames.yy",},},
     {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},},
+    {"id":{"name":"Helps","path":"notes/Helps/Helps.yy",},},
     {"id":{"name":"ТЗ","path":"notes/ТЗ/ТЗ.yy",},},
     {"id":{"name":"obj_angrypig","path":"objects/obj_angrypig/obj_angrypig.yy",},},
     {"id":{"name":"obj_apple","path":"objects/obj_apple/obj_apple.yy",},},
