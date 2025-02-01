@@ -326,3 +326,5 @@ if (place_meeting(x, y + max(1, move_y), obj_falling_platform))
 }
 
 event_inherited();
+
+check_collision_enemy();

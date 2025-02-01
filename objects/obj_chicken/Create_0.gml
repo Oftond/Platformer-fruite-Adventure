@@ -7,10 +7,7 @@ dir = 1;
 distance_detection = 1000;
 move_spd = 7;
 max_spd = move_spd;
-sprite_attack_hitBox = spr_chicken_getDamage_hitBox;
 is_detected_player = false;
-
-create_hitBox();
 
 dected_player = function()
 {
