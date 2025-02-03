@@ -1,4 +1,4 @@
-max_hp = 3
+max_hp = 3;
 current_hp = max_hp;
 damage = 1;
 move_spd = 6;

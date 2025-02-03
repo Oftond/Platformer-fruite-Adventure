@@ -3,7 +3,7 @@ if (is_death || flashing > 0)
 	
 var _x_sign = sign(x - other.x) == 0 ? image_xscale : sign(x - other.x);
 move_x = _x_sign * 10;
-current_hp -= other.damage;
+get_damage(other.damage);
 flashing = max_flashing;
 is_knockback = true;
 move_y = 0;

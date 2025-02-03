@@ -1,2 +1,2 @@
-global.Score += other.give_score;
+score += other.give_score;
 instance_destroy(other);

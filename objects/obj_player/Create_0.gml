@@ -1,4 +1,8 @@
 event_inherited();
+
+max_hp = global.MaxHP;
+current_hp = global.CurrentHP;
+
 object_heart = obj_player_heart;
 move_wall_spd = 6;
 move_locked_max_time = 10;
@@ -9,11 +13,18 @@ global.RespownX = x;
 global.RespownY = y;
 mask_index = spr_player_maskCollide;
 
+get_damage = function(_damage)
+{
+	current_hp -= _damage;
+	update_globalHp();
+}
+
 heal = function(_value)
 {
 	current_hp += _value;
 	if (current_hp > max_hp)
 		current_hp = max_hp;
+	update_globalHp();
 }
 
 check_collision_enemy = function()
@@ -47,13 +58,19 @@ check_collision_enemy = function()
 		other.move_y -= other.jump_spd + 5;
 		other.current_jumps = 1;
 		other.move_x = _x_sign * 10;
-		other.current_hp -= other.damage;
+		other.get_damage(other.damage);
 		other.flashing = max_flashing;
 		other.is_knockback = true;
 		other.state = STATES.HIT;
 		other.image_index = 0;
 		other.alarm[0] = time_to_knockback;
 	}
+}
+
+update_globalHp = function()
+{
+	global.MaxHP = max_hp;
+	global.CurrentHP = current_hp;
 }
 
 instance_create_layer(x, y, "Menegers", obj_camera);

@@ -9,10 +9,7 @@ if (is_death)
 	exit;
 }
 else if (y > room_height + 175)
-{
-	instance_destroy(self);
-	instance_create_layer(global.RespownX, global.RespownY, "Player", obj_player_appear);
-}
+	get_damage(max_hp);
 
 var _dir = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left)|| keyboard_check(ord("A")));
 var _jump_key_pressed = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space);
