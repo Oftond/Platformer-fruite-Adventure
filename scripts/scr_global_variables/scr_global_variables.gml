@@ -13,5 +13,7 @@ global.OpenLevels = 1;
 
 global.FruitsCountInRoom = array_create(global.NumLevels, 0);
 
-global.RespownX = 0;
-global.RespownY = 0;
+global.RespownX = -1;
+global.RespownY = -1;
+
+global.RoomData = { };

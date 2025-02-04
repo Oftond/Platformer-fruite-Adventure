@@ -1,4 +1,7 @@
+time_to_start_game = 60;
+
 button_press = function()
 {
-	room_goto(asset_get_index($"rm_level_{global.CurrentLevel}"));
+	instance_create_layer(x, y, "GUI", obj_transition);
+	alarm[0] = time_to_start_game;
 }

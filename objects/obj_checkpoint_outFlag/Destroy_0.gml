@@ -1,1 +1,1 @@
-instance_create_depth(x, y, depth, obj_chechpoint_flag_idle);
+instance_create_depth(x, y, depth, obj_checkpoint_flag_idle);

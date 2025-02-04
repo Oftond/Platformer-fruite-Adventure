@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_chechpoint_flag_idle",
+  "%Name":"obj_checkpoint_flag_idle",
   "eventList":[],
   "managed":true,
-  "name":"obj_chechpoint_flag_idle",
+  "name":"obj_checkpoint_flag_idle",
   "overriddenProperties":[],
   "parent":{
     "name":"Checkpoints",

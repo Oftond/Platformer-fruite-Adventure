@@ -93,3 +93,112 @@ function GameManager() : SaveSystem() constructor
 		obj_temp.current_hp = _player_struct.player_current_hp;
 	}
 }
+
+function SaveRoom()
+{
+	var _room_struct =
+	{
+		fruitNumber : instance_number(obj_parent_fruit),
+		fruits : array_create(instance_number(obj_parent_fruit), undefined),
+		enemyNumber : instance_number(obj_enemy_parent),
+		enemys : array_create(instance_number(obj_enemy_parent), undefined),
+		checkPointNumber : instance_number(obj_checkpoint),
+		checkPointFlagNumber : instance_number(obj_checkpoint_flag_idle) + 1,
+		checkPoints : array_create(instance_number(obj_checkpoint), undefined),
+		checkPointsFlag : array_create(instance_number(obj_checkpoint_flag_idle) + 1, undefined),
+		playerScore : score
+	}
+
+	for (var i = 0; i < _room_struct.fruitNumber; i++)
+	{
+		var _fruit = instance_find(obj_parent_fruit, i);
+		_room_struct.fruits[i] =
+		{
+			x_pos : _fruit.x,
+			y_pos : _fruit.y,
+			object : _fruit.object_index
+		};
+	}
+	
+	for (var i = 0; i < _room_struct.enemyNumber; i++)
+	{
+		var _enemy = instance_find(obj_enemy_parent, i);
+		_room_struct.enemys[i] =
+		{
+			x_pos : _enemy.x,
+			y_pos : _enemy.y,
+			object : _enemy.object_index
+		};
+	}
+	
+	for (var i = 0; i < _room_struct.checkPointNumber; i++)
+	{
+		var _checkPoint = instance_find(obj_checkpoint, i);
+		_room_struct.checkPoints[i] =
+		{
+			x_pos : _checkPoint.x,
+			y_pos : _checkPoint.y,
+			object : _checkPoint.object_index
+		};
+	}
+	
+	for (var i = 0; i < _room_struct.checkPointFlagNumber; i++)
+	{
+		var _checkPoint = instance_find(obj_checkpoint_flag_idle, i);
+		if (_checkPoint != -4)
+		{
+			_room_struct.checkPointsFlag[i] =
+			{
+				x_pos : _checkPoint.x,
+				y_pos : _checkPoint.y,
+				object : _checkPoint.object_index
+			};
+		}
+		else
+			_room_struct.checkPointsFlag[i] =
+			{
+				x_pos : self.x,
+				y_pos : self.y,
+				object : obj_checkpoint_flag_idle
+			};
+	}
+	
+	global.RoomData = _room_struct;
+}
+
+function LoadRoom()
+{
+	if (array_length(struct_get_names(global.RoomData)) == 0)
+		return;
+	
+	if (instance_exists(obj_enemy_parent))
+		instance_destroy(obj_enemy_parent)
+		
+	if (instance_exists(obj_parent_fruit))
+		instance_destroy(obj_parent_fruit)
+		
+	if (instance_exists(obj_checkpoint))
+		instance_destroy(obj_checkpoint)
+		
+	for (var i = 0; i < global.RoomData.enemyNumber; i++)
+	{
+		instance_create_layer(global.RoomData.enemys[i].x_pos, global.RoomData.enemys[i].y_pos, "Enemys", global.RoomData.enemys[i].object)
+	}
+
+	for (var i = 0; i < global.RoomData.fruitNumber; i++)
+	{
+		instance_create_layer(global.RoomData.fruits[i].x_pos, global.RoomData.fruits[i].y_pos, "Collectiable", global.RoomData.fruits[i].object)
+	}
+	
+	for (var i = 0; i < global.RoomData.checkPointNumber; i++)
+	{
+		instance_create_layer(global.RoomData.checkPoints[i].x_pos, global.RoomData.checkPoints[i].y_pos, "Collectiable", global.RoomData.checkPoints[i].object)
+	}
+	
+	for (var i = 0; i < global.RoomData.checkPointFlagNumber; i++)
+	{
+		instance_create_layer(global.RoomData.checkPointsFlag[i].x_pos, global.RoomData.checkPointsFlag[i].y_pos, "Collectiable", global.RoomData.checkPointsFlag[i].object)
+	}
+	
+	score = global.RoomData.playerScore;
+}

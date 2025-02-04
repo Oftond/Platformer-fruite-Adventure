@@ -1,11 +1,10 @@
 if (is_death)
 {
-	image_angle += 3;
 	if (y > room_height + 175)
-	{
-		instance_destroy(self);
-		instance_create_layer(global.RespownX, global.RespownY, "Player", obj_player_appear);
-	}
+		speed = 0;
+	if (!instance_exists(obj_transition))
+		instance_create_layer(0, 0, "GUI", obj_transition);
+	image_angle += 3;
 	exit;
 }
 else if (y > room_height + 175)

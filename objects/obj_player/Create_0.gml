@@ -1,5 +1,7 @@
 event_inherited();
 
+game_over = false;
+
 max_hp = global.MaxHP;
 current_hp = global.CurrentHP;
 
@@ -17,6 +19,11 @@ get_damage = function(_damage)
 {
 	current_hp -= _damage;
 	update_globalHp();
+	if (!game_over && current_hp <= 0)
+	{
+		game_over = true;
+		alarm[1] = 60;
+	}
 }
 
 heal = function(_value)

@@ -14,5 +14,6 @@ press = function()
 		is_touch = true;
 		wait_timer = wait_time;
 		obj_game_manager.is_end_level = true;
+		instance_create_layer(0, 0, "GUI", obj_transition);
 	}
 }

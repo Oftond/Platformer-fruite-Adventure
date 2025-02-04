@@ -1,2 +1,2 @@
 if (obj_game_manager.is_end_level)
-	room_goto_next();
+	obj_game_manager.goto_next_level();
