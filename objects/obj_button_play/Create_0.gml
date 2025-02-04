@@ -1,0 +1,4 @@
+button_press = function()
+{
+	room_goto(asset_get_index($"rm_level_{global.CurrentLevel}"));
+}

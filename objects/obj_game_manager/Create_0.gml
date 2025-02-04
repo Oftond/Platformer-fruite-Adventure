@@ -7,6 +7,7 @@ global.RespownX = start_player_x;
 global.RespownY = start_player_y;
 
 instance_create_layer(start_player_x, start_player_y, "Player", obj_player_appear);
+instance_create_layer(1824, 96, "GUI", obj_button_settings);
 
 if (instance_exists(obj_player))
 	instance_destroy(obj_player);

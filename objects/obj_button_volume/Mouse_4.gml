@@ -1,1 +1,0 @@
-global.IsOnValume = !global.IsOnValume;

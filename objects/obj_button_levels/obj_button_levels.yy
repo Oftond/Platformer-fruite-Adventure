@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_shop",
+  "%Name":"obj_button_levels",
   "eventList":[],
   "managed":true,
-  "name":"obj_button_shop",
+  "name":"obj_button_levels",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
     "path":"folders/Objects/GUI/Buttons.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_button_parent",
+    "path":"objects/obj_button_parent/obj_button_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
