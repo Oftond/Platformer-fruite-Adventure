@@ -15,5 +15,8 @@ press = function()
 		wait_timer = wait_time;
 		obj_game_manager.is_end_level = true;
 		instance_create_layer(0, 0, "GUI", obj_transition);
+		global.RoomData = { };
+		global.RespownX = -1;
+		global.RespownY = -1;
 	}
 }

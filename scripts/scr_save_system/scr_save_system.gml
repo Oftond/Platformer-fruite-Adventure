@@ -192,12 +192,12 @@ function LoadRoom()
 	
 	for (var i = 0; i < global.RoomData.checkPointNumber; i++)
 	{
-		instance_create_layer(global.RoomData.checkPoints[i].x_pos, global.RoomData.checkPoints[i].y_pos, "Collectiable", global.RoomData.checkPoints[i].object)
+		instance_create_layer(global.RoomData.checkPoints[i].x_pos, global.RoomData.checkPoints[i].y_pos, "Environment", global.RoomData.checkPoints[i].object)
 	}
 	
 	for (var i = 0; i < global.RoomData.checkPointFlagNumber; i++)
 	{
-		instance_create_layer(global.RoomData.checkPointsFlag[i].x_pos, global.RoomData.checkPointsFlag[i].y_pos, "Collectiable", global.RoomData.checkPointsFlag[i].object)
+		instance_create_layer(global.RoomData.checkPointsFlag[i].x_pos, global.RoomData.checkPointsFlag[i].y_pos, "Environment", global.RoomData.checkPointsFlag[i].object)
 	}
 	
 	score = global.RoomData.playerScore;
