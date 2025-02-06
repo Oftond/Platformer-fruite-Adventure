@@ -22,9 +22,7 @@ if (can_jump && is_graunded && wait_timer <= 0 && state != STATES.ANTICIPATION)
 	state = STATES.ANTICIPATION;
 
 if (x + move_x <= change_dir_left || x + move_x >= change_dir_right)
-{
 	dir *= -1;
-}
 
 var _sub_pixel = 0.5;
 if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
@@ -33,11 +31,9 @@ if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
 	while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
 		x += _pixel_check;
 	move_x = 0;
-	//wait_timer = wait_time;
-	//dir *= -1;
 }
 
-if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
+if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap) && wait_timer <= 0)
 {
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
