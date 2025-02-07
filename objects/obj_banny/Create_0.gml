@@ -10,5 +10,3 @@ wait_time = 120;
 can_jump = true;
 jump_height = 0;
 name = "banny";
-
-create_hitBox();

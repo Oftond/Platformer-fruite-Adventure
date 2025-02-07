@@ -18,5 +18,6 @@ press = function()
 		global.RoomData = { };
 		global.RespownX = -1;
 		global.RespownY = -1;
+		global.Score += score;
 	}
 }
