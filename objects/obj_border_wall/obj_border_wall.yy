@@ -35,5 +35,5 @@
     "path":"sprites/spr_border_wall/spr_border_wall.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
