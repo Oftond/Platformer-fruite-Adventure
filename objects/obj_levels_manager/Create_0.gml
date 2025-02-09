@@ -30,17 +30,19 @@ levels_icon =
 
 koef_scale = 6;
 
+offset = 100;
+space = (sprite_get_width(_01) * koef_scale) + offset;
 col = global.NumLevels / 3;
 row = global.NumLevels / 5;
-x_pos = (room_width / 2) - ((col * (sprite_get_width(_01) * koef_scale)) / 2);
+x_pos = (room_width / 2) - ((col * space - offset) / 2);
 y_pos = 320;
 
 for (var i = 0; i < row; i++)
 {
 	for (var j = 0; j < col; j++)
 	{
-		var _x_pos = x_pos + (j * 150);
-		var _y_pos = y_pos + (i * 150);
+		var _x_pos = x_pos + (j * space);
+		var _y_pos = y_pos + (i * space);
 		var _level_obj = instance_create_layer(_x_pos, _y_pos, "Levels", obj_level);
 		var _number = (i * col + j) + 1;
 		_level_obj.number_level = _number;
@@ -53,3 +55,5 @@ for (var i = 0; i < row; i++)
 		}
 	}
 }
+
+instance_create_layer(x, y, "Menegers", obj_shake);

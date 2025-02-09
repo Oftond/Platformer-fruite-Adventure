@@ -1,3 +1,4 @@
+event_inherited();
 time_to_start_game = 60;
 
 button_press = function()

@@ -1,9 +1,7 @@
 event_inherited();
 
 number_level = -1;
-can_press = true;
 time_to_start_game = 60;
-koef_scale = 1;
 
 button_press = function()
 {
