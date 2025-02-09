@@ -18,6 +18,13 @@ press = function()
 		global.RoomData = { };
 		global.RespownX = -1;
 		global.RespownY = -1;
-		global.Score += score;
+		var _allScore = 0;
+		if (score > global.ScoreInLevel[global.CurrentLevel - 1])
+		{
+			global.Score += score - global.ScoreInLevel[global.CurrentLevel - 1];
+			global.ScoreInLevel[global.CurrentLevel - 1] = score;
+		}
+		if (global.OpenLevels <= global.CurrentLevel)
+			global.OpenLevels++;
 	}
 }

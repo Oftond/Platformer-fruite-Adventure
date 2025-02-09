@@ -1,1 +1,1 @@
-give_score = 10;
+give_score = 1;

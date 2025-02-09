@@ -1,0 +1,1 @@
+room_goto(asset_get_index($"rm_level_{number_level}"));
