@@ -3,34 +3,34 @@ event_inherited();
 switch (state)
 {
 	case STATES.IDLE:
-		sprite_index = spr_player_idle;
+		sprite_index = spr_ninjaFrog_idle;
 		image_speed = 1;
 	break;
 	
 	case STATES.JUMP:
-		sprite_index = spr_player_jump;
+		sprite_index = spr_ninjaFrog_jump;
 		image_speed = 1;
 	break;
 	
 	case STATES.DOUBLE_JUMP:
-		sprite_index = spr_player_doubleJump;
+		sprite_index = spr_ninjaFrog_doubleJump;
 		image_speed = 1;
 		if (image_index == sprite_get_number(sprite_index) - 1)
 			state = STATES.JUMP;
 	break;
 	
 	case STATES.FALL:
-		sprite_index = spr_player_fall;
+		sprite_index = spr_ninjaFrog_fall;
 		image_speed = 1;
 	break;
 	
 	case STATES.WALK:
-		sprite_index = spr_player_run;
+		sprite_index = spr_ninjaFrog_run;
 		image_speed = 1;
 	break;
 	
 	case STATES.WALL_JUMP:
-		sprite_index = spr_player_wallJump;
+		sprite_index = spr_ninjaFrog_wallJump;
 		image_speed = 1;
 	break;
 	

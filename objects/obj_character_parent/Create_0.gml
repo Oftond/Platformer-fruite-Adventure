@@ -19,5 +19,5 @@ flashing = 0;
 is_knockback = false;
 time_to_knockback = 15;
 spd_of_knockback = 10;
-sprite_hit = spr_player_hit;
+sprite_hit = spr_ninjaFrog_hit;
 mask_index = sprite_index;
