@@ -3,7 +3,7 @@ sprite_hit = spr_chicken_hit;
 sprite_run = spr_chicken_run;
 sprite_idle = spr_chicken_idle;
 name = "chicken";
-dir = 1;
+dir = choose(1, -1);
 distance_detection = 1000;
 move_spd = 7;
 max_spd = move_spd;
@@ -11,9 +11,8 @@ is_detected_player = false;
 
 dected_player = function()
 {
-	if (is_detected_player)
-		return;
-		
+	if (is_detected_player) return;
+
 	var _find_player = instance_nearest(x, y, obj_player);
 	var _distance_to_player = distance_detection + 1;
 	var _check_wall = noone;

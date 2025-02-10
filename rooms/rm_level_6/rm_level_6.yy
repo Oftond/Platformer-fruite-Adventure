@@ -31,7 +31,7 @@
           -13,0,-7480,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tile_traps","path":"tilesets/tile_traps/tile_traps.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Enemys","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_574D4795","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_574D4795","objectId":{"name":"obj_banny","path":"objects/obj_banny/obj_banny.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1632.0,"y":2216.0,},
+        {"$GMRInstance":"v1","%Name":"inst_574D4795","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_574D4795","objectId":{"name":"obj_banny","path":"objects/obj_banny/obj_banny.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1472.0,"y":2216.0,},
       ],"layers":[],"name":"Enemys","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Collectiable","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Collectiable","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Player","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
@@ -48,8 +48,8 @@
           -226,0,-24,-2147483648,-226,0,-24,-2147483648,-226,0,-24,-2147483648,-226,0,-24,-2147483648,-226,0,-24,
           -2147483648,-226,0,-24,-2147483648,-226,0,-24,-2147483648,-226,0,-24,-2147483648,-226,0,-24,-2147483648,
           -226,0,-24,-2147483648,-226,0,-24,-2147483648,-226,0,-24,-2147483648,-226,0,-24,-2147483648,-226,0,-24,
-          -2147483648,-226,0,-24,-2147483648,-226,0,-3,-2147483648,-861,0,2,91,65,-3,66,2,67,91,-244,0,1,105,-3,
-          106,1,107,-480,0,-9,66,1,67,-240,0,-9,86,1,87,-36,0,-25,-2147483648,-179,0,-9,86,1,74,-24,-2147483648,
+          -2147483648,-226,0,-24,-2147483648,-226,0,-3,-2147483648,-1111,0,6,91,65,66,66,67,91,-245,0,4,105,106,
+          106,107,-231,0,-9,66,1,67,-240,0,-9,86,1,87,-36,0,-25,-2147483648,-179,0,-9,86,3,74,0,0,-22,-2147483648,
           -2,0,-35,-2147483648,-81,0,-4,-2147483648,-94,0,-9,86,3,94,92,93,-11,-2147483648,-15,0,-31,-2147483648,
           2,0,-2147483648,-74,0,-11,-2147483648,-94,0,-8,86,4,91,114,112,113,-5,0,-8,-2147483648,-13,0,-8,-2147483648,
           -15,0,-7,-2147483648,-22,0,-17,-2147483648,-31,0,-18,-2147483648,-21,0,1,-2147483648,-72,0,-7,86,1,88,

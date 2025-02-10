@@ -6,7 +6,7 @@ switch (state)
 		image_speed = 1;
 	break;
 		
-	case STATES.ATTACK:
+	case STATES.WALK:
 		if (image_index != sprite_run)
 		{
 			image_speed = 1;
