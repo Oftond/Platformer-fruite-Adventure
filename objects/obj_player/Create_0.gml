@@ -1,5 +1,55 @@
 event_inherited();
 
+idle_sprites =
+[
+	spr_ninjaFrog_idle,
+	spr_pinkMan_idle,
+	spr_maskDude_idle,
+	spr_virtualGuy_idle
+];
+hit_sprites =
+[
+	spr_ninjaFrog_hit,
+	spr_pinkMan_hit,
+	spr_maskDude_hit,
+	spr_virtualGuy_hit
+];
+wallJump_sprites =
+[
+	spr_ninjaFrog_wallJump,
+	spr_pinkMan_walljump,
+	spr_maskDude_wallJump,
+	spr_virtualGuy_walljump
+];
+fall_sprites =
+[
+	spr_ninjaFrog_fall,
+	spr_pinkMan_fall,
+	spr_maskDude_fall,
+	spr_virtualGuy_fall
+];
+jump_sprites =
+[
+	spr_ninjaFrog_jump,
+	spr_pinkMan_jump,
+	spr_maskDude_jump,
+	spr_virtualGuy_jump
+];
+run_sprites =
+[
+	spr_ninjaFrog_run,
+	spr_pinkMan_run,
+	spr_maskDude_run,
+	spr_virtualGuy_run
+];
+doubleJump_sprites =
+[
+	spr_ninjaFrog_doubleJump,
+	spr_pinkMan_doubleJump,
+	spr_maskDude_doubleJump,
+	spr_virtualGuy_doubleJump
+];
+
 game_over = false;
 
 max_hp = global.MaxHP;

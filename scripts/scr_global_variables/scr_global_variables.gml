@@ -1,3 +1,5 @@
+global.ChooseCharacter = 0;
+
 global.CurrentLevel = 1;
 global.NumLevels = 15;
 global.OpenLevels = 1;
