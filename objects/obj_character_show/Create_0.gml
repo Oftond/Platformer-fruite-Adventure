@@ -1,6 +1,7 @@
 manager = undefined;
 number = -1;
 current_x_pos = x;
+price = 0;
 
 hide = function()
 {
@@ -17,9 +18,9 @@ invokeNext = function()
 	{
 		x = manager.x_pos_right;
 		current_x_pos = x;
-		number = array_length(manager.all_characters_objects);
+		number = array_length(manager.all_characters);
 	}
-	else if (number > array_length(manager.all_characters_objects))
+	else if (number > array_length(manager.all_characters))
 	{
 		x = manager.x_pos_start
 		current_x_pos = x;
@@ -35,9 +36,9 @@ invokePrevious = function()
 	{
 		x = manager.x_pos_right;
 		current_x_pos = x;
-		number = array_length(manager.all_characters_objects);
+		number = array_length(manager.all_characters);
 	}
-	else if (number > array_length(manager.all_characters_objects))
+	else if (number > array_length(manager.all_characters))
 	{
 		x = manager.x_pos_start
 		current_x_pos = x;

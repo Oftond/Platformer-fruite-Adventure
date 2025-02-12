@@ -68,10 +68,16 @@ function GameManager() : SaveSystem() constructor
 	{
 		var _player_struct =
 		{
-			player_max_hp : obj_player.max_hp,
-			player_current_hp : obj_player.current_hp,
-			player_x : obj_player.x,
-			player_y : obj_player.y
+			max_hp : global.MaxHP,
+			choose_character : global.ChooseCharacter,
+			current_level : global.CurrentLevel,
+			open_levels : global.OpenLevels,
+			player_score : global.Score,
+			score_in_level : global.ScoreInLevel,
+			is_on_valume : global.IsOnValume,
+			friuts_count_in_room : global.FruitsCountInRoom,
+			volume_music : global.ValumeMusic,
+			volume_sound : global.ValumeSound
 		}
 		
 		return json_stringify(_player_struct);
@@ -81,16 +87,19 @@ function GameManager() : SaveSystem() constructor
 	///@param _data Данные, полученные из файла
 	SetData = function(_data)
 	{
-		if (_data == "")
-		{
-			instance_create_layer(352, 836, "Player", obj_temp);
-			return;
-		}
-		var _player_struct = json_parse(_data);
-		instance_destroy(obj_temp);
-		instance_create_layer(_player_struct.player_x, _player_struct.player_y, "Player", obj_temp);
-		obj_temp.max_hp = _player_struct.player_max_hp;
-		obj_temp.current_hp = _player_struct.player_current_hp;
+		if (_data == "") return;
+		
+		var _data_struct = json_parse(_data);
+		global.MaxHP = _data_struct.max_hp;
+		global.ChooseCharacter = _data_struct.choose_character;
+		global.CurrentLevel = _data_struct.current_level;
+		global.OpenLevels = _data_struct.open_levels;
+		global.Score = _data_struct.player_score;
+		global.ScoreInLevel = _data_struct.score_in_level;
+		global.IsOnValume = _data_struct.is_on_valume;
+		global.FruitsCountInRoom = _data_struct.friuts_count_in_room;
+		global.ValumeMusic = _data_struct.volume_music;
+		global.ValumeSound = _data_struct.volume_sound;
 	}
 }
 
