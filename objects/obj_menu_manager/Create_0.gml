@@ -1,4 +1,3 @@
-global.SaveSystemManager = new GameManager();
 global.SaveSystemManager.Load();
 
 global.CurrentHP = global.MaxHP;

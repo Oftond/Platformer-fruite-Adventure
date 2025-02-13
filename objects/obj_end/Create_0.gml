@@ -26,5 +26,6 @@ press = function()
 		}
 		if (global.OpenLevels <= global.CurrentLevel)
 			global.OpenLevels++;
+		global.SaveSystemManager.Save();
 	}
 }

@@ -11,8 +11,8 @@ else if (y > room_height + 175)
 	get_damage(max_hp);
 
 var _dir = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left)|| keyboard_check(ord("A")));
-var _jump_key_pressed = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space);
-var _jump_key_hold = keyboard_check(vk_up) || keyboard_check(vk_space);
+var _jump_key_pressed = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
+var _jump_key_hold = keyboard_check(vk_up) || keyboard_check(vk_space) || keyboard_check(ord("W"));
 is_graunded = ((place_meeting(x, y + 1, obj_game_manager.collision_tilemap)) || (place_meeting(x, y + 1, obj_parent_trap)) || (place_meeting(x, y + 1, obj_game_manager.traps_layer_sand)) || (place_meeting(x, y + 1, obj_game_manager.traps_layer_ice)));
 on_wall = place_meeting(x - 1, y, obj_game_manager.collision_tilemap) - place_meeting(x + 1, y, obj_game_manager.collision_tilemap);
 

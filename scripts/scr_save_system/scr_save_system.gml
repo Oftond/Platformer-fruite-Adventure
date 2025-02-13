@@ -211,3 +211,5 @@ function LoadRoom()
 	
 	score = global.RoomData.playerScore;
 }
+
+global.SaveSystemManager = new GameManager();
