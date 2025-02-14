@@ -174,27 +174,35 @@ if (place_meeting(x, y + 1, obj_rock_head))
 
 if (place_meeting(x, y + max(1, move_y), obj_fire))
 {
-	var _fire = instance_place(x, y + max(1, move_y), obj_fire);
-	if (_fire.state == STATES.ATTACK)
+	var _collision_fire = ds_list_create();
+	var _num_block_fire = instance_place_list(x, y + max(1, move_y), obj_fire, _collision_fire, false);
+	for (var i = 0; i < _num_block_fire; i++)
 	{
-		if (flashing == 0)
+		with (instance_place(x, y + max(1, move_y), _collision_fire[| i]))
 		{
-			var _x_sign = sign(x - _fire.x);
-			move_x = _x_sign * 10;
-			current_hp--;
-			if (current_hp > 0)
-				flashing = max_flashing;
-			is_knockback = true;
-			move_y = 0;
-			move_y -= jump_spd + 5;
-			current_jumps = 1;
-			state = STATES.HIT;
-			image_index = 0;
-			alarm[0] = time_to_knockback;
+			if (state == STATES.ATTACK)
+			{
+				if (other.flashing == 0)
+				{
+					var _x_sign = sign(other.x - x);
+					other.move_x = _x_sign * 10;
+					other.current_hp--;
+					if (other.current_hp > 0)
+						other.flashing = other.max_flashing;
+					other.is_knockback = true;
+					other.move_y = 0;
+					other.move_y -= other.jump_spd + 5;
+					other.current_jumps = 1;
+					other.state = STATES.HIT;
+					other.image_index = 0;
+					other.alarm[0] = other.time_to_knockback;
+				}
+			}
+			else if (other.bbox_bottom <= bbox_top && state == STATES.IDLE)
+				state = STATES.HIT;
 		}
 	}
-	else if (bbox_bottom <= _fire.bbox_top && _fire.state == STATES.IDLE)
-		_fire.state = STATES.HIT;
+	ds_list_destroy(_collision_fire);
 }
 
 if (place_meeting(x + move_x, y, obj_parent_trap))

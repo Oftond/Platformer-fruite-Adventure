@@ -25,9 +25,7 @@ traps_layer_ice = layer_tilemap_get_id("TrapsLayerIce");
 global.CurrentLevel = real(string_copy(room_get_name(room), string_length(room_get_name(room)), 1));
 
 if (global.FruitsCountInRoom[global.CurrentLevel - 1] == -1)
-{
 	global.FruitsCountInRoom[global.CurrentLevel - 1] = instance_number(obj_parent_fruit);
-}
 	
 goto_next_level = function()
 {

@@ -12,5 +12,3 @@ move_spd = 0.02;
 xx = x;
 yy = y;
 r = 100;
-
-create_hitBox();

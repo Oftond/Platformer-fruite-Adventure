@@ -4,11 +4,9 @@ sprite_idle = spr_bat_idle;
 sprite_celling_in = spr_bat_ceilling_in;
 sprite_celling_out = spr_bat_ceilling_out;
 sprite_fly = spr_bat_flying;
-move_spd = 2;
+move_spd = 3;
 dir = choose(1, -1);
 dir_y = 1;
 detection_distance = 300;
 detected_player = false;
 name = "bat";
-
-create_hitBox();
