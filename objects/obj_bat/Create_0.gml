@@ -7,6 +7,6 @@ sprite_fly = spr_bat_flying;
 move_spd = 3;
 dir = choose(1, -1);
 dir_y = 1;
-detection_distance = 300;
+detection_distance = 250;
 detected_player = false;
 name = "bat";

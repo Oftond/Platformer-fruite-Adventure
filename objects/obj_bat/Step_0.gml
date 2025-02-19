@@ -4,6 +4,9 @@ if (is_death)
 	exit;
 }
 
+if (!instance_exists(obj_player))
+	exit;
+
 if (detected_player && state == STATES.WALK)
 {
 	dir_y = sign(round(obj_player.y - y)) != 0 ? sign(round(obj_player.y - y)) : image_xscale

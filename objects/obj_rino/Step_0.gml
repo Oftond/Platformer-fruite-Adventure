@@ -35,6 +35,9 @@ if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
 x += move_x;
 y += move_y;
 
+if (!instance_exists(obj_player))
+	exit;
+
 var _find_player = instance_nearest(x, y, obj_player);
 var _check_wall = noone;
 if (_find_player != noone)

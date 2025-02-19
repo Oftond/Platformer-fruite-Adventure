@@ -22,11 +22,12 @@ collision_tilemap = layer_tilemap_get_id("CollisionTiles");
 traps_layer_sand = layer_tilemap_get_id("TrapsLayerSand");
 traps_layer_ice = layer_tilemap_get_id("TrapsLayerIce");
 
-global.CurrentLevel = real(string_copy(room_get_name(room), string_length(room_get_name(room)), 1));
+var _slash_pos = string_last_pos("_", room_get_name(room));
+global.CurrentLevel = real(string_copy(room_get_name(room), _slash_pos + 1, string_length(room_get_name(room)) - _slash_pos));
 
 if (global.FruitsCountInRoom[global.CurrentLevel - 1] == -1)
 	global.FruitsCountInRoom[global.CurrentLevel - 1] = instance_number(obj_parent_fruit);
-	
+
 goto_next_level = function()
 {
 	alarm[0] = time_to_end_level;

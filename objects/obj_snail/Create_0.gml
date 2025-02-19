@@ -11,5 +11,3 @@ grav = 1;
 jump = -10;
 dir = 1;
 name = "snail";
-
-create_hitBox();
