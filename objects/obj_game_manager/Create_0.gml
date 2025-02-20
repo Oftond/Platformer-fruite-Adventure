@@ -14,6 +14,7 @@ if (global.RespownX == -1 && global.RespownY == -1)
 
 instance_create_layer(global.RespownX, global.RespownY, "Player", obj_player_appear);
 instance_create_layer(1824, 96, "GUI", obj_button_settings);
+instance_create_layer(x, y, "Managers", obj_shake);
 
 if (instance_exists(obj_player))
 	instance_destroy(obj_player);

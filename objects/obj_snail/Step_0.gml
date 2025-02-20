@@ -21,6 +21,8 @@ if (current_hp < max_hp)
 	if (place_meeting(x + (move_spd * dir), y, obj_game_manager.collision_tilemap))
 	{
 		dir *= -1;
+		image_xscale = -dir;
+		state = STATES.WALL_HIT;
 	}
 	
 	x += move_spd * 2 * dir;

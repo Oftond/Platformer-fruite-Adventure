@@ -6,7 +6,7 @@ sprite_idle = spr_fatBird_idle;
 sprite_hit = spr_fatBird_hit;
 move_spd = 2;
 dir = choose(1, -1);
-wait_time = 120;
+wait_time = 30;
 name = "fat bird";
 
 player_detected = false;

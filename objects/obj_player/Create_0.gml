@@ -130,7 +130,7 @@ update_globalHp = function()
 	global.CurrentHP = current_hp;
 }
 
-instance_create_layer(x, y, "Menegers", obj_camera);
+instance_create_layer(x, y, "Managers", obj_camera);
 
 for (var i = 0; i < current_hp; i++)
 {

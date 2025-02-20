@@ -9,12 +9,17 @@ switch (state)
 	case STATES.ATTACK:
 		if (sprite_index != sprite_ground)
 		{
+			ShakeStart(15, 5);
 			sprite_index = sprite_ground;
 			image_index = 0;
 			image_speed = 1;
 		}
-		if (image_index >= image_number - 1)
+		if (image_index >= image_number - 1 && image_speed != 0)
+		{
 			image_speed = 0;
+			if (!is_death)
+				alarm[0] = wait_time;
+		}
 	break;
 	
 	case STATES.FALL:

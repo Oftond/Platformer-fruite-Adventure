@@ -70,4 +70,12 @@ switch (state)
 				image_speed = 0;
 		}
 	break;
+	
+	case STATES.WALL_HIT:
+		image_speed = 1;
+		if (sprite_index != sprite_shell_wall_hit)
+		{
+			
+		}
+	break;
 }

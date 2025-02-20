@@ -27,7 +27,6 @@
     {"name":"inst_104F5837","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_42CB7063","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_10D114C3","path":"rooms/rm_level_9/rm_level_9.yy",},
-    {"name":"inst_4BF1948B","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_54966C5E","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_288A90B9","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_4A3DA0C0","path":"rooms/rm_level_9/rm_level_9.yy",},
@@ -80,7 +79,6 @@
     {"name":"inst_7FEAF8","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_7089B2FA","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_16623767","path":"rooms/rm_level_9/rm_level_9.yy",},
-    {"name":"inst_4172393D_1_1_1_1_1_1_1_1_1","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_1D3F6DD9","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_5DF1E7F5","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_708A5EDC","path":"rooms/rm_level_9/rm_level_9.yy",},
@@ -120,6 +118,8 @@
     {"name":"inst_4FF95E3","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_120AD301","path":"rooms/rm_level_9/rm_level_9.yy",},
     {"name":"inst_5D4527FD","path":"rooms/rm_level_9/rm_level_9.yy",},
+    {"name":"inst_4BF1948B","path":"rooms/rm_level_9/rm_level_9.yy",},
+    {"name":"inst_4172393D_1_1_1_1_1_1_1_1_1","path":"rooms/rm_level_9/rm_level_9.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -214,7 +214,7 @@
         {"$GMRInstance":"v1","%Name":"inst_2473CEBE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2473CEBE","objectId":{"name":"obj_kiwi","path":"objects/obj_kiwi/obj_kiwi.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":11744.0,"y":768.0,},
       ],"layers":[],"name":"Collectiable","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Player","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_4172393D_1_1_1_1_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4172393D_1_1_1_1_1_1_1_1_1","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":992.0,},
+        {"$GMRInstance":"v1","%Name":"inst_4172393D_1_1_1_1_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4172393D_1_1_1_1_1_1_1_1_1","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":8160.0,"y":1408.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Environment","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_76523553_1_1_1_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_76523553_1_1_1_1_1_1_1_1","objectId":{"name":"obj_beginning","path":"objects/obj_beginning/obj_beginning.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":288.0,"y":960.0,},
@@ -290,9 +290,9 @@
         {"$GMRInstance":"v1","%Name":"inst_120AD301","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_120AD301","objectId":{"name":"obj_saw_chain","path":"objects/obj_saw_chain/obj_saw_chain.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":15200.0,"y":384.0,},
         {"$GMRInstance":"v1","%Name":"inst_5D4527FD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5D4527FD","objectId":{"name":"obj_saw_chain","path":"objects/obj_saw_chain/obj_saw_chain.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":15200.0,"y":352.0,},
       ],"layers":[],"name":"Traps","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Menegers","depth":1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+    {"$GMRInstanceLayer":"","%Name":"Managers","depth":1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_7BF9BDDC_1_1_1_1_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7BF9BDDC_1_1_1_1_1_1_1_1_1","objectId":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.0,"x":0.0,"y":0.0,},
-      ],"layers":[],"name":"Menegers","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+      ],"layers":[],"name":"Managers","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"InvisiableWalls","depth":1100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_3CCDF5B_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3CCDF5B_1_1_1_1_1","objectId":{"name":"obj_border_wall","path":"objects/obj_border_wall/obj_border_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":59.27711,"x":-64.0,"y":-1169.735,},
         {"$GMRInstance":"v1","%Name":"inst_77E3C2A5_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_77E3C2A5_1_1_1_1","objectId":{"name":"obj_border_wall","path":"objects/obj_border_wall/obj_border_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":60.0,"x":15999.999,"y":-1216.0,},
