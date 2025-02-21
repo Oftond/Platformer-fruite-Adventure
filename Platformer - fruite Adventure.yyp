@@ -205,6 +205,7 @@
     {"id":{"name":"obj_turtle","path":"objects/obj_turtle/obj_turtle.yy",},},
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
     {"id":{"name":"rm_level_10","path":"rooms/rm_level_10/rm_level_10.yy",},},
+    {"id":{"name":"rm_level_11","path":"rooms/rm_level_11/rm_level_11.yy",},},
     {"id":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},},
     {"id":{"name":"rm_level_3","path":"rooms/rm_level_3/rm_level_3.yy",},},
     {"id":{"name":"rm_level_4","path":"rooms/rm_level_4/rm_level_4.yy",},},
@@ -503,6 +504,7 @@
     {"roomId":{"name":"rm_level_7","path":"rooms/rm_level_7/rm_level_7.yy",},},
     {"roomId":{"name":"rm_level_8","path":"rooms/rm_level_8/rm_level_8.yy",},},
     {"roomId":{"name":"rm_level_10","path":"rooms/rm_level_10/rm_level_10.yy",},},
+    {"roomId":{"name":"rm_level_11","path":"rooms/rm_level_11/rm_level_11.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

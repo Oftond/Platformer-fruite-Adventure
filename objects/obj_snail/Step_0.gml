@@ -6,7 +6,7 @@ if (is_death)
 
 var _is_graunded = place_meeting(x, y + 1, obj_game_manager.collision_tilemap);
 
-if (!_is_graunded)
+if (!_is_graunded && state == STATES.IDLE)
 	move_y += grav;
 	
 if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
@@ -21,11 +21,12 @@ if (current_hp < max_hp)
 	if (place_meeting(x + (move_spd * dir), y, obj_game_manager.collision_tilemap))
 	{
 		dir *= -1;
-		image_xscale = -dir;
-		state = STATES.WALL_HIT;
+		if (state == STATES.IDLE)
+			state = STATES.WALL_HIT;
 	}
 	
-	x += move_spd * 2 * dir;
+	image_xscale = -dir;
+	x += move_spd * dir;
 	exit;
 }
 

@@ -75,7 +75,13 @@ switch (state)
 		image_speed = 1;
 		if (sprite_index != sprite_shell_wall_hit)
 		{
-			
+			sprite_index = sprite_shell_wall_hit;
+			image_index = 0;
+		}
+		if (image_index >= image_number - 1)
+		{
+			image_speed = 0;
+			state = STATES.IDLE;
 		}
 	break;
 }

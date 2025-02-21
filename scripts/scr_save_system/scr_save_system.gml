@@ -134,8 +134,8 @@ function SaveRoom()
 		var _enemy = instance_find(obj_enemy_parent, i);
 		_room_struct.enemys[i] =
 		{
-			x_pos : _enemy.x,
-			y_pos : _enemy.y,
+			x_pos : _enemy.start_pos_x,
+			y_pos : _enemy.start_pos_y,
 			object : _enemy.object_index
 		};
 	}

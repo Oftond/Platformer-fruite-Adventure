@@ -50,6 +50,8 @@ doubleJump_sprites =
 	spr_virtualGuy_doubleJump
 ];
 
+touch_fruit = undefined;
+
 game_over = false;
 
 max_hp = global.MaxHP;
