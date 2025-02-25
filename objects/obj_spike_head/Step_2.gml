@@ -38,46 +38,15 @@ else if (move_y > max_move_spd)
 else if (move_y < -max_move_spd)
 	move_y = -max_move_spd;
 
-var _sub_pixel = 0.5;
-if (tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_left + move_x, y) && dir == DIRECTIONS.LEFT)
+switch(mode)
 {
-	var _pixel_check = _sub_pixel * sign(move_x);
-	while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
-		x += _pixel_check;
-	move_x = 0;
-	wait_timer = wait_time;
-	set_hit_sprite(sprite_hit_left);
-	dir = DIRECTIONS.TOP;
-}
-else if (tilemap_get_at_pixel(obj_game_manager.collision_tilemap, x, bbox_top + move_y) && dir == DIRECTIONS.TOP)
-{
-	var _pixel_check = _sub_pixel * sign(move_y);
-	while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
-		y += _pixel_check;
-	move_y = 0;
-	wait_timer = wait_time;
-	set_hit_sprite(sprite_hit_top);
-	dir = DIRECTIONS.RIGHT;
-}
-else if (tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_right + move_x, y) && dir == DIRECTIONS.RIGHT)
-{
-	var _pixel_check = _sub_pixel * sign(move_x);
-	while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
-		x += _pixel_check;
-	move_x = 0;
-	wait_timer = wait_time;
-	set_hit_sprite(sprite_hit_right);
-	dir = DIRECTIONS.BOTTOM;
-}
-else if (tilemap_get_at_pixel(obj_game_manager.collision_tilemap, x, bbox_bottom + move_y) && dir == DIRECTIONS.BOTTOM)
-{
-	var _pixel_check = _sub_pixel * sign(move_y);
-	while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
-		y += _pixel_check;
-	move_y = 0;
-	wait_timer = wait_time;
-	set_hit_sprite(sprite_hit_bottom);
-	dir = DIRECTIONS.LEFT;
+	case 0:
+		change_all_dir();
+	break;
+	
+	case 1:
+		change_horizontal_dir();
+	break;
 }
 
 x += move_x;
