@@ -27,7 +27,7 @@ switch (state)
 			if (!is_shoot)
 			{
 				is_shoot = true;
-				with (instance_create_depth(bbox_left, y - 6, -999, obj_plant_bullet))
+				with (instance_create_depth(x + 56 * -dir, y - 6, -999, obj_plant_bullet))
 				{
 					hspeed = 10 * -other.dir;
 				}

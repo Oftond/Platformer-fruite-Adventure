@@ -15,12 +15,13 @@ if (_find_player != noone)
 
 if (_distance_to_player <= shoot_range && _check_wall == noone && state == STATES.IDLE && count_shoot < max_count_shoot)
 {
-	if (y >= _find_player.y - sprite_get_height(sprite_index) && y <= _find_player.y + sprite_get_height(sprite_index))
+	if ((y >= _find_player.y - sprite_get_height(sprite_index) && y <= _find_player.y + sprite_get_height(sprite_index)) || is_detected_player)
 	{
 		is_shoot = false;
 		image_index = 0;
 		state = STATES.ATTACK;
 		count_shoot++;
+		is_detected_player = true;
 	}
 }
 
@@ -28,4 +29,5 @@ if (count_shoot >= max_count_shoot && shoot_timer > 0)
 {
 	alarm[0] = shoot_timer;
 	shoot_timer = 0;
+	is_detected_player = false;
 }
