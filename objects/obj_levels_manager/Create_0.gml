@@ -56,4 +56,5 @@ for (var i = 0; i < row; i++)
 	}
 }
 
-instance_create_layer(x, y, "Menegers", obj_shake);
+instance_create_layer(x, y, "Managers", obj_shake);
+instance_create_layer(1696, 960, "GUI", obj_back);

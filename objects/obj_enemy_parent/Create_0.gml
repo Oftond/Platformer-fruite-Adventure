@@ -6,3 +6,4 @@ wait_time = 60;
 name = "enemy";
 start_pos_x = x;
 start_pos_y = y;
+dir = 1;

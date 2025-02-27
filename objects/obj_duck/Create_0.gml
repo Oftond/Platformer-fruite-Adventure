@@ -13,5 +13,8 @@ jump_height = 0;
 jump_spd = 22;
 move_spd = 6;
 name = "duck";
-change_dir_left = 0;
-change_dir_right = 0;
+
+try_change_dir = function()
+{
+	if ((place_meeting(x + move_x, y, obj_game_manager.collision_tilemap) && !place_empty(x + move_x, y - 200, obj_game_manager.collision_tilemap) && is_graunded) || place_empty(x + move_x * 10, y + 400, obj_game_manager.collision_tilemap)) dir *= -1;
+}

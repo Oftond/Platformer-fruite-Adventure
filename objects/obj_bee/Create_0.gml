@@ -5,7 +5,7 @@ name = "bee";
 distance_attack = 600;
 is_shoot = false;
 shoot_timer = 0;
-max_shoot_timer = 40;
+max_shoot_timer = 50;
 spd = 0;
 move_spd = 0.02;
 
