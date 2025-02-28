@@ -38,7 +38,7 @@ if (detected_player)
 if (state == STATES.WALK)
 	move_x = move_spd * dir;
 
-if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
+if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap) || place_empty(x + 100 * dir, y + 30, obj_game_manager.collision_tilemap))
 {
 	if (wait_timer <= 0)
 	{

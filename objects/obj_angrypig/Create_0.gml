@@ -3,10 +3,8 @@ max_hp = 2;
 current_hp = max_hp;
 sprite_hit = spr_angrypig_hit;
 move_spd = 3;
-increase_spd = 4;
+increase_spd = 7;
 dir = choose(1, -1);
 wait_timer = 0;
 wait_time = 80;
 name = "angrypig";
-
-create_hitBox();
