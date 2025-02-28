@@ -132,6 +132,11 @@ update_globalHp = function()
 	global.CurrentHP = current_hp;
 }
 
+check_squeezing = function(_move_x, _move_y)
+{
+	return place_meeting(x + _move_x, y + _move_y, obj_game_manager.collision_tilemap);
+}
+
 instance_create_layer(x, y, "Managers", obj_camera);
 
 for (var i = 0; i < current_hp; i++)

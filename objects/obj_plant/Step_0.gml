@@ -17,11 +17,22 @@ if (_distance_to_player <= shoot_range && _check_wall == noone && state == STATE
 {
 	if ((y >= _find_player.y - sprite_get_height(sprite_index) && y <= _find_player.y + sprite_get_height(sprite_index)) || is_detected_player)
 	{
-		is_shoot = false;
-		image_index = 0;
-		state = STATES.ATTACK;
-		count_shoot++;
-		is_detected_player = true;
+		if (dir == -1 && _find_player.x > x)
+		{
+			is_shoot = false;
+			image_index = 0;
+			state = STATES.ATTACK;
+			count_shoot++;
+			is_detected_player = true;
+		}
+		else if (dir == 1 && _find_player.x < x)
+		{
+			is_shoot = false;
+			image_index = 0;
+			state = STATES.ATTACK;
+			count_shoot++;
+			is_detected_player = true;
+		}
 	}
 }
 

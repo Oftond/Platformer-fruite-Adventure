@@ -47,6 +47,10 @@ switch(mode)
 	case 1:
 		change_horizontal_dir();
 	break;
+	
+	case 2:
+		change_vertical_dir();
+	break;
 }
 
 x += move_x;
@@ -56,4 +60,6 @@ if (place_meeting(x, y, obj_player))
 {
 	obj_player.x += move_x;
 	obj_player.y += move_y;
+	if (obj_player.check_squeezing(move_x, move_y))
+		obj_player.get_damage(global.CurrentHP);
 }

@@ -84,6 +84,31 @@ change_horizontal_dir = function()
 	}
 }
 
+change_vertical_dir = function()
+{
+	var _sub_pixel = 0.5;
+	if (tilemap_get_at_pixel(obj_game_manager.collision_tilemap, x,  bbox_top + move_y) && dir == DIRECTIONS.TOP)
+	{
+		var _pixel_check = _sub_pixel * sign(move_y);
+		while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
+			y += _pixel_check;
+		move_y = 0;
+		wait_timer = wait_time;
+		set_hit_sprite(sprite_hit_top);
+		dir = DIRECTIONS.BOTTOM;
+	}
+	else if (tilemap_get_at_pixel(obj_game_manager.collision_tilemap, x,  bbox_bottom + move_y) && dir == DIRECTIONS.BOTTOM)
+	{
+		var _pixel_check = _sub_pixel * sign(move_y);
+		while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
+			y += _pixel_check;
+		move_y = 0;
+		wait_timer = wait_time;
+		set_hit_sprite(sprite_hit_bottom);
+		dir = DIRECTIONS.TOP;
+	}
+}
+
 set_hit_sprite = function(_sprite_hit)
 {
 	image_index = 0;
