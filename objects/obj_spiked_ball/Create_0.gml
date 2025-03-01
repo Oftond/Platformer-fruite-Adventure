@@ -1,10 +1,10 @@
 event_inherited();
 spd = 0;
 chain_distance = 32;
-spd_max = 0.8;
+spd_max = 0.6;
 spd_move = 0.08;
 mode = false;
-max_height = 30;
+max_height = 120;
 
 chains = function()
 {
@@ -13,12 +13,7 @@ chains = function()
 
 get_spd_max = function()
 {
-	return spd_max / (get_height() / max_height);
-}
-
-get_height = function()
-{
-	return max_height * (r / chain_distance);
+	return spd_max / chains();
 }
 
 xx = 864;
