@@ -1,5 +1,7 @@
 event_inherited();
 
+is_ripple_fruit = false;
+
 idle_sprites =
 [
 	spr_ninjaFrog_idle,

@@ -3,6 +3,8 @@ image_speed = 0;
 
 button_press = function()
 {
+	if (instance_exists(obj_transition))
+		return;
 	global.IsOnValume = !global.IsOnValume;
 	
 	if (global.IsOnValume)
@@ -17,4 +19,23 @@ button_press = function()
 		global.ValumeMusic = 0;
 		global.ValumeSound = 0;
 	}
+	global.SaveSystemManager.Save();
 }
+
+set_start_image = function()
+{
+	if (global.IsOnValume)
+	{
+		image_index = 0;
+		global.ValumeMusic = 0.5;
+		global.ValumeSound = 0.5;
+	}
+	else
+	{
+		image_index = 1;
+		global.ValumeMusic = 0;
+		global.ValumeSound = 0;
+	}
+}
+
+set_start_image();

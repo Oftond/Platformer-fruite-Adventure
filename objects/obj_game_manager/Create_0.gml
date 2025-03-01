@@ -1,4 +1,12 @@
-global.SaveSystemManager.Save();
+endAlpha = false;
+isAlpha = false;
+alpha_text = 0;
+alphaTime = 0;
+text =
+[
+	"Уровень",
+	"Level"
+]
 
 is_end_level = false;
 time_to_end_level = 10;
@@ -33,3 +41,5 @@ goto_next_level = function()
 {
 	alarm[0] = time_to_end_level;
 }
+
+global.SaveSystemManager.Save();

@@ -77,7 +77,7 @@ function GameManager() : SaveSystem() constructor
 			is_on_valume : global.IsOnValume,
 			friuts_count_in_room : global.FruitsCountInRoom,
 			volume_music : global.ValumeMusic,
-			volume_sound : global.ValumeSound
+			volume_sound : global.ValumeSound,
 		}
 		
 		return json_stringify(_player_struct);

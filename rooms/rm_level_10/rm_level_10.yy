@@ -171,10 +171,13 @@
     {"name":"inst_25DF1FEF","path":"rooms/rm_level_10/rm_level_10.yy",},
     {"name":"inst_16CA2478","path":"rooms/rm_level_10/rm_level_10.yy",},
     {"name":"inst_4172393D_1_1_1_1_1_1_1_1_1_1","path":"rooms/rm_level_10/rm_level_10.yy",},
+    {"name":"inst_3AA7B2D5","path":"rooms/rm_level_10/rm_level_10.yy",},
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"GUI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"GUI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"GUI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v1","%Name":"inst_3AA7B2D5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3AA7B2D5","objectId":{"name":"obj_player_heart_pickUp","path":"objects/obj_player_heart_pickUp/obj_player_heart_pickUp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":7968.0,"y":1088.0,},
+      ],"layers":[],"name":"GUI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"TrapsLayerIce","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"TrapsLayerIce","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":41,"SerialiseWidth":250,"TileCompressedData":[
           -257,-2147483648,-4,0,-246,-2147483648,-4,0,-247,-2147483648,-2,0,-248,-2147483648,1,0,-249,-2147483648,
           1,0,-249,-2147483648,-2,0,-6,-2147483648,-4,0,-238,-2147483648,-2,0,-5,-2147483648,-5,0,-238,-2147483648,
