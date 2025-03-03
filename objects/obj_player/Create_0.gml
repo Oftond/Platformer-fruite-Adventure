@@ -92,10 +92,7 @@ check_collision_enemy = function()
 {
 	with (instance_place(x, y + move_y, obj_enemy_parent))
 	{
-		if (other.is_death || (name == "turtle" && state == STATES.ATTACK) || (name == "ghost" && (state == STATES.DESAPPEAR || state == STATES.APPEAR)) || name == "skull" || is_death && other.flashing > 0 || state == STATES.HIT || other.is_knockback)
-		{
-			return;
-		}
+		if (other.is_death || (name == "turtle" && state == STATES.ATTACK) || (name == "ghost" && (state == STATES.DESAPPEAR || state == STATES.APPEAR)) || name == "skull" || is_death && other.flashing > 0 || state == STATES.HIT || other.is_knockback) return;
 	
 		if (!other.is_graunded)
 		{
@@ -119,7 +116,7 @@ check_collision_enemy = function()
 		other.move_y -= other.jump_spd + 5;
 		other.current_jumps = 1;
 		other.move_x = _x_sign * 10;
-		other.get_damage(other.damage);
+		other.get_damage(damage);
 		other.flashing = max_flashing;
 		other.is_knockback = true;
 		other.state = STATES.HIT;

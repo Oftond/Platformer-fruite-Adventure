@@ -502,6 +502,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
+    {"roomId":{"name":"rm_level_12","path":"rooms/rm_level_12/rm_level_12.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_levels_map","path":"rooms/rm_levels_map/rm_levels_map.yy",},},
     {"roomId":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
@@ -515,7 +516,6 @@
     {"roomId":{"name":"rm_level_9","path":"rooms/rm_level_9/rm_level_9.yy",},},
     {"roomId":{"name":"rm_level_10","path":"rooms/rm_level_10/rm_level_10.yy",},},
     {"roomId":{"name":"rm_level_11","path":"rooms/rm_level_11/rm_level_11.yy",},},
-    {"roomId":{"name":"rm_level_12","path":"rooms/rm_level_12/rm_level_12.yy",},},
     {"roomId":{"name":"rm_level_13","path":"rooms/rm_level_13/rm_level_13.yy",},},
   ],
   "templateType":"game",

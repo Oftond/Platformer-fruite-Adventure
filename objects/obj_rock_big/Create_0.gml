@@ -10,8 +10,6 @@ death_time = 5;
 name = "rock1";
 create_middle_rocks = false;
 
-create_hitBox();
-
 walk = function()
 {
 	move_x = move_spd * dir;

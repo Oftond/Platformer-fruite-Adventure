@@ -6,7 +6,7 @@ move_y = 0;
 move_y -= jump_spd + 5;
 current_jumps = 1;
 move_x = _x_sign * 10;
-current_hp -= other.damage;
+get_damage(other.damage);
 flashing = max_flashing;
 is_knockback = true;
 state = STATES.HIT;

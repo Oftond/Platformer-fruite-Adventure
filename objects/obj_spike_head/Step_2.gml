@@ -47,6 +47,10 @@ switch(mode)
 	case 1:
 		change_horizontal_dir();
 	break;
+	
+	case 2:
+		change_vertical_dir();
+	break;
 }
 
 x += move_x;

@@ -1,4 +1,5 @@
 event_inherited();
+damage = 1;
 max_hp = 1;
 current_hp = max_hp;
 wait_timer = 0;
