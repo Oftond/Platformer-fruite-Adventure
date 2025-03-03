@@ -15,6 +15,7 @@ var _jump_key_pressed = keyboard_check_pressed(vk_up) || keyboard_check_pressed(
 var _jump_key_hold = keyboard_check(vk_up) || keyboard_check(vk_space) || keyboard_check(ord("W"));
 is_graunded = ((place_meeting(x, y + 1, obj_game_manager.collision_tilemap)) || (place_meeting(x, y + 1, obj_parent_trap)) || (place_meeting(x, y + 1, obj_game_manager.traps_layer_sand)) || (place_meeting(x, y + 1, obj_game_manager.traps_layer_ice)));
 on_wall = place_meeting(x - 1, y, obj_game_manager.collision_tilemap) - place_meeting(x + 1, y, obj_game_manager.collision_tilemap);
+on_ice = place_meeting(x, y + max(1, move_y), obj_game_manager.traps_layer_ice) && !place_meeting(x, y + max(1, move_y), obj_game_manager.collision_tilemap);
 
 move_locked_time = max(move_locked_time - 1, 0);
 
@@ -84,7 +85,8 @@ if (!is_knockback)
 	{
 		if (_dir != 0)
 			image_xscale = sign(_dir);
-		move_x = _dir * move_spd;
+		if (on_ice) move_x = _dir != 0 ? _dir * move_spd * 2 : image_xscale * move_spd;
+		else move_x = _dir * move_spd;
 		
 		if (_jump_key_pressed && current_jumps < max_jumps)
 		{
@@ -186,7 +188,7 @@ if (place_meeting(x, y + max(1, move_y), obj_fire))
 				{
 					var _x_sign = sign(other.x - x);
 					other.move_x = _x_sign * 10;
-					other.current_hp--;
+					get_damage(1);
 					if (other.current_hp > 0)
 						other.flashing = other.max_flashing;
 					other.is_knockback = true;
@@ -272,14 +274,6 @@ if (place_meeting(x, y + max(1, move_y), obj_game_manager.traps_layer_sand) && !
 {
 	if (move_x != 0)
 		move_x = round(move_x / 2);
-}
-
-if (place_meeting(x, y + max(1, move_y), obj_game_manager.traps_layer_ice) && !place_meeting(x, y + max(1, move_y), obj_game_manager.collision_tilemap))
-{
-	if (move_x != 0)
-		move_x += (move_spd / 2) * sign(move_x)
-	else
-		move_x += move_spd * sign(image_xscale)
 }
 
 if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))

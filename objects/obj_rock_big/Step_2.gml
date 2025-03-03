@@ -17,15 +17,16 @@ switch (state)
 	break;
 	
 	case STATES.HIT:
-		if (image_index >= image_number - 1 && is_death && !create_middle_rocks)
-		{
-			create_middle_rocks = true;
-			alarm[0] = death_time;
-		}
 		if (sprite_index != sprite_hit)
 		{
 			sprite_index = sprite_hit;
 			image_index = 0;
+		}
+	
+		if (image_index >= image_number - 1 && is_death && !create_middle_rocks)
+		{
+			create_middle_rocks = true;
+			alarm[0] = death_time;
 		}
 		image_speed = 1;
 	break;

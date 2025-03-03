@@ -15,14 +15,14 @@ walk = function()
 {
 	move_x = move_spd * dir;
 	
-	is_graunded = place_meeting(x, y + 1, obj_game_manager.collision_tilemap);
+	is_graunded = place_meeting(x, y + 1, obj_game_manager.collision_tilemap) || place_meeting(x, y + 1, obj_game_manager.traps_layer_ice) || place_meeting(x, y + 1, obj_game_manager.traps_layer_sand);
 	
 	if (!is_graunded)
 	{
 		move_y += grav;
 	}
 	
-	if (place_meeting(x + move_x, y - 10, obj_game_manager.collision_tilemap) || place_empty(x + move_x, y + 50, obj_game_manager.collision_tilemap))
+	if (place_meeting(x + move_x, y - 10, obj_game_manager.collision_tilemap) || (place_empty(x + 100 * dir, y + 50, obj_game_manager.collision_tilemap) && place_empty(x + 100 * dir, y + 50, obj_game_manager.traps_layer_sand) && place_empty(x + 100 * dir, y + 50, obj_game_manager.traps_layer_ice)))
 	{
 		move_x = 0;
 		if (wait_timer <= 0)
@@ -41,7 +41,23 @@ walk = function()
 		move_y = 0;
 	}
 
-	if (move_x != 0)
+	if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_ice))
+	{
+		var _pixel_check = _sub_pixel * sign(move_y);
+		while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_ice))
+			y += _pixel_check;
+		move_y = 0;
+	}
+	
+	if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_sand))
+	{
+		var _pixel_check = _sub_pixel * sign(move_y);
+		while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_sand))
+			y += _pixel_check;
+		move_y = 0;
+	}
+
+	if (move_x != 0 && state != STATES.HIT)
 		state = STATES.WALK;
 	
 	image_xscale = -dir;

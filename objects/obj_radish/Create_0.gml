@@ -36,10 +36,7 @@ walk = function()
 		}
 	}
 
-	if (move_x != 0)
-	{
-		state = STATES.WALK;
-	}
+	if (move_x != 0 && state != STATES.HIT) state = STATES.WALK;
 	image_xscale = -dir;
 	x += move_x;
 }

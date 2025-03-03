@@ -53,7 +53,6 @@ doubleJump_sprites =
 ];
 
 touch_fruit = undefined;
-
 game_over = false;
 
 max_hp = global.MaxHP;
@@ -64,6 +63,7 @@ move_wall_spd = 6;
 move_locked_max_time = 10;
 move_locked_time = 0;
 on_wall = 0;
+on_ice = false;
 on_arrow = false;
 global.RespownX = x;
 global.RespownY = y;
@@ -109,7 +109,7 @@ check_collision_enemy = function()
 				return;
 			}
 		}
-	
+		
 		var _x_sign = sign(other.x - x) == 0 ? image_xscale : sign(other.x - x);
 
 		other.move_y = 0;
