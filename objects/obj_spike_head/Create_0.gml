@@ -25,7 +25,7 @@ change_all_dir = function()
 		set_hit_sprite(sprite_hit_left);
 		dir = DIRECTIONS.TOP;
 	}
-	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_left + move_x, y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, bbox_left + move_x, y)) && dir == DIRECTIONS.TOP)
+	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, x, bbox_top + move_y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, x, bbox_top + move_y)) && dir == DIRECTIONS.TOP)
 	{
 		var _pixel_check = _sub_pixel * sign(move_y);
 		while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
@@ -35,7 +35,7 @@ change_all_dir = function()
 		set_hit_sprite(sprite_hit_top);
 		dir = DIRECTIONS.RIGHT;
 	}
-	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_left + move_x, y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, bbox_left + move_x, y)) && dir == DIRECTIONS.RIGHT)
+	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_right + move_x, y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, bbox_right + move_x, y)) && dir == DIRECTIONS.RIGHT)
 	{
 		var _pixel_check = _sub_pixel * sign(move_x);
 		while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
@@ -45,7 +45,7 @@ change_all_dir = function()
 		set_hit_sprite(sprite_hit_right);
 		dir = DIRECTIONS.BOTTOM;
 	}
-	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_left + move_x, y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, bbox_left + move_x, y)) && dir == DIRECTIONS.BOTTOM)
+	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, x, bbox_bottom + move_y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, x, bbox_bottom + move_y)) && dir == DIRECTIONS.BOTTOM)
 	{
 		var _pixel_check = _sub_pixel * sign(move_y);
 		while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
@@ -70,7 +70,7 @@ change_horizontal_dir = function()
 		set_hit_sprite(sprite_hit_left);
 		dir = DIRECTIONS.RIGHT;
 	}
-	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_left + move_x, y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, bbox_left + move_x, y)) && dir == DIRECTIONS.RIGHT)
+	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_right + move_x, y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, bbox_right + move_x, y)) && dir == DIRECTIONS.RIGHT)
 	{
 		var _pixel_check = _sub_pixel * sign(move_x);
 		while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
@@ -85,7 +85,7 @@ change_horizontal_dir = function()
 change_vertical_dir = function()
 {
 	var _sub_pixel = 0.5;
-	if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_left + move_x, y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, bbox_left + move_x, y)) && dir == DIRECTIONS.TOP)
+	if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, x, bbox_top + move_y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, x, bbox_top + move_y)) && dir == DIRECTIONS.TOP)
 	{
 		var _pixel_check = _sub_pixel * sign(move_y);
 		while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
@@ -95,7 +95,7 @@ change_vertical_dir = function()
 		set_hit_sprite(sprite_hit_top);
 		dir = DIRECTIONS.BOTTOM;
 	}
-	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, bbox_left + move_x, y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, bbox_left + move_x, y)) && dir == DIRECTIONS.BOTTOM)
+	else if ((tilemap_get_at_pixel(obj_game_manager.collision_tilemap, x, bbox_bottom + move_y) || tilemap_get_at_pixel(obj_game_manager.traps_layer_sand, x, bbox_bottom + move_y)) && dir == DIRECTIONS.BOTTOM)
 	{
 		var _pixel_check = _sub_pixel * sign(move_y);
 		while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))

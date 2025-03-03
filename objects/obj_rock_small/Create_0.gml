@@ -13,8 +13,6 @@ name = "rock3";
 death_time = 5;
 create_small_rocks = false;
 
-create_hitBox();
-
 walk = function()
 {
 	move_x = move_spd * dir;
@@ -26,12 +24,8 @@ walk = function()
 		move_y += grav;
 	}
 	
-	var _sub_pixel = 0.5;
-	if (place_meeting(x + move_x, y - 10, obj_game_manager.collision_tilemap))
+	if (place_meeting(x + move_x, y - 10, obj_game_manager.collision_tilemap) || place_empty(x + move_x, y + 50, obj_game_manager.collision_tilemap))
 	{
-		var _pixel_check = _sub_pixel * sign(move_x);
-		while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
-			x += _pixel_check;
 		move_x = 0;
 		if (wait_timer <= 0)
 		{
@@ -40,6 +34,7 @@ walk = function()
 		}
 	}
 	
+	var _sub_pixel = 0.5;
 	if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
 	{
 		var _pixel_check = _sub_pixel * sign(move_y);

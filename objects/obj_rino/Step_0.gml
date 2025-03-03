@@ -7,7 +7,7 @@ if (is_death)
 if (wait_time > 0 && state == STATES.IDLE)
 	wait_time--;
 
-is_graunded = place_meeting(x, y + 1, obj_game_manager.collision_tilemap);
+is_graunded = place_meeting(x, y + 1, obj_game_manager.collision_tilemap) || place_meeting(x, y + 1, obj_game_manager.traps_layer_sand);
 if (wait_time <= 0)
 	move_x = move_spd * dir;
 
@@ -24,7 +24,7 @@ if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
 }
 
 var _sub_pixel = 0.5;
-if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
+if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap) || place_meeting(x, y + move_y, obj_game_manager.traps_layer_sand))
 {
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))

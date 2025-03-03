@@ -1,3 +1,9 @@
+text =
+[
+	"ОБЩИЙ СЧЕТ",
+	"TOTAL SCORE"
+]
+
 levels_icon =
 [
 	_01,
