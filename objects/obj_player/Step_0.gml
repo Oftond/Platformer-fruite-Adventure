@@ -85,8 +85,44 @@ if (!is_knockback)
 	{
 		if (_dir != 0)
 			image_xscale = sign(_dir);
-		if (on_ice) move_x = _dir != 0 ? _dir * move_spd * 2 : image_xscale * move_spd;
-		else move_x = _dir * move_spd;
+		
+		if (on_ice)
+		{
+			if (inertia != 0 && _dir != 0)
+			{
+		        inertia *= ice_speed_multiplier;
+		        inertia = clamp(inertia, -max_x_speed, max_x_speed);
+			}
+		}
+		
+		if (!is_graunded && inertia != 0)
+		{
+			move_x = inertia;
+		}
+		
+		if (inertia != 0 && is_graunded && !on_ice)
+		{
+			inertia = lerp(inertia, 0, deceleration);
+			move_x = inertia;
+			if (abs(inertia) < 0.1) inertia = 0;
+		}
+		
+		if (_dir != sign(inertia) && inertia != 0 && _dir != 0)
+		{
+			move_x = lerp(move_x, 0, turn_deceleration);
+			if (abs(move_x) < min_turn_speed)
+			{
+				move_x = _dir * move_spd;
+			}
+		}
+		else if (inertia != 0) move_x = inertia;
+		else
+		{
+			move_x = _dir * move_spd;
+			if (inertia == 0 && on_ice) inertia = move_x;
+		}
+		
+		if (move_x == 0 && inertia != 0) move_x = inertia;
 		
 		if (_jump_key_pressed && current_jumps < max_jumps)
 		{
@@ -276,8 +312,18 @@ if (place_meeting(x, y + max(1, move_y), obj_game_manager.traps_layer_sand) && !
 		move_x = round(move_x / 2);
 }
 
+if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
+{
+	x -= move_x;
+	var _pixel_check = _sub_pixel * sign(move_x);
+	while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
+		x += _pixel_check;
+	move_x = 0;
+}
+
 if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
 {
+	y -= move_y;
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
 		y += _pixel_check;
@@ -285,15 +331,7 @@ if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
 	jump_timer = 0;
 }
 
-if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
-{
-	var _pixel_check = _sub_pixel * sign(move_x);
-	while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
-		x += _pixel_check;
-	move_x = 0;
-}
-
-move_y = clamp(move_y, -35, 35);
+move_y = clamp(move_y, -max_y_speed, max_y_speed);
 
 x += move_x;
 y += move_y;
