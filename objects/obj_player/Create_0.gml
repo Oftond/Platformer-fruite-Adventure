@@ -65,6 +65,10 @@ move_locked_time = 0;
 on_wall = 0;
 on_ice = false;
 on_arrow = false;
+
+ice_acceleration = 0.5;
+max_slide_speed = 8;
+
 global.RespownX = x;
 global.RespownY = y;
 mask_index = spr_player_maskCollide;

@@ -19,6 +19,24 @@ if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.collisio
 	move_y = 0;
 	state = STATES.ATTACK;
 }
+else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.traps_layer_sand) && state == STATES.FALL)
+{
+	y = round(y);
+	var _pixel_check = _sub_pixel * sign(move_y);
+	while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_sand))
+		y += _pixel_check;
+	move_y = 0;
+	state = STATES.ATTACK;
+}
+else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.traps_layer_ice) && state == STATES.FALL)
+{
+	y = round(y);
+	var _pixel_check = _sub_pixel * sign(move_y);
+	while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_ice))
+		y += _pixel_check;
+	move_y = 0;
+	state = STATES.ATTACK;
+}
 
 if (state == STATES.IDLE && player_detected)
 {

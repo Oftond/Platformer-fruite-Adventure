@@ -22,12 +22,8 @@ walk = function()
 {
 	move_x = move_spd * dir;
 	
-	var _sub_pixel = 0.5;
-	if (place_meeting(x + move_x, y - 10, obj_game_manager.collision_tilemap))
+	if (place_meeting(x + move_x, y - 10, obj_game_manager.collision_tilemap) || place_empty(x + 100 * dir, y + 50, obj_game_manager.collision_tilemap))
 	{
-		var _pixel_check = _sub_pixel * sign(move_x);
-		while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
-			x += _pixel_check;
 		move_x = 0;
 		if (wait_timer <= 0)
 		{

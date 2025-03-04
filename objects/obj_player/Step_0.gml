@@ -188,7 +188,7 @@ if (place_meeting(x, y + max(1, move_y), obj_fire))
 				{
 					var _x_sign = sign(other.x - x);
 					other.move_x = _x_sign * 10;
-					get_damage(1);
+					other.get_damage(1);
 					if (other.current_hp > 0)
 						other.flashing = other.max_flashing;
 					other.is_knockback = true;

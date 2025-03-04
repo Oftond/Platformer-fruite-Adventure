@@ -115,7 +115,9 @@ function SaveRoom()
 		checkPointFlagNumber : instance_number(obj_checkpoint_flag_idle) + 1,
 		checkPoints : array_create(instance_number(obj_checkpoint), undefined),
 		checkPointsFlag : array_create(instance_number(obj_checkpoint_flag_idle) + 1, undefined),
-		playerScore : score
+		playerScore : score,
+		blocksNumber : instance_number(obj_block),
+		blocks : array_create(instance_number(obj_block), undefined)
 	}
 
 	for (var i = 0; i < _room_struct.fruitNumber; i++)
@@ -172,6 +174,16 @@ function SaveRoom()
 			};
 	}
 	
+	for (var i = 0; i < _room_struct.blocksNumber; i++)
+	{
+		var _block = instance_find(obj_block, i);
+		_room_struct.blocks[i] =
+		{
+			x_pos : _block.x,
+			y_pos : _block.y,
+		};
+	}
+	
 	global.RoomData = _room_struct;
 }
 
@@ -188,6 +200,9 @@ function LoadRoom()
 		
 	if (instance_exists(obj_checkpoint))
 		instance_destroy(obj_checkpoint)
+		
+	if (instance_exists(obj_block))
+		instance_destroy(obj_block)
 		
 	for (var i = 0; i < global.RoomData.enemyNumber; i++)
 	{
@@ -207,6 +222,11 @@ function LoadRoom()
 	for (var i = 0; i < global.RoomData.checkPointFlagNumber; i++)
 	{
 		instance_create_layer(global.RoomData.checkPointsFlag[i].x_pos, global.RoomData.checkPointsFlag[i].y_pos, "Environment", global.RoomData.checkPointsFlag[i].object)
+	}
+	
+	for (var i = 0; i < global.RoomData.blocksNumber; i++)
+	{
+		instance_create_layer(global.RoomData.blocks[i].x_pos, global.RoomData.blocks[i].y_pos, "Environment", obj_block);
 	}
 	
 	score = global.RoomData.playerScore;
