@@ -11,5 +11,3 @@ wait_time = 120;
 is_fire = true;
 name = "skull";
 dir = irandom(360);
-
-create_hitBox();

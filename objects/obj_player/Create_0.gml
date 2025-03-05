@@ -66,11 +66,11 @@ on_wall = 0;
 on_ice = false;
 on_arrow = false;
 
-ice_speed_multiplier = 1.5;
+ice_speed_multiplier = 1.2;
 inertia = 0;
 deceleration = 0.2;
-turn_deceleration = 0.2;
-min_turn_speed = 0.5;
+turn_deceleration = 0.3;
+min_turn_speed = 0.1;
 
 max_x_speed = 10;
 max_y_speed = 35;

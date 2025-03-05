@@ -10,5 +10,3 @@ wait_time = 240;
 is_visible = true;
 alarm[0] = wait_time;
 name = "ghost";
-
-create_hitBox();

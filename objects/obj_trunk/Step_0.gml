@@ -6,7 +6,7 @@ if (is_death)
 
 move_x = move_spd * dir;
 
-if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
+if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap) || (place_empty(x + 100 * dir, y + 50, obj_game_manager.collision_tilemap) && place_empty(x + 100 * dir, y + 50, obj_game_manager.traps_layer_sand) && place_empty(x + 100 * dir, y + 50, obj_game_manager.traps_layer_ice)))
 {
 	if (wait_timer <= 0)
 	{
@@ -47,7 +47,7 @@ if (shoot_timer > 0 && state == STATES.ATTACK)
 if (wait_timer <= 0)
 {
 	image_xscale = -sign(dir);
-	if (move_x != 0)
+	if (move_x != 0 && state != STATES.HIT)
 		state = STATES.WALK;
 	x += move_x;
 }

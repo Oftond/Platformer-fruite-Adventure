@@ -18,9 +18,8 @@ switch (state)
 		if (!instance_exists(obj_turtle_spikes))
 		{
 			object_spikes = instance_create_depth(x, y, depth, obj_turtle_spikes);
-			object_spikes.image_index = other.image_index;
+			object_spikes.image_index = image_index;
 		}
-		object_spikes.sprite_index = sprite_index;
 		image_speed = 1;
 		if (sprite_index != sprite_attack_start && !attack_start)
 		{
@@ -46,14 +45,14 @@ switch (state)
 		}
 		else if (sprite_index == sprite_attack_end && attack_end)
 		{
+			if (instance_exists(object_spikes))
+				instance_destroy(object_spikes);
 			if (image_index >= image_number - 1)
 			{
 				state = STATES.IDLE;
 				wait_timer = 0;
 				attack_start = false;
 				attack_end = false;
-				if (instance_exists(object_spikes))
-					instance_destroy(object_spikes);
 			}
 		}
 		if (wait_timer > 0)

@@ -95,10 +95,7 @@ if (!is_knockback)
 			}
 		}
 		
-		if (!is_graunded && inertia != 0)
-		{
-			move_x = inertia;
-		}
+		if (!is_graunded && inertia != 0) move_x = inertia;
 		
 		if (inertia != 0 && is_graunded && !on_ice)
 		{
@@ -107,13 +104,25 @@ if (!is_knockback)
 			if (abs(inertia) < 0.1) inertia = 0;
 		}
 		
-		if (_dir != sign(inertia) && inertia != 0 && _dir != 0)
+		if (_dir != sign(move_x) && move_x != 0 && _dir != 0)
 		{
 			move_x = lerp(move_x, 0, turn_deceleration);
 			if (abs(move_x) < min_turn_speed)
 			{
 				move_x = _dir * move_spd;
 			}
+		}
+		
+		if (_dir != sign(inertia) && _dir != 0 && inertia != 0)
+		{
+			inertia = lerp(inertia, 0, turn_deceleration);
+			if (abs(inertia) < min_turn_speed)
+			{
+				move_x = _dir * move_spd;
+				if (on_ice) inertia = move_x;
+				else inertia = 0;
+			}
+			else move_x = inertia;
 		}
 		else if (inertia != 0) move_x = inertia;
 		else
@@ -245,6 +254,7 @@ if (place_meeting(x, y + max(1, move_y), obj_fire))
 
 if (place_meeting(x + move_x, y, obj_parent_trap))
 {
+	x -= move_x;
 	var _trap = instance_place(x, y +  max(0, move_y), obj_parent_trap);
 	var _get_damage = false;
 	with(_trap)
@@ -265,6 +275,7 @@ if (place_meeting(x + move_x, y, obj_parent_trap))
 
 if (place_meeting(x, y + move_y, obj_parent_trap))
 {
+	y -= move_y;
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_parent_trap))
 		y += _pixel_check;
@@ -274,6 +285,7 @@ if (place_meeting(x, y + move_y, obj_parent_trap))
 
 if (place_meeting(x + move_x, y, obj_game_manager.traps_layer_sand))
 {
+	x -= move_x;
 	var _pixel_check = _sub_pixel * sign(move_x);
 	while (!place_meeting(x + _pixel_check, y, obj_game_manager.traps_layer_sand))
 		x += _pixel_check;
@@ -282,6 +294,7 @@ if (place_meeting(x + move_x, y, obj_game_manager.traps_layer_sand))
 
 if (place_meeting(x + move_x, y, obj_game_manager.traps_layer_ice))
 {
+	x -= move_x;
 	var _pixel_check = _sub_pixel * sign(move_x);
 	while (!place_meeting(x + _pixel_check, y, obj_game_manager.traps_layer_ice))
 		x += _pixel_check;
@@ -290,6 +303,7 @@ if (place_meeting(x + move_x, y, obj_game_manager.traps_layer_ice))
 
 if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_sand))
 {
+	y -= move_y;
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_sand))
 		y += _pixel_check;
@@ -299,6 +313,7 @@ if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_sand))
 
 if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_ice))
 {
+	y -= move_y;
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_ice))
 		y += _pixel_check;
@@ -319,6 +334,7 @@ if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
 	while (!place_meeting(x + _pixel_check, y, obj_game_manager.collision_tilemap))
 		x += _pixel_check;
 	move_x = 0;
+	inertia = 0;
 }
 
 if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))

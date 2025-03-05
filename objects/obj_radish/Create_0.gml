@@ -22,7 +22,7 @@ walk = function()
 {
 	move_x = move_spd * dir;
 	
-	if (place_meeting(x + move_x, y - 10, obj_game_manager.collision_tilemap) || place_empty(x + 100 * dir, y + 50, obj_game_manager.collision_tilemap))
+	if (place_meeting(x + move_x, y - 10, obj_game_manager.collision_tilemap) || (place_empty(x + 100 * dir, y + 50, obj_game_manager.collision_tilemap) && place_empty(x + 100 * dir, y + 50, obj_game_manager.traps_layer_sand) && place_empty(x + 100 * dir, y + 50, obj_game_manager.traps_layer_ice)))
 	{
 		move_x = 0;
 		if (wait_timer <= 0)
