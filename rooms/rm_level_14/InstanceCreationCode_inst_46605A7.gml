@@ -1,2 +1,1 @@
-mode = 1;
-dir = DIRECTIONS.LEFT;
+dir = DIRECTIONS.RIGHT;

@@ -15,7 +15,7 @@ switch (state)
 	break;
 	
 	case STATES.ATTACK:
-		if (!instance_exists(obj_turtle_spikes))
+		if (object_spikes = undefined)
 		{
 			object_spikes = instance_create_depth(x, y, depth, obj_turtle_spikes);
 			object_spikes.image_index = image_index;
@@ -46,7 +46,10 @@ switch (state)
 		else if (sprite_index == sprite_attack_end && attack_end)
 		{
 			if (instance_exists(object_spikes))
+			{
 				instance_destroy(object_spikes);
+				object_spikes = undefined;
+			}
 			if (image_index >= image_number - 1)
 			{
 				state = STATES.IDLE;

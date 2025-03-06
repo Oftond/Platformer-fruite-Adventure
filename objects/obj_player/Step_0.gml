@@ -99,17 +99,16 @@ if (!is_knockback)
 		
 		if (inertia != 0 && is_graunded && !on_ice)
 		{
-			inertia = lerp(inertia, 0, deceleration);
-			move_x = inertia;
-			if (abs(inertia) < 0.1) inertia = 0;
-		}
-		
-		if (_dir != sign(move_x) && move_x != 0 && _dir != 0)
-		{
-			move_x = lerp(move_x, 0, turn_deceleration);
-			if (abs(move_x) < min_turn_speed)
+			if (_dir != 0)
 			{
-				move_x = _dir * move_spd;
+				inertia = 0;
+				move_x = inertia;
+			}
+			else
+			{
+				inertia = lerp(inertia, 0, deceleration);
+				move_x = inertia;
+				if (abs(inertia) < 0.1) inertia = 0;
 			}
 		}
 		
