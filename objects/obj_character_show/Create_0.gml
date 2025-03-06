@@ -1,3 +1,15 @@
+text =
+[
+	"Требуется",
+	"Need"
+];
+
+text2 =
+[
+	"Открыт",
+	"Discovered"
+];
+
 manager = undefined;
 number = -1;
 current_x_pos = x;

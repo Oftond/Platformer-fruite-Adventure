@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_fatBird_idle",
   "bboxMode":2,
-  "bbox_bottom":155,
+  "bbox_bottom":167,
   "bbox_left":44,
   "bbox_right":111,
   "bbox_top":72,

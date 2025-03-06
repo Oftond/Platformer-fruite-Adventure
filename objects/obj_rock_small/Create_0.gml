@@ -24,13 +24,13 @@ walk = function()
 		move_y += grav;
 	}
 	
-	if (place_meeting(x + move_x, y - 10, obj_game_manager.collision_tilemap) || (place_empty(x + 100 * dir, y + 50, obj_game_manager.collision_tilemap) && place_empty(x + 100 * dir, y + 50, obj_game_manager.traps_layer_sand) && place_empty(x + 100 * dir, y + 50, obj_game_manager.traps_layer_ice)))
+	if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap) || (place_empty(x + 150 * dir, y + 50, obj_game_manager.collision_tilemap) && place_empty(x + 150 * dir, y + 50, obj_game_manager.traps_layer_sand) && place_empty(x + 150 * dir, y + 50, obj_game_manager.traps_layer_ice)))
 	{
+		if (state != STATES.HIT) state = STATES.IDLE;
 		move_x = 0;
 		if (wait_timer <= 0)
 		{
 			wait_timer = wait_time;
-			state = STATES.IDLE;
 		}
 	}
 	

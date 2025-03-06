@@ -1,9 +1,9 @@
 all_characters = 
 [
-	{name : "virtualGuy", sprite : spr_virtualGuy_idle, cost : 1145},
+	{name : "virtualGuy", sprite : spr_virtualGuy_idle, cost : 1230},
 	{name : "ninjaFrog", sprite : spr_ninjaFrog_idle, cost : 0},
-	{name : "pinkMan", sprite : spr_pinkMan_idle, cost : 345},
-	{name : "maskDude", sprite : spr_maskDude_idle, cost : 675}
+	{name : "pinkMan", sprite : spr_pinkMan_idle, cost : 264},
+	{name : "maskDude", sprite : spr_maskDude_idle, cost : 748}
 ];
 
 current_index = global.ChooseCharacter;
