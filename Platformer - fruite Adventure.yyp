@@ -243,6 +243,7 @@
     {"id":{"name":"scr_reset_default_params","path":"scripts/scr_reset_default_params/scr_reset_default_params.yy",},},
     {"id":{"name":"scr_ripple_fruit","path":"scripts/scr_ripple_fruit/scr_ripple_fruit.yy",},},
     {"id":{"name":"scr_save_system","path":"scripts/scr_save_system/scr_save_system.yy",},},
+    {"id":{"name":"scr_set_random_background","path":"scripts/scr_set_random_background/scr_set_random_background.yy",},},
     {"id":{"name":"scr_shake","path":"scripts/scr_shake/scr_shake.yy",},},
     {"id":{"name":"scr_startSettings_camera","path":"scripts/scr_startSettings_camera/scr_startSettings_camera.yy",},},
     {"id":{"name":"seq_destroy_block","path":"sequences/seq_destroy_block/seq_destroy_block.yy",},},
