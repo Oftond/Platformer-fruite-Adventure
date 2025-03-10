@@ -143,7 +143,7 @@ update_globalHp = function()
 
 check_squeezing = function(_move_x, _move_y)
 {
-	return place_meeting(x + _move_x, y + _move_y, obj_game_manager.collision_tilemap);
+	return place_meeting(x + _move_x, y + _move_y, obj_game_manager.collision_tilemap) || place_meeting(x + _move_x, y + _move_y, obj_game_manager.traps_layer_sand) || place_meeting(x + _move_x, y + _move_y, obj_game_manager.traps_layer_ice);
 }
 
 instance_create_layer(x, y, "Managers", obj_camera);

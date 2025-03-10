@@ -213,7 +213,7 @@ if (place_meeting(x, y + 1, obj_rock_head))
 	var _head = instance_place(x, y + 1, obj_rock_head);
 	if (bbox_bottom <= _head.bbox_top)
 	{
-		if (!place_meeting(x + _head.move_x, y, obj_game_manager.collision_tilemap) && !place_meeting(x, y + _head.move_y, obj_game_manager.collision_tilemap))
+		if (!place_meeting(x + _head.move_x, y, obj_game_manager.collision_tilemap) && !place_meeting(x, y + _head.move_y, obj_game_manager.collision_tilemap) && !place_meeting(x + _head.move_x, y, obj_game_manager.traps_layer_ice) && !place_meeting(x, y + _head.move_y, obj_game_manager.traps_layer_ice) && !place_meeting(x + _head.move_x, y, obj_game_manager.traps_layer_sand) && !place_meeting(x, y + _head.move_y, obj_game_manager.traps_layer_sand))
 			x += _head.move_x;
 	}
 }

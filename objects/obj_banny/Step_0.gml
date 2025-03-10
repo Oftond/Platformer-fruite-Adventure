@@ -50,12 +50,12 @@ else if (place_meeting(x + move_x, y, obj_game_manager.traps_layer_ice))
 	}
 }
 
-if ((place_empty(x + 5 * dir, y + 50, obj_game_manager.collision_tilemap) || place_empty(x + 5 * dir, y + 50, obj_game_manager.traps_layer_sand) || place_empty(x + 5 * dir, y + 50, obj_game_manager.traps_layer_ice)) && can_jump && instance_exists(obj_player))
+if ((place_empty(x + 5 * dir, y + 50, obj_game_manager.collision_tilemap) && place_empty(x + 5 * dir, y + 50, obj_game_manager.traps_layer_sand) && place_empty(x + 5 * dir, y + 50, obj_game_manager.traps_layer_ice)) && can_jump && instance_exists(obj_player))
 {
 	if (obj_player.y < y + 20)
 	{
 		move_y = jump_height;
-		can_jump = false;	
+		can_jump = false;
 	}
 }
 

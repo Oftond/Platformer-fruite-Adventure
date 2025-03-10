@@ -46,8 +46,11 @@ jump = function()
 	is_graunded = place_meeting(x, y + 1, obj_game_manager.collision_tilemap) || place_meeting(x, y + 1, obj_game_manager.traps_layer_ice) || place_meeting(x, y + 1, obj_game_manager.traps_layer_sand);
 
 	if (!is_graunded)
+	{
 		move_y += grav;
-	else if (!can_jump)
+		can_jump = false;
+	}
+	else if (!can_jump && is_graunded)
 		can_jump = true;
 		
 	if (move_y < 0)
