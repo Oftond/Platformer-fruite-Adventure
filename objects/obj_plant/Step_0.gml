@@ -13,7 +13,7 @@ if (_find_player != noone)
 	_distance_to_player = point_distance(x, y, _find_player.x, _find_player.y);
 }
 
-if (_distance_to_player <= shoot_range && _check_wall == noone && state == STATES.IDLE && count_shoot < max_count_shoot)
+if ((_distance_to_player <= shoot_range && _check_wall == noone && state == STATES.IDLE && count_shoot < max_count_shoot) || (is_detected_player && count_shoot < max_count_shoot && state == STATES.IDLE))
 {
 	if ((y >= _find_player.y - sprite_get_height(sprite_index) && y <= _find_player.y + sprite_get_height(sprite_index)) || is_detected_player)
 	{

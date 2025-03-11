@@ -1,1 +1,0 @@
-dir = DIRECTIONS.BOTTOM;

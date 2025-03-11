@@ -1,1 +1,1 @@
-dir = DIRECTIONS.TOP;
+dir = DIRECTIONS.RIGHT;
