@@ -6,7 +6,6 @@ sprite_hit_wall_1 = spr_skull_hit_wall_1;
 sprite_hit_wall_2 = spr_skull_hit_wall_2;
 sprite_hit = spr_skull_hit;
 move_spd = 4;
-dir = choose(1, -1);
 wait_time = 120;
 is_fire = true;
 name = "skull";
