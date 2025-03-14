@@ -102,6 +102,23 @@ check_collision_enemy = function()
 {
 	with (instance_place(x, y + move_y, obj_enemy_parent))
 	{
+		if (name == "rino")
+		{
+			if (sprite_index == sprite_hit_wall)
+			{
+				if (!other.is_graunded)
+				{
+					if ((other.bbox_bottom - other.move_y) < (bbox_top - move_y))
+					{
+						other.move_y = 0;
+						other.move_y -= other.jump_spd + 5;
+						other.current_jumps = 1;
+					}
+				}
+			
+				return;
+			}
+		}
 		if (other.is_death || (name == "turtle" && state == STATES.ATTACK) || (name == "ghost" && (state == STATES.DESAPPEAR || state == STATES.APPEAR)) || name == "skull" || is_death && other.flashing > 0 || state == STATES.HIT || other.is_knockback) return;
 	
 		if (!other.is_graunded)
