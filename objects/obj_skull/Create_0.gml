@@ -12,3 +12,5 @@ name = "skull";
 dir = irandom(360);
 damage = 1;
 player_come = false;
+
+parts = pointer_null;

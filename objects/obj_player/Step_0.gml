@@ -10,6 +10,8 @@ if (is_death)
 else if (y > room_height + 175)
 	get_damage(current_hp);
 
+if (cooldown_parts > 0) cooldown_parts--;
+
 var _dir = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left)|| keyboard_check(ord("A")));
 var _jump_key_pressed = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
 var _jump_key_hold = keyboard_check(vk_up) || keyboard_check(vk_space) || keyboard_check(ord("W"));
@@ -134,6 +136,7 @@ if (!is_knockback)
 		
 		if (_jump_key_pressed && current_jumps < max_jumps)
 		{
+			dust_jump_create(spr_dust_part, image_xscale, self);
 			current_jumps++;
 			jump_timer = jump_hold_time;
 			if (!is_graunded)
@@ -347,6 +350,16 @@ if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
 }
 
 move_y = clamp(move_y, -max_y_speed, max_y_speed);
+
+if (is_graunded && move_x != 0)
+{
+	if (place_meeting(x, y + 1, obj_game_manager.collision_tilemap))
+		dust_create(part_dust, image_xscale, self);
+	else if (place_meeting(x, y + 1, obj_game_manager.traps_layer_sand))
+		dust_create(part_sand, image_xscale, self);
+	else if (place_meeting(x, y + 1, obj_game_manager.traps_layer_ice))
+		dust_create(part_ice, image_xscale, self);
+}
 
 x += move_x;
 y += move_y;

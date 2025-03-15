@@ -5,11 +5,17 @@ switch (state)
 	case STATES.IDLE:
 		if (is_fire)
 		{
+			if (parts == pointer_null) parts = part_system_create_layer("GUI", false, Ps_FireSkull);
 			sprite_index = sprite_idle_1;
 			image_speed = 1;
 		}
 		else
 		{
+			if (parts != pointer_null)
+			{
+				part_system_destroy(parts);
+				parts = pointer_null;
+			}
 			sprite_index = sprite_idle_2;
 			image_speed = 1;
 		}

@@ -1,3 +1,4 @@
+if (parts != pointer_null) part_system_position(parts, x, y);
 event_inherited();
 
 if (!player_come && instance_exists(obj_player))

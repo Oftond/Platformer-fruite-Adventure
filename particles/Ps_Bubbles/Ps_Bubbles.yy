@@ -13,8 +13,8 @@
   ],
   "name":"Ps_Bubbles",
   "parent":{
-    "name":"Particle Systems",
-    "path":"folders/Particle Systems.yy",
+    "name":"Other",
+    "path":"folders/Particle Systems/Other.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

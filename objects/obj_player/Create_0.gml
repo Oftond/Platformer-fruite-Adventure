@@ -1,5 +1,11 @@
 event_inherited();
 
+part_dust = spr_dust_part;
+part_ice = spr_ice_part;
+part_sand = spr_sand_part;
+cooldown_parts = 0;
+max_cooldown_time = 10;
+
 is_ripple_fruit = false;
 
 idle_sprites =
