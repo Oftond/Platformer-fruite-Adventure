@@ -136,7 +136,7 @@ if (!is_knockback)
 		
 		if (_jump_key_pressed && current_jumps < max_jumps)
 		{
-			dust_jump_create(spr_dust_part, image_xscale, self);
+			dust_jump_create(spr_dust_part, self);
 			current_jumps++;
 			jump_timer = jump_hold_time;
 			if (!is_graunded)
@@ -283,6 +283,7 @@ if (place_meeting(x, y + move_y, obj_parent_trap))
 		y += _pixel_check;
 	move_y = 0;
 	jump_timer = 0;
+	dust_landing_create(part_dust, self);
 }
 
 if (place_meeting(x + move_x, y, obj_game_manager.traps_layer_sand))
@@ -311,6 +312,7 @@ if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_sand))
 		y += _pixel_check;
 	move_y = 0;
 	jump_timer = 0;
+	dust_landing_create(part_dust, self);
 }
 
 if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_ice))
@@ -321,6 +323,7 @@ if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_ice))
 		y += _pixel_check;
 	move_y = 0;
 	jump_timer = 0;
+	dust_landing_create(part_ice, self);
 }
 
 if (place_meeting(x, y + max(1, move_y), obj_game_manager.traps_layer_sand) && !place_meeting(x, y + max(1, move_y), obj_game_manager.collision_tilemap))
@@ -347,6 +350,7 @@ if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
 		y += _pixel_check;
 	move_y = 0;
 	jump_timer = 0;
+	dust_landing_create(part_dust, self);
 }
 
 move_y = clamp(move_y, -max_y_speed, max_y_speed);
@@ -380,13 +384,14 @@ if (place_meeting(x, y - 1, obj_block))
 	ds_list_destroy(_collision_blocks);
 }
 
-if (place_meeting(x, y + max(1, move_y), obj_falling_platform))
+if (place_meeting(x, y + move_y, obj_falling_platform))
 {
-	var _platform = instance_place(x, y + max(1, move_y), obj_falling_platform);
+	var _platform = instance_place(x, y + move_y, obj_falling_platform);
 	if (bbox_bottom <= _platform.bbox_top)
 	{
 		_platform.set_fall_time();
 	}
+	dust_landing_create(part_dust, self);
 }
 
 event_inherited();

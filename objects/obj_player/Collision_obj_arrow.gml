@@ -13,3 +13,5 @@ current_jumps--;
 
 if (jump_timer > 0)
 	jump_timer = 0;
+	
+dust_jumpArrow_create(part_dust, other);

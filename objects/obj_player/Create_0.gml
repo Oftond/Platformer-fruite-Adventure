@@ -125,7 +125,8 @@ check_collision_enemy = function()
 				return;
 			}
 		}
-		if (other.is_death || (name == "turtle" && state == STATES.ATTACK) || (name == "ghost" && (state == STATES.DESAPPEAR || state == STATES.APPEAR)) || name == "skull" || is_death && other.flashing > 0 || state == STATES.HIT || other.is_knockback) return;
+		if (other.is_death || (name == "turtle" && state == STATES.ATTACK) || (name == "ghost" && (state == STATES.DESAPPEAR || state == STATES.APPEAR)) || name == "skull" || is_death && other.flashing > 0 || state == STATES.HIT || other.is_knockback)
+			return;
 	
 		if (!other.is_graunded)
 		{
@@ -134,7 +135,7 @@ check_collision_enemy = function()
 				if (other.state != STATES.HIT)
 					current_hp -= other.damage;
 				other.move_y = 0;
-				other.move_y -= other.jump_spd + 5;
+				other.move_y -= other.jump_spd + 10;
 				other.current_jumps = 1;
 				if (state != STATES.HIT)
 					image_index = 0;
