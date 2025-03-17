@@ -6,5 +6,6 @@ button_press = function()
 		return;
 	instance_activate_all();
 	layer_sequence_destroy(obj_button_settings.pause_sequence);
+	obj_button_settings.pause_sequence = undefined;
 	global.IsPause = false;
 }

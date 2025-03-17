@@ -1,8 +1,9 @@
 event_inherited();
 pause_sequence = undefined;
+
 button_press = function()
 {
-	if (instance_exists(obj_transition))
+	if (instance_exists(obj_transition) || pause_sequence != undefined)
 		return;
 	if (!global.IsPause)
 	{

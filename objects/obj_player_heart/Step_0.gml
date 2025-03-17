@@ -15,5 +15,8 @@ if (number == instance_number(obj_player_heart) && number < global.CurrentHP)
 			image_speed = other.image_speed;
 		}
 	}
-	obj_player_heart.alarm[0] = self.anim_frequency;
+	with (obj_player_heart)
+	{
+		alarm[0] = self.anim_frequency;
+	}
 }

@@ -1,5 +1,5 @@
+if (instance_exists(obj_player_appear)) exit;
 event_inherited();
-
 part_dust = spr_dust_part;
 part_ice = spr_ice_part;
 part_sand = spr_sand_part;

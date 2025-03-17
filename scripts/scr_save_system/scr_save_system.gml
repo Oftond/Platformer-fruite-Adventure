@@ -80,7 +80,6 @@ function GameManager() : SaveSystem() constructor
 			volume_sound : global.ValumeSound,
 			isHelps : global.IsHelps
 		}
-		
 		return json_stringify(_player_struct);
 	}
 	

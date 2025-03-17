@@ -12,5 +12,6 @@ else
 		exit;
 	instance_activate_all();
 	layer_sequence_destroy(pause_sequence);
+	pause_sequence = undefined;
 	global.IsPause = false;
 }
