@@ -26,6 +26,8 @@ press = function()
 		}
 		if (global.OpenLevels <= global.CurrentLevel)
 			global.OpenLevels++;
+		if (!global.IsHelps)
+			global.IsHelps = true;
 		global.SaveSystemManager.Save();
 	}
 }

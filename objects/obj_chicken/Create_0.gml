@@ -11,7 +11,7 @@ is_detected_player = false;
 
 dected_player = function()
 {
-	if (is_detected_player) return;
+	if (is_detected_player || state == STATES.HIT) return;
 
 	var _find_player = instance_nearest(x, y, obj_player);
 	var _distance_to_player = distance_detection + 1;
@@ -39,6 +39,7 @@ dected_player = function()
 
 walk = function()
 {
+	if (state == STATES.HIT) return;
 	if (is_detected_player && instance_exists(obj_player))
 	{
 		if (x + 200 <= obj_player.x || x - 200 >= obj_player.x)

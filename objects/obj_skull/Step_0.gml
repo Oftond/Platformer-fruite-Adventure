@@ -6,7 +6,7 @@ if (!player_come && instance_exists(obj_player))
 	if (distance_to_object(obj_player) < 2000) player_come = true;
 }
 
-if (is_death || !player_come)
+if (is_death || !player_come || state == STATES.HIT)
 	exit;
 	
 x += lengthdir_x(move_spd, dir);

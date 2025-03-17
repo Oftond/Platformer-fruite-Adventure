@@ -14,7 +14,7 @@ if (place_meeting(x + move_spd * dir, y, obj_game_manager.collision_tilemap) || 
 	}
 }
 
-if (wait_timer <= 0)
+if (wait_timer <= 0 && state != STATES.HIT)
 	state = STATES.WALK;
 
 if (wait_timer <= 0)

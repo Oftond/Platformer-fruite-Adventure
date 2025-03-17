@@ -49,7 +49,7 @@ if (_find_player != noone)
 	_check_wall = collision_line(x, y, _find_player.x, _find_player.y, obj_game_manager.collision_tilemap, true, true);
 }
 
-if (_distance_to_player <= detection_distance && _find_player != noone && _check_wall == noone && !detected_player)
+if (_distance_to_player <= detection_distance && _find_player != noone && _check_wall == noone && !detected_player && state != STATES.HIT)
 {
 	state = STATES.CEILLING;
 	detected_player = true;

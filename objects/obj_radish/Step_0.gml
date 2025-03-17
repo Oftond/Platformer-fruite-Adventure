@@ -1,6 +1,6 @@
 event_inherited();
 
-if (is_death)
+if (is_death || state == STATES.HIT)
 	exit;
 	
 if (wait_timer > 0)

@@ -1,5 +1,5 @@
 event_inherited();
-if (is_death) exit;
+if (is_death || state == STATES.HIT) exit;
 
 move_x = move_spd * dir;
 

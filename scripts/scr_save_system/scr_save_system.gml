@@ -78,6 +78,7 @@ function GameManager() : SaveSystem() constructor
 			friuts_count_in_room : global.FruitsCountInRoom,
 			volume_music : global.ValumeMusic,
 			volume_sound : global.ValumeSound,
+			isHelps : global.IsHelps
 		}
 		
 		return json_stringify(_player_struct);
@@ -88,7 +89,6 @@ function GameManager() : SaveSystem() constructor
 	SetData = function(_data)
 	{
 		if (_data == "") return;
-		
 		var _data_struct = json_parse(_data);
 		global.MaxHP = _data_struct.max_hp;
 		global.ChooseCharacter = _data_struct.choose_character;
@@ -100,6 +100,7 @@ function GameManager() : SaveSystem() constructor
 		global.FruitsCountInRoom = _data_struct.friuts_count_in_room;
 		global.ValumeMusic = _data_struct.volume_music;
 		global.ValumeSound = _data_struct.volume_sound;
+		global.IsHelps = _data_struct.isHelps;
 	}
 }
 
@@ -189,8 +190,7 @@ function SaveRoom()
 
 function LoadRoom()
 {
-	if (array_length(struct_get_names(global.RoomData)) == 0)
-		return;
+	if (array_length(struct_get_names(global.RoomData)) == 0) return;
 	
 	if (instance_exists(obj_enemy_parent))
 		instance_destroy(obj_enemy_parent)

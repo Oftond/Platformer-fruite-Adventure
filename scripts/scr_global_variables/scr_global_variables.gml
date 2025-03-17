@@ -20,3 +20,5 @@ global.RespownX = -1;
 global.RespownY = -1;
 
 global.RoomData = { };
+
+global.IsHelps = false;

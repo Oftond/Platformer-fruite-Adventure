@@ -22,7 +22,7 @@ switch (state)
 			sprite_index = sprite_celling_out;
 			image_index = 0;
 		}
-		if (image_index >= image_number - 1)
+		if (image_index >= image_number - 1 && state != STATES.HIT)
 		{
 			state = STATES.WALK;
 		}

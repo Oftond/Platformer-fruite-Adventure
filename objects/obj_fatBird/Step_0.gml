@@ -10,7 +10,7 @@ if (state == STATES.FALL && player_detected)
 	move_y += grav;
 
 var _sub_pixel = 0.5;
-if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.collision_tilemap) && state == STATES.FALL)
+if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.collision_tilemap) && state == STATES.FALL && state != STATES.HIT)
 {
 	y = round(y);
 	var _pixel_check = _sub_pixel * sign(move_y);
@@ -19,7 +19,7 @@ if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.collisio
 	move_y = 0;
 	state = STATES.ATTACK;
 }
-else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.traps_layer_sand) && state == STATES.FALL)
+else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.traps_layer_sand) && state == STATES.FALL && state != STATES.HIT)
 {
 	y = round(y);
 	var _pixel_check = _sub_pixel * sign(move_y);
@@ -28,7 +28,7 @@ else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.tra
 	move_y = 0;
 	state = STATES.ATTACK;
 }
-else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.traps_layer_ice) && state == STATES.FALL)
+else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.traps_layer_ice) && state == STATES.FALL && state != STATES.HIT)
 {
 	y = round(y);
 	var _pixel_check = _sub_pixel * sign(move_y);
@@ -50,7 +50,7 @@ if (_find_player != noone)
 
 if (_check_wall == noone && _find_player != noone && (bbox_right >= _find_player.x && bbox_left <= _find_player.x))
 {
-	if (_find_player.y > y)
+	if (_find_player.y > y && state != STATES.HIT)
 	{
 		player_detected = true;
 		state = STATES.FALL;

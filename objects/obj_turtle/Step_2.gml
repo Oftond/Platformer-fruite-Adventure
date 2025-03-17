@@ -10,7 +10,7 @@ switch (state)
 		}
 		image_speed = 1;
 		wait_timer++;
-		if (wait_timer > wait_time)
+		if (wait_timer > wait_time && state != STATES.HIT)
 			state = STATES.ATTACK;
 	break;
 	
@@ -50,7 +50,7 @@ switch (state)
 				instance_destroy(object_spikes);
 				object_spikes = undefined;
 			}
-			if (image_index >= image_number - 1)
+			if (image_index >= image_number - 1 && state != STATES.HIT)
 			{
 				state = STATES.IDLE;
 				wait_timer = 0;

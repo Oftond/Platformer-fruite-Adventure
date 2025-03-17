@@ -20,12 +20,12 @@ if (global.RespownX == -1 && global.RespownY == -1)
 	global.RespownY = start_player_y;
 }
 
+if (instance_exists(obj_player))
+	instance_destroy(obj_player);
+
 instance_create_layer(global.RespownX, global.RespownY, "Player", obj_player_appear);
 instance_create_layer(1824, 96, "GUI", obj_button_settings);
 instance_create_layer(x, y, "Managers", obj_shake);
-
-if (instance_exists(obj_player))
-	instance_destroy(obj_player);
 
 collision_tilemap = layer_tilemap_get_id("CollisionTiles");
 traps_layer_sand = layer_tilemap_get_id("TrapsLayerSand");

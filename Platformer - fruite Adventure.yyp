@@ -528,6 +528,7 @@
     {"id":{"name":"Spr_Heart_3","path":"sprites/Spr_Heart_3/Spr_Heart_3.yy",},},
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_ice_part","path":"sprites/spr_ice_part/spr_ice_part.yy",},},
+    {"id":{"name":"spr_keyboard_keys_move","path":"sprites/spr_keyboard_keys_move/spr_keyboard_keys_move.yy",},},
     {"id":{"name":"spr_kiwi","path":"sprites/spr_kiwi/spr_kiwi.yy",},},
     {"id":{"name":"spr_leaderboard","path":"sprites/spr_leaderboard/spr_leaderboard.yy",},},
     {"id":{"name":"spr_levels","path":"sprites/spr_levels/spr_levels.yy",},},

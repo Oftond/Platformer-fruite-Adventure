@@ -65,9 +65,9 @@ if (instance_exists(obj_player) && is_detected_player)
 		dir = sign(x - obj_player.x) == 0 ? image_xscale : sign(obj_player.x - x);
 }
 
-if (move_x !=0)
+if (move_x !=0 && state != STATES.HIT)
 	state = STATES.WALK;
-else
+else if (state != STATES.HIT)
 	state = STATES.IDLE;
 
 jump();

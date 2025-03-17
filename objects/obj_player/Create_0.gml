@@ -135,7 +135,7 @@ check_collision_enemy = function()
 				if (other.state != STATES.HIT)
 					current_hp -= other.damage;
 				other.move_y = 0;
-				other.move_y -= other.jump_spd + 10;
+				other.move_y -= other.jump_spd + 5;
 				other.current_jumps = 1;
 				if (state != STATES.HIT)
 					image_index = 0;
@@ -174,8 +174,6 @@ instance_create_layer(x, y, "Managers", obj_camera);
 
 for (var i = 0; i < current_hp; i++)
 {
-	with (instance_create_layer(100 + (i * 70), 100, "GUI", object_heart))
-	{
-		number = i + 1;
-	}
+	var _obj = instance_create_layer(100 + (i * 70), 100, "GUI", object_heart);
+	_obj.number = i + 1;
 }

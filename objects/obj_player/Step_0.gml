@@ -312,7 +312,7 @@ if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_sand))
 		y += _pixel_check;
 	move_y = 0;
 	jump_timer = 0;
-	dust_landing_create(part_dust, self);
+	dust_landing_create(part_sand, self);
 }
 
 if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_ice))

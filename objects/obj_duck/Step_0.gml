@@ -12,13 +12,13 @@ if (!is_graunded)
 {
 	move_y += grav;
 }
-else
+else if (state != STATES.HIT)
 	state = STATES.IDLE;
 
 if (wait_timer <= 0)
 	move_x = move_spd * dir;
 	
-if (can_jump && is_graunded && wait_timer <= 0 && state != STATES.ANTICIPATION)
+if (can_jump && is_graunded && wait_timer <= 0 && state != STATES.ANTICIPATION && state != STATES.HIT)
 	state = STATES.ANTICIPATION;
 
 try_change_dir();
@@ -45,9 +45,9 @@ if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
 
 image_xscale = -dir;
 
-if (move_y < 0)
+if (move_y < 0 && state != STATES.HIT)
 	state = STATES.JUMP;
-else if (move_y >= 0 && !is_graunded)
+else if (move_y >= 0 && !is_graunded && state != STATES.HIT)
 	state = STATES.FALL;
 
 x += move_x;

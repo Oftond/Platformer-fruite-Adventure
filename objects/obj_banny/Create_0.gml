@@ -25,10 +25,11 @@ dected_player = function()
 		_distance_to_player = point_distance(x, y, _find_player.x, _find_player.y);
 		_check_wall = collision_line(x, y, _find_player.x, _find_player.y, obj_game_manager.collision_tilemap, true, true);
 	}
+	
+	if (state != STATES.HIT)
+		state = STATES.IDLE;
 
-	state = STATES.IDLE;
-
-	if (_check_wall == noone && _distance_to_player <= distance_detection && (_find_player.y < (bbox_bottom) && _find_player.y > (bbox_top - 15)))
+	if (_check_wall == noone && _distance_to_player <= distance_detection && (_find_player.y < (bbox_bottom) && _find_player.y > (bbox_top - 15)) && state != STATES.HIT)
 	{
 		state = STATES.WALK;
 		is_detected_player = true;
@@ -53,9 +54,9 @@ jump = function()
 	else if (!can_jump && is_graunded)
 		can_jump = true;
 		
-	if (move_y < 0)
+	if (move_y < 0 && state != STATES.HIT)
 		state = STATES.JUMP;
-	else if (move_y >= 0 && !is_graunded)
+	else if (move_y >= 0 && !is_graunded && state != STATES.HIT)
 		state = STATES.FALL;
 
 	var _sub_pixel = 0.5;
