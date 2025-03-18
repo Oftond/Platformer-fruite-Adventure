@@ -8,4 +8,10 @@ global.RoomData = { };
 instance_create_layer(x, y, "Managers", obj_charactersShop_manager);
 instance_create_layer(x, y, "Managers", obj_shake);
 
+instance_create_layer(1664, 96, "GUI", obj_button_volume);
+//instance_create_layer(1664, 96, "GUI", obj_button_volume);
+//instance_create_layer(1664, 96, "GUI", obj_button_volume);
+//instance_create_layer(1664, 96, "GUI", obj_button_volume);
+//instance_create_layer(1664, 96, "GUI", obj_button_volume);
+
 set_random_background();

@@ -9,7 +9,8 @@ instance_create_layer(x, y, "Environment", obj_pointer_maskCollide);
 
 moveAnim = function()
 {
-	if (other.move_x != 0 && !is_touch)
+	if (!instance_exists(obj_player)) return;
+	if (obj_player.move_x != 0 && !is_touch)
 	{
 		sprite_index = spr_start_move;
 		is_touch = true;
