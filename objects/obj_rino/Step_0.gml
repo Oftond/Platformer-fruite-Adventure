@@ -1,4 +1,4 @@
-if (is_death || state == STATES.HIT)
+if (is_death)
 {
 	image_angle += 3;
 	exit;
@@ -63,7 +63,7 @@ if (_check_wall == noone && state == STATES.IDLE && wait_time <= 0)
 {
 	if (y >= _find_player.y - 5 && y <= _find_player.y + 5)
 	{
-		state = STATES.ATTACK;
+		if (state != STATES.HIT) state = STATES.ATTACK;
 		dir = sign(x - _find_player.x) == 0 ? image_xscale : sign(_find_player.x - x);
 	}
 }

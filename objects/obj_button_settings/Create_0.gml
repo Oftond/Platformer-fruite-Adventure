@@ -1,3 +1,5 @@
+instance_deactivate_all(true);
+instance_activate_all();
 event_inherited();
 pause_sequence = undefined;
 

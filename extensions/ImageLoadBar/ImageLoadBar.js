@@ -50,16 +50,17 @@ function ImageLoadBar_hook(ctx, width, height, total, current, image) {
 	} else barTop = (height - barHeight) >> 1;
 	// bar border:
 	var barLeft = (width - barWidth) >> 1;
-	ctx.fillStyle = barBorderColor;
-	ctx.fillRect(barLeft, barTop, barWidth, barHeight);
+	//ctx.fillStyle = barBorderColor;
+	ctx.strokeStyle = barBorderColor;
+	ctx.strokeRect(barLeft, barTop, barWidth, barHeight);
 	//
 	var barInnerLeft = barLeft + barBorderWidth;
 	var barInnerTop = barTop + barBorderWidth;
 	var barInnerWidth = barWidth - barBorderWidth * 2;
 	var barInnerHeight = barHeight - barBorderWidth * 2;
 	// bar background:
-	ctx.fillStyle = barBackgroundColor;
-	ctx.fillRect(barInnerLeft, barInnerTop, barInnerWidth, barInnerHeight);
+	//ctx.fillStyle = barBackgroundColor;
+	//ctx.fillRect(barInnerLeft, barInnerTop, barInnerWidth, barInnerHeight);
 	// bar foreground:
 	var barLoadedWidth = Math.round(barInnerWidth * current / total);
 	ctx.fillStyle = barForegroundColor;
