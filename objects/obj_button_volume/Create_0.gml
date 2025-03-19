@@ -7,11 +7,10 @@ button_press = function()
 		return;
 	global.IsOnValume = !global.IsOnValume;
 	
-	set_start_image();
 	global.SaveSystemManager.Save();
 }
 
-set_start_image = function()
+set_image = function()
 {
 	if (global.IsOnValume)
 	{
@@ -26,5 +25,3 @@ set_start_image = function()
 		global.ValumeSound = 0;
 	}
 }
-
-set_start_image();

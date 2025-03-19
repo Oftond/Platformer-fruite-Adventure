@@ -16,5 +16,8 @@ name = "duck";
 
 try_change_dir = function()
 {
-	if ((place_meeting(x + move_spd * dir, y, obj_game_manager.collision_tilemap) && !place_empty(x +  move_spd * dir, y - 400, obj_game_manager.collision_tilemap) && is_graunded) || place_empty(x + move_x * 10, y + 400, obj_game_manager.collision_tilemap)) dir *= -1;
+	if ((place_meeting(x + move_spd * dir, y, obj_game_manager.collision_tilemap) && !place_empty(x +  move_spd * dir, y - 400, obj_game_manager.collision_tilemap) && is_graunded) || place_empty(x + move_x, y + 400, obj_game_manager.collision_tilemap))
+	{
+		dir *= -1;
+	}
 }
