@@ -6,7 +6,7 @@ text =
 [
 	"Уровень",
 	"Level"
-]
+];
 
 is_end_level = false;
 time_to_end_level = 10;

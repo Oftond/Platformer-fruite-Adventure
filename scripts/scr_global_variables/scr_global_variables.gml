@@ -21,4 +21,7 @@ global.RespownY = -1;
 
 global.RoomData = { };
 
-global.IsHelps = false;
+global.IsHelpsForMove = false;
+global.IsHelpsForJump = false;
+global.IsHelpsForWallJump = false;
+global.IsHelpsForDoubleJump = false;

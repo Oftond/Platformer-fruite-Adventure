@@ -14,4 +14,5 @@ if (os_browser != browser_not_a_browser)
 		window_center();
 	}
 }
+
 room_goto_next();
