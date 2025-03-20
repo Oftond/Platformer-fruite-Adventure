@@ -1,5 +1,7 @@
 if (instance_exists(obj_player_appear)) exit;
+
 event_inherited();
+
 part_dust = spr_dust_part;
 part_ice = spr_ice_part;
 part_sand = spr_sand_part;
@@ -7,6 +9,12 @@ cooldown_parts = 0;
 max_cooldown_time = 10;
 
 is_ripple_fruit = false;
+
+can_double_jump = global.OpenLevels > 2;
+can_wall_jump = global.OpenLevels > 5;
+
+max_jumps = can_double_jump ? 2 : 1;
+current_jumps = 0;
 
 idle_sprites =
 [
@@ -77,6 +85,9 @@ inertia = 0;
 deceleration = 0.2;
 turn_deceleration = 0.3;
 min_turn_speed = 0.1;
+
+jump_buffer = 0;
+jump_buffer_time = 10;
 
 max_x_speed = 10;
 max_y_speed = 35;

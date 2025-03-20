@@ -25,3 +25,4 @@ global.IsHelpsForMove = false;
 global.IsHelpsForJump = false;
 global.IsHelpsForWallJump = false;
 global.IsHelpsForDoubleJump = false;
+global.IsHelpsForCrushBlock = false;
