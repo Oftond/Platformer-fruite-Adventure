@@ -1,3 +1,4 @@
+instance_create_depth(x, y, depth, obj_button_showFullscreenAds);
 endAlpha = false;
 isAlpha = false;
 alpha_text = 0;

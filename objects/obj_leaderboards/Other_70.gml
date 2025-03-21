@@ -8,7 +8,7 @@ else
 	{
         switch (async_load[? "event"]) {	
 			case "leaderboardsInit":
-				YaGames_Leaderboards_setScore("HightScore", global.NumLevel);
+				YaGames_Leaderboards_setScore("highScore", global.Score);
 				set_up = true;
 			break;
 			

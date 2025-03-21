@@ -66,6 +66,8 @@ function GameManager() : SaveSystem() constructor
 	///Логика сохранения всех данных об игре
 	GetData = function()
 	{
+		if (global.Score > 0)
+			instance_create_depth(x, y, depth, obj_leaderboards);
 		var _player_struct =
 		{
 			max_hp : global.MaxHP,
@@ -77,8 +79,7 @@ function GameManager() : SaveSystem() constructor
 			is_on_valume : global.IsOnValume,
 			friuts_count_in_room : global.FruitsCountInRoom,
 			volume_music : global.ValumeMusic,
-			volume_sound : global.ValumeSound,
-			isHelps : global.IsHelps
+			volume_sound : global.ValumeSound
 		}
 		return json_stringify(_player_struct);
 	}
@@ -99,7 +100,6 @@ function GameManager() : SaveSystem() constructor
 		global.FruitsCountInRoom = _data_struct.friuts_count_in_room;
 		global.ValumeMusic = _data_struct.volume_music;
 		global.ValumeSound = _data_struct.volume_sound;
-		global.IsHelps = _data_struct.isHelps;
 	}
 }
 

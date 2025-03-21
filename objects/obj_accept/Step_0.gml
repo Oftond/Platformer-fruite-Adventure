@@ -1,6 +1,3 @@
-if (obj_button_play.acceptWindow_sequence != undefined || obj_button_levels.acceptWindow_sequence != undefined)
-	exit;
-
 image_xscale = koef_scale;
 image_yscale = koef_scale;
 var _mouse_gui_x = device_mouse_x_to_gui(0);

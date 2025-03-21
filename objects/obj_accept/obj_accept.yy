@@ -1,13 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_play",
+  "%Name":"obj_accept",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_button_play",
+  "name":"obj_accept",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
@@ -35,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_play",
-    "path":"sprites/spr_play/spr_play.yy",
+    "name":"spr_tick",
+    "path":"sprites/spr_tick/spr_tick.yy",
   },
   "spriteMaskId":null,
   "visible":true,
