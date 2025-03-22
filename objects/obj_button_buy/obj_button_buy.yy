@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_levels",
+  "%Name":"obj_button_buy",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_button_levels",
+  "name":"obj_button_buy",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_levels",
-    "path":"sprites/spr_levels/spr_levels.yy",
+    "name":"spr_button_buy",
+    "path":"sprites/spr_button_buy/spr_button_buy.yy",
   },
   "spriteMaskId":null,
   "visible":true,

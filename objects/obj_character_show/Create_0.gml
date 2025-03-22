@@ -10,10 +10,12 @@ text2 =
 	"Discovered"
 ];
 
+is_bought = false;
 manager = undefined;
 number = -1;
 current_x_pos = x;
 price = 0;
+name = "character";
 
 hide = function()
 {

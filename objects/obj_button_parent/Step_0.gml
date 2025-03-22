@@ -1,5 +1,7 @@
-if (obj_button_play.acceptWindow_sequence != undefined || obj_button_levels.acceptWindow_sequence != undefined)
-	exit;
+if (room == rm_menu)
+	if (instance_exists(obj_button_buy))
+		if (obj_button_buy.acceptWindow_sequence != undefined)
+			exit;
 
 image_xscale = koef_scale;
 image_yscale = koef_scale;

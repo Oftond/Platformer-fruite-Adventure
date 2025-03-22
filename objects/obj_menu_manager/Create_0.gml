@@ -1,3 +1,14 @@
+text =
+[
+	"Ваш баланс",
+	"Your balance"
+];
+
+text_level =
+[
+	"Уровень",
+	"Level"
+];
 global.SaveSystemManager.Load();
 
 global.CurrentHP = global.MaxHP;

@@ -9,9 +9,11 @@ global.CurrentHP = global.MaxHP;
 global.Score = 0;
 global.ScoreInLevel = array_create(global.NumLevels, 0);
 
+global.Moneys = 400;
+
 global.IsOnValume = true;
 
-global.Language = LANGUAGES.ENG;
+global.Language = LANGUAGES.RUS;
 global.IsPause = false;
 
 global.FruitsCountInRoom = array_create(global.NumLevels, -1);
@@ -20,6 +22,10 @@ global.RespownX = -1;
 global.RespownY = -1;
 
 global.RoomData = { };
+
+global.BoughtMaskDude = false;
+global.BoughtPinkMan = false;
+global.BoughtVirtualGuy = false;
 
 global.IsHelpsForMove = false;
 global.IsHelpsForJump = false;

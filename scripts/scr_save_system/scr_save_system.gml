@@ -67,7 +67,7 @@ function GameManager() : SaveSystem() constructor
 	GetData = function()
 	{
 		if (global.Score > 0)
-			instance_create_depth(x, y, depth, obj_leaderboards);
+			instance_create_depth(0, 0, 0, obj_leaderboards);
 		var _player_struct =
 		{
 			max_hp : global.MaxHP,
@@ -79,7 +79,11 @@ function GameManager() : SaveSystem() constructor
 			is_on_valume : global.IsOnValume,
 			friuts_count_in_room : global.FruitsCountInRoom,
 			volume_music : global.ValumeMusic,
-			volume_sound : global.ValumeSound
+			volume_sound : global.ValumeSound,
+			moneys : global.Moneys,
+			bought_maskDude : global.BoughtMaskDude,
+			bought_pinkMan : global.BoughtPinkMan,
+			bought_virtualGuy : global.BoughtVirtualGuy
 		}
 		return json_stringify(_player_struct);
 	}
@@ -100,6 +104,9 @@ function GameManager() : SaveSystem() constructor
 		global.FruitsCountInRoom = _data_struct.friuts_count_in_room;
 		global.ValumeMusic = _data_struct.volume_music;
 		global.ValumeSound = _data_struct.volume_sound;
+		global.BoughtMaskDude = _data_struct.bought_maskDude;
+		global.BoughtPinkMan = _data_struct.bought_pinkMan;
+		global.BoughtVirtualGuy = _data_struct.bought_virtualGuy;
 	}
 }
 

@@ -7,7 +7,7 @@ button_press = function()
 	
 	with (obj_character_show)
 	{
-		if (number == 2 && price == 0)
+		if (number == 2 && is_bought)
 		{
 			global.SaveSystemManager.Save();
 		}

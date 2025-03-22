@@ -1,19 +1,9 @@
+if (acceptWindow_sequence != undefined) exit;
+
 image_xscale = koef_scale;
 image_yscale = koef_scale;
 var _mouse_gui_x = device_mouse_x_to_gui(0);
 var _mouse_gui_y = device_mouse_y_to_gui(0);
-
-if (!can_press || instance_exists(obj_transition))
-{
-	if (device_mouse_check_button_pressed(0, mb_left) && collision_point(_mouse_gui_x, _mouse_gui_y, object_index, false, false) == id)
-	{
-		if (acceptWindow_sequence != undefined || obj_button_levels.acceptWindow_sequence != undefined)
-			exit;
-		ShakeStart(10, 8);
-		acceptWindow_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_acceptWindow);
-	}
-	exit;
-}
 
 if (device_mouse_check_button_pressed(0, mb_left) && collision_point(_mouse_gui_x, _mouse_gui_y, object_index, false, false) == id)
 	button_press();
