@@ -125,7 +125,7 @@ function SaveRoom()
 		playerScore : score,
 		blocksNumber : instance_number(obj_block),
 		blocks : array_create(instance_number(obj_block), undefined)
-	}
+	};
 
 	for (var i = 0; i < _room_struct.fruitNumber; i++)
 	{
@@ -135,17 +135,6 @@ function SaveRoom()
 			x_pos : _fruit.x,
 			y_pos : _fruit.y,
 			object : _fruit.object_index
-		};
-	}
-	
-	for (var i = 0; i < _room_struct.enemyNumber; i++)
-	{
-		var _enemy = instance_find(obj_enemy_parent, i);
-		_room_struct.enemys[i] =
-		{
-			x_pos : _enemy.start_pos_x,
-			y_pos : _enemy.start_pos_y,
-			object : _enemy.object_index
 		};
 	}
 	
@@ -188,6 +177,18 @@ function SaveRoom()
 		{
 			x_pos : _block.x,
 			y_pos : _block.y,
+		};
+	}
+	
+	for (var i = 0; i < _room_struct.enemyNumber; i++)
+	{
+		var _enemy = instance_find(obj_enemy_parent, i);
+		if (_enemy.is_death) continue;
+		_room_struct.enemys[i] =
+		{
+			x_pos : _enemy.start_pos_x,
+			y_pos : _enemy.start_pos_y,
+			object : _enemy.object_index
 		};
 	}
 	

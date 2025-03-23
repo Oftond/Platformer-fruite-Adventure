@@ -10,8 +10,8 @@
   "name":"obj_character_show",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"YaGamesObjects",
+    "path":"folders/Objects/YaGamesObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

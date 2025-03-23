@@ -9,7 +9,7 @@ global.CurrentHP = global.MaxHP;
 global.Score = 0;
 global.ScoreInLevel = array_create(global.NumLevels, 0);
 
-global.Moneys = 400;
+global.Moneys = 0;
 
 global.IsOnValume = true;
 
@@ -32,3 +32,5 @@ global.IsHelpsForJump = false;
 global.IsHelpsForWallJump = false;
 global.IsHelpsForDoubleJump = false;
 global.IsHelpsForCrushBlock = false;
+
+global.FruitsCollected = { };

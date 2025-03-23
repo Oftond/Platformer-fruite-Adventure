@@ -30,4 +30,7 @@ delete_seq = function()
 	if (acceptWindow_sequence == undefined) return;
 	layer_sequence_destroy(acceptWindow_sequence);
 	acceptWindow_sequence = undefined;
+	image_blend = c_white;
+	obj_next.image_blend = c_white;
+	obj_previous.image_blend = c_white;
 }
