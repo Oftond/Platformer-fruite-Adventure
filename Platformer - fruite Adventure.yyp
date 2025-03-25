@@ -362,6 +362,7 @@
     {"id":{"name":"scr_drawHelps","path":"scripts/scr_drawHelps/scr_drawHelps.yy",},},
     {"id":{"name":"scr_enums","path":"scripts/scr_enums/scr_enums.yy",},},
     {"id":{"name":"scr_global_variables","path":"scripts/scr_global_variables/scr_global_variables.yy",},},
+    {"id":{"name":"scr_inputController","path":"scripts/scr_inputController/scr_inputController.yy",},},
     {"id":{"name":"scr_isMap","path":"scripts/scr_isMap/scr_isMap.yy",},},
     {"id":{"name":"scr_loadBar","path":"scripts/scr_loadBar/scr_loadBar.yy",},},
     {"id":{"name":"scr_player_partsDust","path":"scripts/scr_player_partsDust/scr_player_partsDust.yy",},},

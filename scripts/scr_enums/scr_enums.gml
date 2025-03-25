@@ -28,3 +28,13 @@ enum LANGUAGES
 	RUS,
 	ENG
 }
+
+enum INPUT
+{
+	ACCEPT,
+	JUMP,
+	LEFT,
+	RIGHT,
+	UP,
+	DOWN
+}

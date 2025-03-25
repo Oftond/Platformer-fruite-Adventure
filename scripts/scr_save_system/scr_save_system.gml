@@ -83,7 +83,10 @@ function GameManager() : SaveSystem() constructor
 			moneys : global.Moneys,
 			bought_maskDude : global.BoughtMaskDude,
 			bought_pinkMan : global.BoughtPinkMan,
-			bought_virtualGuy : global.BoughtVirtualGuy
+			bought_virtualGuy : global.BoughtVirtualGuy,
+			is_helps_first : global.IsHelpsFirst,
+			is_helps_second : global.IsHelpsSecond,
+			is_helps_third : global.IsHelpsThird
 		}
 		return json_stringify(_player_struct);
 	}
@@ -107,6 +110,10 @@ function GameManager() : SaveSystem() constructor
 		global.BoughtMaskDude = _data_struct.bought_maskDude;
 		global.BoughtPinkMan = _data_struct.bought_pinkMan;
 		global.BoughtVirtualGuy = _data_struct.bought_virtualGuy;
+		global.Moneys = _data_struct.moneys;
+		global.IsHelpsFirst = _data_struct.is_helps_first;
+		global.IsHelpsSecond = _data_struct.is_helps_second;
+		global.IsHelpsThird = _data_struct.is_helps_third;
 	}
 }
 

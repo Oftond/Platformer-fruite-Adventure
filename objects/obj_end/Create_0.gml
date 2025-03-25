@@ -26,19 +26,17 @@ press = function()
 		}
 		if (global.OpenLevels <= global.CurrentLevel)
 			global.OpenLevels++;
-		if (room == rm_level_1 && !global.IsHelpsForMove && !global.IsHelpsForJump)
+		if (room == rm_level_1 && !global.IsHelpsFirst)
 		{
-			global.IsHelpsForMove = true;
-			global.IsHelpsForJump = true;
+			global.IsHelpsFirst = true;
 		}
-		else if (room == rm_level_3 && !global.IsHelpsForWallJump && !global.IsHelpsForCrushBlock)
+		else if (room == rm_level_3 && !global.IsHelpsSecond)
 		{
-			global.IsHelpsForWallJump = false;
-			global.IsHelpsForCrushBlock = false;
+			global.IsHelpsSecond = true;
 		}
-		else if (room == rm_level_6 && !global.IsHelpsForDoubleJump)
+		else if (room == rm_level_6 && !global.IsHelpsThird)
 		{
-			global.IsHelpsForDoubleJump = false;
+			global.IsHelpsThird = true;
 		}
 		global.Moneys += score;
 		global.SaveSystemManager.Save();

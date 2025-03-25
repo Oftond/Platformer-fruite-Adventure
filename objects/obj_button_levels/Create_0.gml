@@ -1,6 +1,7 @@
 event_inherited();
 time_to_show_levels = 60;
 levels_room = rm_levels_map;
+index = 1;
 
 button_press = function()
 {

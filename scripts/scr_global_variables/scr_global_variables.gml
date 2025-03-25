@@ -27,10 +27,10 @@ global.BoughtMaskDude = false;
 global.BoughtPinkMan = false;
 global.BoughtVirtualGuy = false;
 
-global.IsHelpsForMove = false;
-global.IsHelpsForJump = false;
-global.IsHelpsForWallJump = false;
-global.IsHelpsForDoubleJump = false;
-global.IsHelpsForCrushBlock = false;
+global.IsHelpsFirst = false;
+global.IsHelpsSecond = false;
+global.IsHelpsThird = false;
 
 global.FruitsCollected = { };
+
+global.Keyboard = ds_map_create();

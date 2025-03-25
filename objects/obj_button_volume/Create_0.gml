@@ -1,4 +1,5 @@
 event_inherited();
+index = 4;
 image_speed = 0;
 
 button_press = function()

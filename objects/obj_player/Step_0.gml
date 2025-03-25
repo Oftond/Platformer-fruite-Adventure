@@ -12,9 +12,9 @@ else if (y > room_height + 175)
 
 if (cooldown_parts > 0) cooldown_parts--;
 
-var _dir = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left)|| keyboard_check(ord("A")));
-var _jump_key_pressed = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
-var _jump_key_hold = keyboard_check(vk_up) || keyboard_check(vk_space) || keyboard_check(ord("W"));
+var _dir = input_held(INPUT.RIGHT) - input_held(INPUT.LEFT);
+var _jump_key_pressed = input_pressed(INPUT.JUMP);
+var _jump_key_hold = input_held(INPUT.JUMP);
 is_graunded = ((place_meeting(x, y + 1, obj_game_manager.collision_tilemap)) || (place_meeting(x, y + 1, obj_parent_trap)) || (place_meeting(x, y + 1, obj_game_manager.traps_layer_sand)) || (place_meeting(x, y + 1, obj_game_manager.traps_layer_ice)));
 on_wall = can_wall_jump ? (place_meeting(x - 1, y, obj_game_manager.collision_tilemap) - place_meeting(x + 1, y, obj_game_manager.collision_tilemap)) : 0;
 on_ice = place_meeting(x, y + max(1, move_y), obj_game_manager.traps_layer_ice) && !place_meeting(x, y + max(1, move_y), obj_game_manager.collision_tilemap);
