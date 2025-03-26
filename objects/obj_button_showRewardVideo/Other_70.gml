@@ -15,19 +15,23 @@ else
 				instance_destroy();
             break;
             case "rewardClosed":
+				instance_destroy();
             break;
             case "rewardError":
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
-                var errMessage = async_load[? "message"];			
+                var errMessage = async_load[? "message"];
+				instance_destroy();
             break;
 			
             case "notInitSDK":
+				instance_destroy();
             break;
             case "RuntimeError":
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
-                var errMessage = async_load[? "message"];	
+                var errMessage = async_load[? "message"];
+				instance_destroy();
             break;
         }
    }

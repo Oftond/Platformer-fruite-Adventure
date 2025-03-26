@@ -1,4 +1,5 @@
 event_inherited();
+index = 6;
 
 button_press = function()
 {
@@ -18,5 +19,25 @@ mouse_enter = function()
 	{
 		image_xscale = koef_scale + (koef_scale / 8);
 		image_yscale = koef_scale + (koef_scale / 8);
+		
+		if (!can_press || instance_exists(obj_transition))
+		{
+			if (input_pressed(INPUT.ACCEPT))
+				ShakeStart(10, 8);
+			else
+			{
+				image_xscale = koef_scale + (koef_scale / 8);
+				image_yscale = koef_scale + (koef_scale / 8);
+			}
+			return;
+		}
+		
+		if (input_pressed(INPUT.ACCEPT))
+			button_press();
+		else
+		{
+			image_xscale = koef_scale + (koef_scale / 8);
+			image_yscale = koef_scale + (koef_scale / 8);
+		}
 	}
 }

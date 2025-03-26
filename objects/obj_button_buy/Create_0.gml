@@ -10,9 +10,18 @@ obj_menu_manager.selected_index++;
 index = 1;
 
 acceptWindow_sequence = undefined;
+button_is_cooldown = false;
 
 button_press = function()
 {
+	if (button_is_cooldown && obj_menu_manager.is_keyboard_control)
+	{
+		button_is_cooldown = false;
+		return;
+	}
+	else
+		button_is_cooldown = false;
+	
 	with (obj_character_show)
 	{
 		if (number == 2 && price > global.Moneys)
@@ -33,6 +42,7 @@ button_press = function()
 			global.Moneys -= price;
 		}
 	}
+	obj_menu_manager.selected_index = 7;
 }
 
 delete_seq = function()
@@ -43,6 +53,7 @@ delete_seq = function()
 	image_blend = c_white;
 	obj_next.image_blend = c_white;
 	obj_previous.image_blend = c_white;
+	obj_menu_manager.selected_index = index;
 }
 
 mouse_enter = function()
@@ -60,6 +71,25 @@ mouse_enter = function()
 	{
 		image_xscale = koef_scale + (koef_scale / 8);
 		image_yscale = koef_scale + (koef_scale / 8);
+		if (!can_press || instance_exists(obj_transition))
+		{
+			if (input_pressed(INPUT.ACCEPT))
+				ShakeStart(10, 8);
+			else
+			{
+				image_xscale = koef_scale + (koef_scale / 8);
+				image_yscale = koef_scale + (koef_scale / 8);
+			}
+			return;
+		}
+		
+		if (input_pressed(INPUT.ACCEPT))
+			button_press();
+		else
+		{
+			image_xscale = koef_scale + (koef_scale / 8);
+			image_yscale = koef_scale + (koef_scale / 8);
+		}
 	}
 	else
 	{
