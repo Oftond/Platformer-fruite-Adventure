@@ -1,22 +1,42 @@
 if (!is_keyboard_control && input_pressed(INPUT.DOWN) || input_pressed(INPUT.LEFT) || input_pressed(INPUT.UP) || input_pressed(INPUT.RIGHT))
 	is_keyboard_control = true;
+	
+if (room == rm_menu)
+	if (instance_exists(obj_button_buy))
+		if (obj_button_buy.acceptWindow_sequence != undefined)
+			exit;
 
 if (input_pressed(INPUT.LEFT))
 	selected_index = max(selected_index - 1, 0);
 	
 if (input_pressed(INPUT.RIGHT))
-	selected_index = min(selected_index + 1, array_length(menu_buttons) - 1);
+	selected_index = min(selected_index + 1, instance_number(obj_button_parent) - 1);
 
-if (input_pressed(INPUT.UP))
+if (!instance_exists(obj_button_buy))
 {
-	if (selected_index == 0 || selected_index == 1) selected_index += 2;
-	else if (selected_index == 2 || selected_index == 3) selected_index = max(selected_index + 1, array_length(menu_buttons) - 1);
-}
+	if (input_pressed(INPUT.UP))
+	{
+		if (selected_index == 0 || selected_index == 1) selected_index += 2;
+		else if (selected_index == 2 || selected_index == 3) selected_index = max(selected_index + 1, instance_number(obj_button_parent) - 1);
+	}
 
-if (input_pressed(INPUT.DOWN))
+	if (input_pressed(INPUT.DOWN))
+	{
+		if (selected_index == 2 || selected_index == 3) selected_index -= 2;
+		else if (selected_index == 4) selected_index--;
+	}
+}
+else
 {
-	if (selected_index == 2 || selected_index == 3) selected_index -= 2;
-	else if (selected_index == 4) selected_index--;
-}
+	if (input_pressed(INPUT.UP))
+	{
+		if (selected_index == 0 || selected_index == 1 || selected_index == 2) selected_index += 2;
+		else if (selected_index == 3 || selected_index == 4) selected_index = max(selected_index + 1, instance_number(obj_button_parent) - 1);
+	}
 
-show_debug_message(selected_index);
+	if (input_pressed(INPUT.DOWN))
+	{
+		if (selected_index == 3 || selected_index == 4) selected_index -= 2;
+		else if (selected_index == 5) selected_index--;
+	}
+}

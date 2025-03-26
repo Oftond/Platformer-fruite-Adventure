@@ -9,6 +9,11 @@ button_press = function()
 
 mouse_enter = function()
 {
+	if (room == rm_menu)
+		if (instance_exists(obj_button_buy))
+			if (obj_button_buy.acceptWindow_sequence != undefined)
+				exit;
+	
 	image_xscale = koef_scale;
 	image_yscale = koef_scale;
 	var _mouse_gui_x = device_mouse_x_to_gui(0);
@@ -18,6 +23,11 @@ mouse_enter = function()
 	{
 		if (device_mouse_check_button_pressed(0, mb_left) && collision_point(_mouse_gui_x, _mouse_gui_y, object_index, false, false) == id)
 			ShakeStart(10, 8);
+		else if (collision_point(_mouse_gui_x, _mouse_gui_y, object_index, false, false) == id)
+		{
+			image_xscale = koef_scale + (koef_scale / 8);
+			image_yscale = koef_scale + (koef_scale / 8);
+		}
 		exit;
 	}
 
@@ -28,15 +38,14 @@ mouse_enter = function()
 		image_xscale = koef_scale + (koef_scale / 8);
 		image_yscale = koef_scale + (koef_scale / 8);
 	}
-	else
-	{
-		image_xscale = koef_scale;
-		image_yscale = koef_scale;
-	}
 }
 
 key_enter = function()
 {
+	if (room == rm_menu)
+		if (instance_exists(obj_button_buy))
+			if (obj_button_buy.acceptWindow_sequence != undefined)
+				exit;
 	image_xscale = koef_scale;
 	image_yscale = koef_scale;
 	
@@ -46,6 +55,11 @@ key_enter = function()
 		{
 			if (input_pressed(INPUT.ACCEPT))
 				ShakeStart(10, 8);
+			else
+			{
+				image_xscale = koef_scale + (koef_scale / 8);
+				image_yscale = koef_scale + (koef_scale / 8);
+			}
 			exit;
 		}
 		
