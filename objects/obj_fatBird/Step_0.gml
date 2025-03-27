@@ -17,7 +17,8 @@ if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.collisio
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
 		y += _pixel_check;
 	move_y = 0;
-	state = STATES.ATTACK;
+	if (state != STATES.HIT)
+		state = STATES.ATTACK;
 }
 else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.traps_layer_sand) && state == STATES.FALL && state != STATES.HIT)
 {
@@ -26,7 +27,8 @@ else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.tra
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_sand))
 		y += _pixel_check;
 	move_y = 0;
-	state = STATES.ATTACK;
+	if (state != STATES.HIT)
+		state = STATES.ATTACK;
 }
 else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.traps_layer_ice) && state == STATES.FALL && state != STATES.HIT)
 {
@@ -35,7 +37,8 @@ else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.tra
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_ice))
 		y += _pixel_check;
 	move_y = 0;
-	state = STATES.ATTACK;
+	if (state != STATES.HIT)
+		state = STATES.ATTACK;
 }
 
 if (state == STATES.IDLE && player_detected)

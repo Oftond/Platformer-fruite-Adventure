@@ -1,5 +1,6 @@
 event_inherited();
 index = 4;
+if(instance_exists(obj_pauseMenu)) index = 0;
 image_speed = 0;
 
 button_press = function()

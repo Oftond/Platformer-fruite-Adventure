@@ -13,7 +13,7 @@ function InputBind(_device, _action, _keys)
 	}
 }
 
-InputBind(global.Keyboard, INPUT.ACCEPT, [vk_enter, "Z", vk_space]);
+InputBind(global.Keyboard, INPUT.ACCEPT, [vk_enter, "Z"]);
 InputBind(global.Keyboard, INPUT.JUMP, [vk_space, vk_up, "W"]);
 InputBind(global.Keyboard, INPUT.LEFT, [vk_left, "A"]);
 InputBind(global.Keyboard, INPUT.DOWN, [vk_down, "S"]);

@@ -1,4 +1,5 @@
 event_inherited();
+index = 2;
 
 button_press = function()
 {
@@ -8,4 +9,5 @@ button_press = function()
 	layer_sequence_destroy(obj_button_settings.pause_sequence);
 	obj_button_settings.pause_sequence = undefined;
 	global.IsPause = false;
+	global.IsMovedCursor = false;
 }

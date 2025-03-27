@@ -1,1 +1,2 @@
-state = STATES.IDLE;
+if (state != STATES.HIT)
+	state = STATES.IDLE;

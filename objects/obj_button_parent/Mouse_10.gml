@@ -8,4 +8,5 @@ else if (instance_exists(obj_levels_manager))
 	obj_levels_manager.is_keyboard_control = false;
 	obj_levels_manager.selected_index = index;
 }
-global.IsMovedCursor = true;
+if (!instance_exists(obj_pauseMenu))
+	global.IsMovedCursor = true;

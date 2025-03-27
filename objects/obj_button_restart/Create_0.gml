@@ -1,5 +1,6 @@
 event_inherited();
 time_to_show_levels = 60;
+index = 1;
 
 button_press = function()
 {

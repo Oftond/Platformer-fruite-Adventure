@@ -2,6 +2,7 @@ event_inherited();
 time_to_show_levels = 60;
 levels_room = rm_levels_map;
 index = 1;
+if(instance_exists(obj_pauseMenu)) index = 3;
 
 button_press = function()
 {
