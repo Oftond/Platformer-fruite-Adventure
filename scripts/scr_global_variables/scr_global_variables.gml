@@ -34,3 +34,5 @@ global.IsHelpsThird = false;
 global.FruitsCollected = { };
 
 global.Keyboard = ds_map_create();
+
+global.IsMovedCursor = false;

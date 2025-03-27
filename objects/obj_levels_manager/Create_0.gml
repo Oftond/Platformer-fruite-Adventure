@@ -34,6 +34,9 @@ levels_icon =
 	_25
 ];
 
+is_keyboard_control = false;
+selected_index = 0;
+
 koef_scale = 6;
 
 offset = 100;
@@ -54,6 +57,7 @@ for (var i = 0; i < row; i++)
 		_level_obj.number_level = _number;
 		_level_obj.sprite_index = levels_icon[_number - 1];
 		_level_obj.koef_scale = koef_scale;
+		_level_obj.index = (i * col + j);
 		if (_number > global.OpenLevels)
 		{
 			_level_obj.can_press = false;
@@ -63,6 +67,10 @@ for (var i = 0; i < row; i++)
 }
 
 instance_create_layer(x, y, "Managers", obj_shake);
-instance_create_layer(1696, 960, "GUI", obj_back);
+
+with (instance_create_layer(1696, 960, "GUI", obj_back))
+{
+	index = instance_number(obj_level);
+}
 
 set_random_background();

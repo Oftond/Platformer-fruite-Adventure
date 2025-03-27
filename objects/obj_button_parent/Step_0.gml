@@ -5,5 +5,12 @@ if (instance_exists(obj_menu_manager))
 	else
 		key_enter();
 }
+else if (instance_exists(obj_levels_manager))
+{
+	if (!obj_levels_manager.is_keyboard_control)
+		mouse_enter();
+	else
+		key_enter();
+}
 else
 	mouse_enter();
