@@ -1,10 +1,5 @@
-if (is_death)
+if (is_death || global.IsPause || flashing > 0)
 	exit;
-	
-if (flashing > 0)
-{
-	exit;
-}
 
 var _x_sign = sign(x - other.x) == 0 ? image_xscale : sign(x - other.x);
 

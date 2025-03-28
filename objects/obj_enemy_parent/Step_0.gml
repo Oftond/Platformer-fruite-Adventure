@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (is_death)
 {
 	image_angle += 3;

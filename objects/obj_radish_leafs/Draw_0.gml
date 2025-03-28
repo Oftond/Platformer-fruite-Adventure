@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 curvPosition += curvSpeed;
 if (curvPosition >= 1 || alpha <= 0)
 {

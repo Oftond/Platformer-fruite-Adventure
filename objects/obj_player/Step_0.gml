@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (is_death)
 {
 	if (y > room_height + 175)
@@ -392,11 +394,12 @@ if (place_meeting(x, y - 1, obj_block))
 if (place_meeting(x, y + move_y, obj_falling_platform))
 {
 	var _platform = instance_place(x, y + move_y, obj_falling_platform);
-	if (bbox_bottom <= _platform.bbox_top)
+	if (bbox_bottom <= _platform.bbox_bottom)
 	{
 		_platform.set_fall_time();
 	}
-	dust_landing_create(part_dust, self);
+	if (move_y > 0)
+		dust_landing_create(part_dust, self);
 }
 
 event_inherited();

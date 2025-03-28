@@ -1,4 +1,4 @@
-if (is_death || touch_fruit == undefined || score == 0)
+if (is_death || touch_fruit == undefined || score == 0 || global.IsPause)
 	exit;
 draw_set_font(fnt_main);
 draw_set_halign(fa_left);

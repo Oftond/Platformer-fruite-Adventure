@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (y + move_y >= top_path_y && y + move_y <= bottom_path_y)
 	y += move_y;
 if (x + move_x >= left_path_x && x + move_x <= right_path_x)

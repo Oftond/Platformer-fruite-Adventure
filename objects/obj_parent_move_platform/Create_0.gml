@@ -12,3 +12,5 @@ top_path_y = 0;
 bottom_path_y = room_height;
 dir_y = 0;
 dir_x = 0;
+start_image_speed = image_speed;
+alarm_time = -1;

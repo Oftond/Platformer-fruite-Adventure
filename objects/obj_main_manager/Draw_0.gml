@@ -1,1 +1,0 @@
-draw_text(270, 480, instance_number(obj_main_manager));

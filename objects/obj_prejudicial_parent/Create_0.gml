@@ -13,3 +13,4 @@ top_path_y = 0;
 bottom_path_y = room_height;
 time = 0;
 max_time = 10;
+alarm_time = -1;

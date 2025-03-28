@@ -3,7 +3,6 @@ event_inherited();
 is_touch = false;
 wait_time = 10;
 wait_timer = 0;
-
 mask_index = sprite_index;
 
 press = function()

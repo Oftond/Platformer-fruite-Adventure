@@ -6,15 +6,13 @@ button_press = function()
 	if (instance_exists(obj_transition) || pause_sequence != undefined || global.IsPause)
 		return;
 	pause_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_pause_menu);
-	global.IsPause = true;
+	pause();
 }
 
 mouse_enter = function()
 {
-	if (room == rm_menu)
-		if (instance_exists(obj_button_buy))
-			if (obj_button_buy.acceptWindow_sequence != undefined)
-				exit;
+	if (global.IsPause) exit;
+	
 	image_xscale = koef_scale;
 	image_yscale = koef_scale;
 	var _mouse_gui_x = device_mouse_x_to_gui(0);

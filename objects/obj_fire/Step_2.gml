@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 switch(state)
 {
 	case STATES.IDLE:

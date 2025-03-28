@@ -4,7 +4,6 @@ is_touch = false;
 wait_time = 10;
 wait_timer = 0;
 mask_index = sprite_index;
-
 instance_create_layer(x, y, "Environment", obj_pointer_maskCollide);
 
 moveAnim = function()

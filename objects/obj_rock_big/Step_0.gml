@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (is_death || state == STATES.HIT)
 	exit;
 

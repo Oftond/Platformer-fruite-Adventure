@@ -117,6 +117,8 @@ heal = function(_value)
 
 check_collision_enemy = function()
 {
+	if (global.IsPause) return;
+	
 	with (instance_place(x, y + move_y, obj_enemy_parent))
 	{
 		if (name == "rino")

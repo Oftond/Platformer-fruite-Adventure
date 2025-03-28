@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (parts != pointer_null) part_system_position(parts, x, y);
 event_inherited();
 

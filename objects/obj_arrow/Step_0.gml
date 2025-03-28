@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (destroy && !off)
 {
 	image_index = 0;

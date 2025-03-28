@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 y += move_y;
 x += move_x;
 time++;

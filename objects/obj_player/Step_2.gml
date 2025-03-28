@@ -1,3 +1,4 @@
+if (global.IsPause) exit;
 event_inherited();
 
 switch (state)
@@ -35,6 +36,7 @@ switch (state)
 	break;
 	
 	case STATES.HIT:
+		image_index = 1;
 		if (sprite_index != hit_sprites[global.ChooseCharacter])
 		{
 			image_index = 0;

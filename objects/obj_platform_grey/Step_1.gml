@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (!stop_platform)
 {
 	time = 0;

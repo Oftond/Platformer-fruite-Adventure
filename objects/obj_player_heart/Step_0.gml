@@ -1,4 +1,4 @@
-if (!instance_exists(obj_player))
+if (!instance_exists(obj_player) || global.IsPause)
 	exit;
 
 if (number > global.CurrentHP)

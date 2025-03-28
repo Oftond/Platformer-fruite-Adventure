@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (mode)
 {
 	if (y <= yy + max_height && x < xx)

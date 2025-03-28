@@ -1,4 +1,7 @@
+if (global.IsPause) exit;
+
 event_inherited();
+
 switch (state)
 {
 	case STATES.IDLE:
@@ -13,6 +16,7 @@ switch (state)
 	
 	case STATES.HIT:
 		sprite_index = sprite_hit;
+		image_speed = 1;
 		if (image_index >= sprite_get_number(sprite_index) - 1)
 		{
 			image_speed = 0;

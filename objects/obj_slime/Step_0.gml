@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 event_inherited();
 if (is_death || state == STATES.HIT) exit;
 

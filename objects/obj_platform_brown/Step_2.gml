@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (start_move && stop_platform)
 {
 	dir_y *= -1;

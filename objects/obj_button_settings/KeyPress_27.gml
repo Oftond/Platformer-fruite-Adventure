@@ -3,13 +3,12 @@ if (instance_exists(obj_transition))
 if (!global.IsPause)
 {
 	pause_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_pause_menu);
-	global.IsPause = true;
+	pause();
 }
 else
 {
-	if (pause_sequence == undefined)
-		exit;
+	if (pause_sequence == undefined) exit;
 	layer_sequence_destroy(pause_sequence);
 	pause_sequence = undefined;
-	global.IsPause = false;
+	unpause();
 }

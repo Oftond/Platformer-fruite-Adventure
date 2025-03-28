@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (y + move_spd_y * dir_y >= top_path_y && y + move_spd_y * dir_y <= bottom_path_y)
 	move_y = move_spd_y * dir_y;
 else

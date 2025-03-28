@@ -1,4 +1,4 @@
-if (is_death || flashing > 0 || state == STATES.HIT)
+if (is_death || flashing > 0 || state == STATES.HIT || global.IsPause)
 	exit;
 	
 if (other.is_death)

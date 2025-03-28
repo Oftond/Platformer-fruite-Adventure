@@ -1,4 +1,4 @@
-if (is_death || current_hp <= 0)
+if (is_death || current_hp <= 0 || global.IsPause)
 	exit;
 score += other.give_score;
 touch_fruit = other.sprite_index;

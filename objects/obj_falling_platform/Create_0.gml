@@ -10,13 +10,13 @@ grav = 0;
 max_grav = 0.5
 max_time_to_back = 600;
 time_to_back = 0;
+is_comeback = true;
 
 set_fall_time = function()
 {
 	if (fall_time < max_fall_time)
 	{
 		fall_time = max_fall_time;
-		alarm[1] = fall_time;
 	}
 }
 

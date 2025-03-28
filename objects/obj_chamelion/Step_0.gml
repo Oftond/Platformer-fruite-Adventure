@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 event_inherited();
 
 if (state == STATES.HIT || is_death || state == STATES.ATTACK || attack_timer > 0)

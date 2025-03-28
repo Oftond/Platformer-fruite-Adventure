@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (durability <= 0)
 	destroy = true;
 	

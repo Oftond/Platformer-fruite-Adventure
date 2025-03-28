@@ -1,4 +1,4 @@
-if (endAlpha)
+if (endAlpha || global.IsPause)
 	exit;
 draw_set_font(fnt_big);
 draw_set_halign(fa_center);

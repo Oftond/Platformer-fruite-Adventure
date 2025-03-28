@@ -1,3 +1,5 @@
+if (global.IsPause) exit;
+
 if (wait_timer > 0)
 {
 	wait_timer--;
