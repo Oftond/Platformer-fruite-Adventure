@@ -1,3 +1,5 @@
+if (instance_number(obj_main_manager) > 1) instance_destroy(self);
+
 randomize();
 if (os_browser != browser_not_a_browser)
 {

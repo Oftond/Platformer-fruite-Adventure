@@ -11,7 +11,30 @@ else
             case "rewardOpened":
             break;
             case "rewardReceived":
-				lives++;
+				switch(reward)
+				{
+					case REWARD.CHARACTER:
+						with (obj_character_show)
+						{
+							if (number == 2)
+							{
+								if (name == "virtualGuy")
+									global.BoughtVirtualGuy = true;
+								else if (name == "pinkMan")
+									global.BoughtPinkMan = true;
+								else if (name == "maskDude")
+									global.BoughtMaskDude = true;
+								is_bought = true;
+								global.SaveSystemManager.Save();
+							}
+						}
+					break;
+					
+					case REWARD.HEALTH:
+						global.MaxHP++;
+						global.CurrentHP = global.MaxHP;
+					break;
+				}
 				instance_destroy();
             break;
             case "rewardClosed":

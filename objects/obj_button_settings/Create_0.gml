@@ -1,5 +1,3 @@
-instance_deactivate_all(true);
-instance_activate_all();
 event_inherited();
 pause_sequence = undefined;
 
@@ -7,9 +5,6 @@ button_press = function()
 {	
 	if (instance_exists(obj_transition) || pause_sequence != undefined || global.IsPause)
 		return;
-	
-	instance_deactivate_all(true);
-	instance_activate_object(obj_block);
 	pause_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_pause_menu);
 	global.IsPause = true;
 }
