@@ -9,28 +9,28 @@ else
         var _msg = json_encode(async_load);
         switch (async_load[? "event"]) {	
             case "adClosed":
-				audio_set_master_gain(1, 1);
+				unpause_music();
                 var _data = async_load[? "data"];
 				var _isShown = _data[? "wasShown"];
             break;
             case "adOpened":
-				audio_set_master_gain(1, 0);
+				pause_music();
             break;
             case "offlineMode":
-				audio_set_master_gain(1, 1);
+				unpause_music();
             break;
             case "adError":
-				audio_set_master_gain(1, 1);
+				unpause_music();
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
                 var errMessage = async_load[? "message"];	
             break;
 			
             case "notInitSDK":
-				audio_set_master_gain(1, 1);
+				unpause_music();
             break;
             case "RuntimeError":
-				audio_set_master_gain(1, 1);
+				unpause_music();
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
                 var errMessage = async_load[? "message"];	

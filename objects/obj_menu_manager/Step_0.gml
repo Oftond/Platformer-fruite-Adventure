@@ -4,9 +4,9 @@ if (!is_keyboard_control && (input_pressed(INPUT.DOWN) || input_pressed(INPUT.LE
 	if (!global.IsMovedCursor) exit;
 }
 
-if (input_pressed(INPUT.LEFT) && instance_exists(obj_button_buy))
+if (input_pressed(INPUT.LEFT) && instance_exists(obj_button_buyCharacter))
 {
-	if (obj_button_buy.acceptWindow_sequence != undefined)
+	if (obj_button_buyCharacter.acceptWindow_sequence != undefined)
 		selected_index = max(selected_index - 1, 6);
 	else
 		selected_index = max(selected_index - 1, 0);
@@ -17,7 +17,7 @@ else if (input_pressed(INPUT.LEFT))
 if (input_pressed(INPUT.RIGHT))
 	selected_index = min(selected_index + 1, instance_number(obj_button_parent) - 1);
 
-if (!instance_exists(obj_button_buy))
+if (!instance_exists(obj_button_buyCharacter))
 {
 	if (input_pressed(INPUT.UP))
 	{
@@ -31,7 +31,7 @@ if (!instance_exists(obj_button_buy))
 		else if (selected_index == 4) selected_index--;
 	}
 }
-else if (obj_button_buy.acceptWindow_sequence == undefined)
+else if (obj_button_buyCharacter.acceptWindow_sequence == undefined)
 {
 	if (input_pressed(INPUT.UP))
 	{

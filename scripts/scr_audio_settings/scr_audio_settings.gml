@@ -51,6 +51,26 @@ function ModMusicPlay()
 	}
 }
 
+function pause_music()
+{
+	if (global.CurrentPlayingMusic == noone) return;
+
+	if (!audio_is_paused(global.CurrentPlayingMusic))
+	{
+		audio_pause_sound(global.CurrentPlayingMusic);
+	}
+}
+
+function unpause_music()
+{
+	if (global.CurrentPlayingMusic == noone) return;
+	
+	if (audio_is_paused(global.CurrentPlayingMusic))
+	{
+		audio_resume_sound(global.CurrentPlayingMusic);
+	}
+}
+
 ///Эта функция проигрывает звук один раз.
 ///@param _sound Звук, который вы хотите проиграть
 function SetSoundPlay(_sound)

@@ -13,15 +13,18 @@ else
 			break;
 			
             case "offlineMode":
+				instance_destroy(self);
             break;
 			
             case "notInitSDK":
+				instance_destroy(self);
             break;
 			
             case "RuntimeError":
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
-                var errMessage = async_load[? "message"];	
+                var errMessage = async_load[? "message"];
+				instance_destroy(self);
             break;
         }
    }

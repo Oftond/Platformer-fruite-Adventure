@@ -3,11 +3,11 @@ index = 6;
 
 button_press = function()
 {
-	if (instance_exists(obj_button_buy))
+	if (instance_exists(obj_button_buyCharacter))
 	{
 		if (obj_menu_manager.is_keyboard_control)
-			obj_button_buy.button_is_cooldown = true;
-		obj_button_buy.delete_seq();
+			obj_button_buyCharacter.button_is_cooldown = true;
+		obj_button_buyCharacter.delete_seq();
 	}
 }
 

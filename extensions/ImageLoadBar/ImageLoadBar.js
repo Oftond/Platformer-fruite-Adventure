@@ -34,8 +34,13 @@ function ImageLoadBar_hook(ctx, width, height, total, current, image) {
 	var barHeight = getf("bar_height", 20);
 	var barBorderWidth = getf("bar_border_width", 2);
 	var barOffset = getf("bar_offset", 10);
+	const gradient = ctx.createLinearGradient(0, 0, 0, height);
+
+	gradient.addColorStop(0, '#4CAF50');
+    gradient.addColorStop(0.5, '#FFEB3B');
+    gradient.addColorStop(1, '#F4A460');
 	// background:
-	ctx.fillStyle = backgroundColor;
+	ctx.fillStyle = gradient;
 	ctx.fillRect(0, 0, width, height);
 	// image:
 	var totalHeight, barTop;
@@ -44,8 +49,7 @@ function ImageLoadBar_hook(ctx, width, height, total, current, image) {
 		if (!rect) rect = [0, 0, image.width, image.height];
 		totalHeight = rect[3] + barHeight;
 		var image_y = (height - totalHeight) >> 1;
-		ctx.drawImage(image, rect[0], rect[1], rect[2], rect[3],
-			(width - rect[2]) >> 1, image_y, rect[2], rect[3]);
+		ctx.drawImage(image, 0, 0, width, height);
 		barTop = image_y + rect[3] + barOffset;
 	} else barTop = (height - barHeight) >> 1;
 	// bar border:

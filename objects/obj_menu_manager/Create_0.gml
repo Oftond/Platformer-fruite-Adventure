@@ -1,3 +1,6 @@
+SetMusicPlay(MP3_Welcome_Home_Main);
+
+global.SaveSystemManager.Delete();
 global.SaveSystemManager.Load();
 global.CurrentHP = global.MaxHP;
 global.RespownX = -1;
@@ -16,6 +19,14 @@ text_level =
 	"Level"
 ];
 
+text_health =
+[
+	"купить сердце за",
+	"buy a heart for"
+];
+
+health_price = 100;
+
 is_keyboard_control = false;
 selected_index = 0;
 
@@ -27,5 +38,6 @@ instance_create_layer(736, 832, "GUI", obj_button_play);
 instance_create_layer(1184, 832, "GUI", obj_button_levels);
 instance_create_layer(672, 544, "GUI", obj_previous);
 instance_create_layer(1248, 544, "GUI", obj_next);
+instance_create_layer(320, 460, "GUI", obj_button_buyHealth);
 
 set_random_background();

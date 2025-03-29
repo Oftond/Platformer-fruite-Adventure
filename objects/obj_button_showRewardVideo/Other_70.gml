@@ -9,8 +9,10 @@ else
         switch (async_load[? "event"]) {
 			
             case "rewardOpened":
+				pause_music();
             break;
             case "rewardReceived":
+				unpause_music();
 				switch(reward)
 				{
 					case REWARD.CHARACTER:
@@ -38,16 +40,19 @@ else
 				instance_destroy();
             break;
             case "rewardClosed":
+				unpause_music();
 				instance_destroy();
             break;
             case "rewardError":
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
                 var errMessage = async_load[? "message"];
+				unpause_music();
 				instance_destroy();
             break;
 			
             case "notInitSDK":
+				unpause_music();
 				instance_destroy();
             break;
             case "RuntimeError":
@@ -55,6 +60,7 @@ else
                 var errName = async_load[? "name"];
                 var errMessage = async_load[? "message"];
 				instance_destroy();
+				unpause_music();
             break;
         }
    }

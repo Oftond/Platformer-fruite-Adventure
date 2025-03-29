@@ -10,8 +10,8 @@ button_press = function()
 mouse_enter = function()
 {
 	if (room == rm_menu)
-		if (instance_exists(obj_button_buy))
-			if (obj_button_buy.acceptWindow_sequence != undefined)
+		if (instance_exists(obj_button_buyCharacter))
+			if (obj_button_buyCharacter.acceptWindow_sequence != undefined)
 				exit;
 	image_xscale = koef_scale;
 	image_yscale = koef_scale;
