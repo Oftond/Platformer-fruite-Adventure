@@ -1,1 +1,2 @@
 LoadRoom();
+global.HeartsParts = undefined;

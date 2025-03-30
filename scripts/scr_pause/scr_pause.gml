@@ -1,6 +1,9 @@
+global.ObjectsPaused = [];
+
 function pause()
 {
 	global.IsPause = true;
+	global.ObjectsPaused = [];
 	
 	with (all)
 	{
@@ -17,10 +20,16 @@ function pause()
 		image_speed = 0;
 		
 		gravity = 0;
+		
+		array_push(global.ObjectsPaused, object_index);
 	}
 	
-	paused_backgroundSpeed = layer_get_vspeed("Background");
 	layer_vspeed("Background", 0);
+	
+	layer_set_visible("SFX_dust", false);
+	
+	if (global.HeartsParts != undefined)
+		part_system_automatic_update(global.HeartsParts, false);
 }
 
 function unpause()
@@ -29,6 +38,9 @@ function unpause()
 	
 	with (all)
 	{
+		if (!array_contains(global.ObjectsPaused, object_index))
+			continue;
+		
 		alarm_time = -1;
 		
 		speed = paused_speed;
@@ -38,5 +50,12 @@ function unpause()
 		gravity = paused_gravity;
 	}
 	
-	layer_vspeed("Background", paused_backgroundSpeed);
+	layer_vspeed("Background", 1);
+	
+	layer_set_visible("SFX_dust", true);
+	
+	if (global.HeartsParts != undefined)
+		part_system_automatic_update(global.HeartsParts, true);
+	
+	global.ObjectsPaused = [];
 }

@@ -1,11 +1,11 @@
-SetMusicPlay(MP3_Welcome_Home_Main);
-
-global.SaveSystemManager.Delete();
+//global.SaveSystemManager.Delete();
 global.SaveSystemManager.Load();
 global.CurrentHP = global.MaxHP;
 global.RespownX = -1;
 global.RespownY = -1;
 global.RoomData = { };
+
+SetMusicPlay(MP3_Welcome_Home_Main);
 
 text =
 [

@@ -1,6 +1,6 @@
 if (not isMap(async_load))
 {
-	
+
 }
 else
 {

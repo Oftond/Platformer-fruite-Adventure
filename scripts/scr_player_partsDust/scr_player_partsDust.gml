@@ -2,7 +2,7 @@ function dust_create(_part, _dir, _obj)
 {
 	if (cooldown_parts > 0) return;
 	
-	var part_system = part_system_create_layer("Environment", false);
+	var part_system = part_system_create_layer("SFX_dust", false);
 	var part_type = part_type_create();
 	var _direction = 1;
 	
@@ -26,7 +26,7 @@ function dust_create(_part, _dir, _obj)
 
 function dust_jump_create(_part, _obj)
 {
-	var part_system = part_system_create_layer("Environment", false);
+	var part_system = part_system_create_layer("SFX_dust", false);
 	var part_type = part_type_create();
 
 	part_type_sprite(part_type, _part, false, false, false);
@@ -42,7 +42,7 @@ function dust_jump_create(_part, _obj)
 
 function dust_landing_create(_part, _obj)
 {
-	var part_system = part_system_create_layer("Environment", false);
+	var part_system = part_system_create_layer("SFX_dust", false);
 	var part_type = part_type_create();
 	var part_type2 = part_type_create();
 
@@ -69,7 +69,7 @@ function dust_landing_create(_part, _obj)
 
 function dust_jumpArrow_create(_part, _obj)
 {
-	var part_system = part_system_create_layer("Environment", false);
+	var part_system = part_system_create_layer("SFX_dust", false);
 	var part_type = part_type_create();
 
 	part_type_sprite(part_type, _part, false, false, false);

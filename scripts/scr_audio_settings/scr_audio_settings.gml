@@ -1,9 +1,3 @@
-global.ValumeMusic = 0.5;
-global.ValumeSound = 0.5;
-
-global.CurrentPlayingMusic = noone;
-global.CurrentPlayingSound = noone;
-
 ///Эта функция устанавливает для проигрывания мелодия. Если
 ///уже играет какая-то мелодия, то она остановится и начнется
 ///играть новая мелодия. Если в данный момент играет таже
