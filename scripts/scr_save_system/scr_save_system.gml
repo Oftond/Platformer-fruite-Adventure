@@ -131,7 +131,8 @@ function SaveRoom()
 		checkPointsFlag : array_create(instance_number(obj_checkpoint_flag_idle) + 1, undefined),
 		playerScore : score,
 		blocksNumber : instance_number(obj_block),
-		blocks : array_create(instance_number(obj_block), undefined)
+		blocks : array_create(instance_number(obj_block), undefined),
+		playerMoneys : obj_game_manager.moneys
 	};
 
 	for (var i = 0; i < _room_struct.fruitNumber; i++)
@@ -244,6 +245,7 @@ function LoadRoom()
 	}
 	
 	score = global.RoomData.playerScore;
+	obj_game_manager.moneys = global.RoomData.playerMoneys;
 }
 
 global.SaveSystemManager = new GameManager();

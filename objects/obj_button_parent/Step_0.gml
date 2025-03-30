@@ -21,5 +21,12 @@ else if (instance_exists(obj_pauseMenu))
 	else
 		key_enter();
 }
+else if (instance_exists(obj_finishLevel))
+{
+	if (!obj_finishLevel.is_keyboard_control)
+		mouse_enter();
+	else
+		key_enter();
+}
 else
 	mouse_enter();

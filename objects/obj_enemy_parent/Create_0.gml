@@ -8,3 +8,5 @@ name = "enemy";
 start_pos_x = x;
 start_pos_y = y;
 dir = 1;
+
+score_drop = 10;

@@ -1,5 +1,11 @@
 if (instance_exists(obj_player_appear)) exit;
 
+text_score =
+[
+	"счет",
+	"score"
+];
+
 event_inherited();
 
 part_dust = spr_dust_part;
@@ -153,6 +159,7 @@ check_collision_enemy = function()
 				if (state != STATES.HIT)
 					image_index = 0;
 				state = STATES.HIT;
+				score += score_drop;
 				return;
 			}
 		}

@@ -1,4 +1,7 @@
 instance_create_depth(x, y, depth, obj_button_showFullscreenAds);
+
+moneys = 0;
+
 endAlpha = false;
 isAlpha = false;
 alpha_text = 0;
