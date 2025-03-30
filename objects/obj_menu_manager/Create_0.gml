@@ -1,4 +1,3 @@
-//global.SaveSystemManager.Delete();
 global.SaveSystemManager.Load();
 global.CurrentHP = global.MaxHP;
 global.RespownX = -1;

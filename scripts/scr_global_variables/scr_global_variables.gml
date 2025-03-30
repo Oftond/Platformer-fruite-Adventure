@@ -19,7 +19,7 @@ global.Moneys = 0;
 
 global.IsOnValume = true;
 
-global.Language = LANGUAGES.RUS;
+global.Language = LANGUAGES.ENG;
 global.IsPause = false;
 
 global.FruitsCountInRoom = array_create(global.NumLevels, -1);

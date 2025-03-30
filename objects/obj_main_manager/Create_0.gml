@@ -11,3 +11,5 @@ if (os_browser != browser_not_a_browser)
 	window_set_size(bw, bh);
 	window_center();
 }
+
+instance_create_depth(x, y, depth, obj_button_getEnvironment);
