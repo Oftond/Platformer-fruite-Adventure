@@ -53,6 +53,8 @@ delete_seq = function()
 	image_blend = c_white;
 	obj_next.image_blend = c_white;
 	obj_previous.image_blend = c_white;
+	obj_button_buyHealth.image_blend = c_white;
+	obj_button_volume.image_blend = c_white;
 	obj_menu_manager.selected_index = index;
 }
 

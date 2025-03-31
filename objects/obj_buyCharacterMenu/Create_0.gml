@@ -9,4 +9,5 @@ if (instance_exists(obj_button_buyCharacter))
 	obj_button_buyCharacter.image_blend = c_grey;
 	obj_next.image_blend = c_grey;
 	obj_previous.image_blend = c_grey;
+	obj_button_buyHealth.image_blend = c_grey;
 }

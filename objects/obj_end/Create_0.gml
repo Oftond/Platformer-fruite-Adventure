@@ -39,9 +39,11 @@ press = function()
 		global.Moneys += obj_game_manager.moneys;
 		if (global.ScoreInLevel[global.CurrentLevel - 1] < obj_game_manager.moneys)
 			global.ScoreInLevel[global.CurrentLevel - 1] = obj_game_manager.moneys;
-		global.SaveSystemManager.Save();
 		
 		global.CurrentLevel++;
+		
+		global.SaveSystemManager.Save();
+		
 		if (menu_sequence == undefined)
 			menu_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_levelCompleted);
 	}

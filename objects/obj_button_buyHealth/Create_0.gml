@@ -1,13 +1,6 @@
 event_inherited();
 
-with (obj_button_parent)
-{
-	if (index > 0)
-		index++;
-}
-obj_menu_manager.selected_index++;
-
-index = 4;
+index = 2;
 
 buyWindow_sequence = undefined;
 button_is_cooldown = false;
@@ -58,8 +51,13 @@ delete_seq = function()
 
 mouse_enter = function()
 {
-	if (buyWindow_sequence != undefined) exit;
-
+	if (buyWindow_sequence != undefined) return;
+	if (instance_exists(obj_button_buyCharacter))
+	{
+		if (obj_button_buyCharacter.acceptWindow_sequence != undefined)
+			return;
+	}
+	
 	image_xscale = koef_scale;
 	image_yscale = koef_scale;
 	var _mouse_gui_x = device_mouse_x_to_gui(0);

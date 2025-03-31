@@ -1,5 +1,5 @@
 event_inherited();
-index = 3;
+index = 4;
 
 button_press = function()
 {
