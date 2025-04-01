@@ -1,3 +1,3 @@
 req_id = YaGames_showRewardedVideo();
-reward = REWARD.CHARACTER;
+reward = 30;
 pause_music();

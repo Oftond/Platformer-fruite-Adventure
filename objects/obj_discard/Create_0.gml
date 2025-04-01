@@ -1,13 +1,22 @@
 event_inherited();
-index = 6;
+index = 7;
 
 button_press = function()
 {
-	if (instance_exists(obj_button_buyCharacter))
+	with(obj_button_buyCharacter)
 	{
+		if (acceptWindow_sequence == undefined) break;
 		if (obj_menu_manager.is_keyboard_control)
-			obj_button_buyCharacter.button_is_cooldown = true;
-		obj_button_buyCharacter.delete_seq();
+			button_is_cooldown = true;
+		delete_seq();
+	}
+	
+	with (obj_button_buyHealth)
+	{
+		if (acceptWindow_sequence == undefined) break;
+		if (obj_menu_manager.is_keyboard_control)
+			button_is_cooldown = true;
+		delete_seq();
 	}
 }
 

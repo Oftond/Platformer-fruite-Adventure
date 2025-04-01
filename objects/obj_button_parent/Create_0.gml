@@ -10,9 +10,8 @@ button_press = function()
 mouse_enter = function()
 {
 	if (room == rm_menu)
-		if (instance_exists(obj_button_buyCharacter))
-			if (obj_button_buyCharacter.acceptWindow_sequence != undefined)
-				exit;
+		if (instance_exists(obj_accept_get_moneys_menu))
+			exit;
 	image_xscale = koef_scale;
 	image_yscale = koef_scale;
 	var _mouse_gui_x = device_mouse_x_to_gui(0);

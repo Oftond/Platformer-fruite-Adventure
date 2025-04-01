@@ -2,8 +2,10 @@ event_inherited();
 
 index = 2;
 
-buyWindow_sequence = undefined;
+acceptWindow_sequence = undefined;
 button_is_cooldown = false;
+
+health_cost = 100;
 
 button_press = function()
 {
@@ -15,43 +17,43 @@ button_press = function()
 	else
 		button_is_cooldown = false;
 	
-	with (obj_character_show)
+	if (global.Moneys < health_cost)
 	{
-		if (number == 2 && price > global.Moneys)
-		{
-			ShakeStart(10, 8);
-			other.buyWindow_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_acceptWindow);
-		}
-		else if (number == 2 && price < global.Moneys)
-		{
-			if (name == "virtualGuy")
-				global.BoughtVirtualGuy = true;
-			else if (name == "pinkMan")
-				global.BoughtPinkMan = true;
-			else if (name == "maskDude")
-				global.BoughtMaskDude = true;
-			is_bought = true;
-			global.SaveSystemManager.Save();
-			global.Moneys -= price;
-		}
+		ShakeStart(10, 8);
+		other.acceptWindow_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_acceptWindow);
 	}
-	obj_menu_manager.selected_index = 7;
+	else
+	{
+		global.Moneys -= health_cost;
+		global.CurrentHP = global.MaxHP;
+		global.MaxHP++;
+	}
+	obj_menu_manager.selected_index = 8;
 }
 
 delete_seq = function()
 {
-	if (buyWindow_sequence == undefined) return;
-	layer_sequence_destroy(buyWindow_sequence);
-	buyWindow_sequence = undefined;
+	if (acceptWindow_sequence == undefined) return;
+	layer_sequence_destroy(acceptWindow_sequence);
+	acceptWindow_sequence = undefined;
+	obj_button_play.image_blend = c_white;
+	obj_button_levels.image_blend = c_white;
 	image_blend = c_white;
 	obj_next.image_blend = c_white;
 	obj_previous.image_blend = c_white;
+	obj_button_volume.image_blend = c_white;
+	with (obj_button_buyCharacter)
+	{
+		image_blend = c_white;
+	}
 	obj_menu_manager.selected_index = index;
+	obj_button_play.can_press = true;
+	obj_button_levels.can_press = true;
 }
 
 mouse_enter = function()
 {
-	if (buyWindow_sequence != undefined) return;
+	if (acceptWindow_sequence != undefined) return;
 	if (instance_exists(obj_button_buyCharacter))
 	{
 		if (obj_button_buyCharacter.acceptWindow_sequence != undefined)

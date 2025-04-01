@@ -42,7 +42,7 @@ button_press = function()
 			global.Moneys -= price;
 		}
 	}
-	obj_menu_manager.selected_index = 7;
+	obj_menu_manager.selected_index = 8;
 }
 
 delete_seq = function()
@@ -56,6 +56,8 @@ delete_seq = function()
 	obj_button_buyHealth.image_blend = c_white;
 	obj_button_volume.image_blend = c_white;
 	obj_menu_manager.selected_index = index;
+	obj_button_play.can_press = true;
+	obj_button_levels.can_press = true;
 }
 
 mouse_enter = function()

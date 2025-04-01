@@ -12,6 +12,7 @@ button_press = function()
 	global.ValumeSound = global.IsOnValume ? 0.25 : 0;
 	audio_sound_gain(global.CurrentPlayingMusic, global.ValumeMusic, 0);
 	audio_sound_gain(global.CurrentPlayingSound, global.ValumeSound, 0);
+	
 	global.SaveSystemManager.Save();
 }
 

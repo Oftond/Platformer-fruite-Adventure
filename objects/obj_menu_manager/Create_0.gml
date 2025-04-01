@@ -37,6 +37,6 @@ instance_create_layer(736, 832, "GUI", obj_button_play);
 instance_create_layer(1184, 832, "GUI", obj_button_levels);
 instance_create_layer(672, 544, "GUI", obj_previous);
 instance_create_layer(1248, 544, "GUI", obj_next);
-instance_create_layer(320, 544, "GUI", obj_button_buyHealth);
+instance_create_layer(342, 544, "GUI", obj_button_buyHealth);
 
 set_random_background();
