@@ -12,8 +12,8 @@
   "duration":129.648,
   "name":"MP3_Welcome_Home_Main",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

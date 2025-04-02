@@ -12,8 +12,8 @@
   "duration":6.696,
   "name":"MP3_Heroic_Lose_Sting",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

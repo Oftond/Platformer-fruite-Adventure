@@ -25,8 +25,8 @@ button_press = function()
 	else
 	{
 		global.Moneys -= health_cost;
-		global.CurrentHP = global.MaxHP;
 		global.MaxHP++;
+		global.CurrentHP = global.MaxHP;
 	}
 	obj_menu_manager.selected_index = 8;
 }

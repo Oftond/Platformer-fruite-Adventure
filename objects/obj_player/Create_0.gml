@@ -6,6 +6,9 @@ text_score =
 	"score"
 ];
 
+sound_of_lose = MP3_Hopeful_Lose_Sting;
+sound_of_pain = OGG_Player_Pain2;
+
 event_inherited();
 
 part_dust = spr_dust_part;
@@ -104,12 +107,15 @@ mask_index = spr_player_maskCollide;
 
 get_damage = function(_damage)
 {
+	SetSoundPlay(sound_of_pain);
 	current_hp -= _damage;
 	update_globalHp();
 	if (!game_over && current_hp <= 0)
 	{
 		game_over = true;
-		alarm[1] = 60;
+		StopMusicPlay();
+		SetSoundPlay(sound_of_lose);
+		if (!obj_game_manager.is_checkpoint) alarm[1] = 80;
 	}
 }
 

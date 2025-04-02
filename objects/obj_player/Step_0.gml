@@ -4,7 +4,7 @@ if (is_death)
 {
 	if (y > room_height + 175)
 		speed = 0;
-	if (!instance_exists(obj_transition))
+	if (!instance_exists(obj_transition) && !obj_game_manager.is_checkpoint)
 		instance_create_layer(0, 0, "GUI", obj_transition);
 	image_angle += 3;
 	exit;
@@ -38,6 +38,8 @@ if (place_meeting(x, y + max(1, move_y), obj_parent_move_platform))
 	if (bbox_bottom <= _platform.bbox_top)
 	{
 		is_graunded = true;
+		if (move_y > 0)
+			dust_landing_create(part_dust, self);
 	}
 }
 
@@ -284,13 +286,14 @@ if (place_meeting(x + move_x, y, obj_parent_trap))
 
 if (place_meeting(x, y + move_y, obj_parent_trap))
 {
+	if (move_y > 0)
+		dust_landing_create(part_dust, self);
 	y -= move_y;
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_parent_trap))
 		y += _pixel_check;
 	move_y = 0;
 	jump_timer = 0;
-	dust_landing_create(part_dust, self);
 }
 
 if (place_meeting(x + move_x, y, obj_game_manager.traps_layer_sand))
@@ -313,24 +316,26 @@ if (place_meeting(x + move_x, y, obj_game_manager.traps_layer_ice))
 
 if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_sand))
 {
+	if (move_y > 0)
+		dust_landing_create(part_sand, self);
 	y -= move_y;
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_sand))
 		y += _pixel_check;
 	move_y = 0;
 	jump_timer = 0;
-	dust_landing_create(part_sand, self);
 }
 
 if (place_meeting(x, y + move_y, obj_game_manager.traps_layer_ice))
 {
+	if (move_y > 0)
+		dust_landing_create(part_ice, self);
 	y -= move_y;
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.traps_layer_ice))
 		y += _pixel_check;
 	move_y = 0;
 	jump_timer = 0;
-	dust_landing_create(part_ice, self);
 }
 
 if (place_meeting(x, y + max(1, move_y), obj_game_manager.traps_layer_sand) && !place_meeting(x, y + max(1, move_y), obj_game_manager.collision_tilemap))
@@ -351,13 +356,14 @@ if (place_meeting(x + move_x, y, obj_game_manager.collision_tilemap))
 
 if (place_meeting(x, y + move_y, obj_game_manager.collision_tilemap))
 {
+	if (move_y > 0)
+		dust_landing_create(part_dust, self);
 	y -= move_y;
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while (!place_meeting(x, y + _pixel_check, obj_game_manager.collision_tilemap))
 		y += _pixel_check;
 	move_y = 0;
 	jump_timer = 0;
-	dust_landing_create(part_dust, self);
 }
 
 move_y = clamp(move_y, -max_y_speed, max_y_speed);
@@ -370,6 +376,8 @@ if (is_graunded && move_x != 0)
 		dust_create(part_sand, image_xscale, self);
 	else if (place_meeting(x, y + 1, obj_game_manager.traps_layer_ice))
 		dust_create(part_ice, image_xscale, self);
+	else if (place_meeting(x, y + 1, obj_parent_move_platform))
+		dust_create(part_dust, image_xscale, self);
 }
 
 x += move_x;
@@ -398,8 +406,6 @@ if (place_meeting(x, y + move_y, obj_falling_platform))
 	{
 		_platform.set_fall_time();
 	}
-	if (move_y > 0)
-		dust_landing_create(part_dust, self);
 }
 
 event_inherited();

@@ -1,5 +1,5 @@
 global.ValumeMusic = 0.5;
-global.ValumeSound = 0.25;
+global.ValumeSound = 0.15;
 
 global.CurrentPlayingMusic = noone;
 global.CurrentPlayingSound = noone;
@@ -12,6 +12,7 @@ global.OpenLevels = 1;
 
 global.MaxHP = 3;
 global.CurrentHP = global.MaxHP;
+global.TotalMaxHP = 8;
 global.Score = 0;
 global.ScoreInLevel = array_create(global.NumLevels, 0);
 

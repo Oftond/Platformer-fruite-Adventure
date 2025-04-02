@@ -12,8 +12,8 @@
   "duration":209.3513,
   "name":"MP3_Foreboding_Main",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

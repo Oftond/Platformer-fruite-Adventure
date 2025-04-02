@@ -12,8 +12,8 @@
   "duration":148.896,
   "name":"MP3_Driving_Main",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -1,6 +1,6 @@
 if (not isMap(async_load))
 {
-
+	
 }
 else
 {
@@ -11,16 +11,28 @@ else
             case "rewardOpened":
 				pause_music();
             break;
+			
             case "rewardReceived":
 				unpause_music();
-				global.Moneys += reward;
-				global.SaveSystemManager.Save();
+				if (instance_exists(obj_accept_get_moneys_menu))
+				{
+					global.Moneys += reward;
+					global.SaveSystemManager.Save();
+				}
+				else if (instance_exists(obj_loseMenu))
+				{
+					global.RespownX = obj_game_manager.temp_player_respown_X;
+					global.RespownY = obj_game_manager.temp_player_respown_y;
+					SaveRoom();
+				}
 				instance_destroy();
             break;
+			
             case "rewardClosed":
 				unpause_music();
 				instance_destroy();
             break;
+			
             case "rewardError":
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
@@ -33,6 +45,7 @@ else
 				unpause_music();
 				instance_destroy();
             break;
+			
             case "RuntimeError":
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
@@ -40,6 +53,11 @@ else
 				instance_destroy();
 				unpause_music();
             break;
+			
+			default:
+				instance_destroy();
+				unpause_music();
+			break;
         }
    }
 }

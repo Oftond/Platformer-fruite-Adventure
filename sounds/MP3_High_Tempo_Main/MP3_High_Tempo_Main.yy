@@ -12,8 +12,8 @@
   "duration":143.1617,
   "name":"MP3_High_Tempo_Main",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

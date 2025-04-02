@@ -1,3 +1,5 @@
+SetMusicPlay(MP3_Welcome_Home_Main);
+
 text =
 [
 	"ОБЩИЙ СЧЕТ",

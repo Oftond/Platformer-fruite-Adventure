@@ -12,8 +12,8 @@
   "duration":157.776,
   "name":"MP3_Heroic_Main",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

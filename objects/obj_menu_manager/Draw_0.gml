@@ -6,4 +6,7 @@ draw_text(room_width / 2, (room_height / 2) + 280, $"{text_level[global.Language
 
 draw_text(372, 428, $"{text_health[global.Language]}: {health_price}");
 draw_set_halign(fa_left);
-draw_text(372, 320, global.MaxHP);
+if (global.MaxHP < global.TotalMaxHP)
+	draw_text(372, 320, global.MaxHP);
+else
+	draw_text(372, 320, text_maxHP[global.Language]);

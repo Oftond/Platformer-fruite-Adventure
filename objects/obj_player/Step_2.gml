@@ -36,7 +36,7 @@ switch (state)
 	break;
 	
 	case STATES.HIT:
-		image_index = 1;
+		image_speed = 1;
 		if (sprite_index != hit_sprites[global.ChooseCharacter])
 		{
 			image_index = 0;

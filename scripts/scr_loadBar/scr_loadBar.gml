@@ -14,10 +14,10 @@ function gmcallback_imgloadbar(argument0, argument1, argument2, argument3, argum
 	        r[2] = iw;
 	        r[3] = ih;
 	        return r;
-	    case "background_color": return c_white;
-	    case "bar_background_color": return c_white;
-	    case "bar_foreground_color": return c_black;
-	    case "bar_border_color": return c_black;
+	    case "background_color": return c_black;
+	    case "bar_background_color": return c_black;
+	    case "bar_foreground_color": return c_white;
+	    case "bar_border_color": return c_white;
 	    case "bar_width": return round(cw * 0.6); // (px)
 	    case "bar_height": return 20; // (px)
 	    case "bar_border_width": return 2; // (px)

@@ -2,6 +2,7 @@ function dust_create(_part, _dir, _obj)
 {
 	if (cooldown_parts > 0) return;
 	
+	var _sound_of_walk = OGG_Step1;
 	var part_system = part_system_create_layer("SFX_dust", false);
 	var part_type = part_type_create();
 	var _direction = 1;
@@ -22,10 +23,12 @@ function dust_create(_part, _dir, _obj)
 	if (_dir == 1 && part_system_exists(part_system)) part_particles_create(part_system, _obj.bbox_left + 20, _obj.bbox_bottom, part_type, 1);
 	
 	cooldown_parts = max_cooldown_time;
+	SetSoundPlay(_sound_of_walk);
 }
 
 function dust_jump_create(_part, _obj)
 {
+	var _sound_jump = OGG_Jump;
 	var part_system = part_system_create_layer("SFX_dust", false);
 	var part_type = part_type_create();
 
@@ -38,10 +41,13 @@ function dust_jump_create(_part, _obj)
 	
 	if (part_system_exists(part_system))
 		part_particles_create(part_system, _obj.x, _obj.bbox_bottom - 10, part_type, 10);
+	
+	SetSoundPlay(_sound_jump);
 }
 
 function dust_landing_create(_part, _obj)
 {
+	var _sound_land = OGG_Jump_Land;
 	var part_system = part_system_create_layer("SFX_dust", false);
 	var part_type = part_type_create();
 	var part_type2 = part_type_create();
@@ -65,10 +71,13 @@ function dust_landing_create(_part, _obj)
 		part_particles_create(part_system, _obj.bbox_left + 10, _obj.bbox_bottom + 5, part_type, 4);
 		part_particles_create(part_system, _obj.bbox_right - 10, _obj.bbox_bottom + 5, part_type2, 4);
 	}
+	
+	SetSoundPlay(_sound_land);
 }
 
 function dust_jumpArrow_create(_part, _obj)
 {
+	var _sound_jump = OGG_Jump;
 	var part_system = part_system_create_layer("SFX_dust", false);
 	var part_type = part_type_create();
 
@@ -81,4 +90,6 @@ function dust_jumpArrow_create(_part, _obj)
 	
 	if (part_system_exists(part_system))
 		part_particles_create(part_system, _obj.x, _obj.bbox_bottom, part_type, 6);
+	
+	SetSoundPlay(_sound_jump);
 }

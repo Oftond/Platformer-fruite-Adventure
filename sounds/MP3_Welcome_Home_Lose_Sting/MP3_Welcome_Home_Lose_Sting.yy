@@ -12,8 +12,8 @@
   "duration":4.704,
   "name":"MP3_Welcome_Home_Lose_Sting",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

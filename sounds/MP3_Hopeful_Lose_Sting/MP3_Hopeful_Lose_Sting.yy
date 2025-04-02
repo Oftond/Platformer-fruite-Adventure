@@ -12,8 +12,8 @@
   "duration":6.5543,
   "name":"MP3_Hopeful_Lose_Sting",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

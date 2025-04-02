@@ -1,4 +1,4 @@
-if (instance_exists(obj_transition) || instance_exists(obj_finishLevel))
+if (instance_exists(obj_transition) || instance_exists(obj_finishLevel) || instance_exists(obj_loseMenu))
 	exit;
 if (!global.IsPause)
 {

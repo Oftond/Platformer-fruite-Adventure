@@ -18,6 +18,19 @@ button_press = function()
 			button_is_cooldown = true;
 		delete_seq();
 	}
+	
+	with(obj_game_manager)
+	{
+		global.RespownX = start_player_x;
+		global.RespownY = start_player_y;
+		global.RoomData = { };
+	}
+	
+	if (!instance_exists(obj_menu_manager) && instance_exists(obj_game_manager) && !instance_exists(obj_transition))
+	{
+		instance_create_layer(0, 0, "GUI", obj_transition);
+		alarm[0] = 80;
+	}
 }
 
 mouse_enter = function()

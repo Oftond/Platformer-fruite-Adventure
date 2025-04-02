@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"OGG_Option_Select",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.75,
+  "name":"OGG_Option_Select",
+  "parent":{
+    "name":"Sound",
+    "path":"folders/Sounds/Sound.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"OGG_Option_Select.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -4,8 +4,6 @@ global.RespownX = -1;
 global.RespownY = -1;
 global.RoomData = { };
 
-SetMusicPlay(MP3_Welcome_Home_Main);
-
 text =
 [
 	"Ваш баланс",
@@ -24,10 +22,16 @@ text_health =
 	"buy a heart\nfor"
 ];
 
-health_price = 100;
+health_price = 150;
 
 is_keyboard_control = false;
 selected_index = 0;
+
+text_maxHP =
+[
+	"МАКС",
+	"MAX"
+];
 
 instance_create_layer(x, y, "Managers", obj_charactersShop_manager);
 instance_create_layer(x, y, "Managers", obj_shake);

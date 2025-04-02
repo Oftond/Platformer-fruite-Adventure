@@ -2,6 +2,8 @@ global.ObjectsPaused = [];
 
 function pause()
 {
+	audio_bus_main.effects[0] = audio_effect_create(AudioEffectType.Reverb1, {size : 0.7});
+	audio_bus_main.effects[1] = audio_effect_create(AudioEffectType.HPF2, {gain: 0.5, cutoff : 800});
 	global.IsPause = true;
 	global.ObjectsPaused = [];
 	
@@ -20,7 +22,7 @@ function pause()
 		image_speed = 0;
 		
 		gravity = 0;
-		
+
 		array_push(global.ObjectsPaused, object_index);
 	}
 	
@@ -34,6 +36,8 @@ function pause()
 
 function unpause()
 {
+	audio_bus_main.effects[0] = undefined;
+	audio_bus_main.effects[1] = undefined;
 	global.IsPause = false;
 	
 	with (all)

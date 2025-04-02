@@ -12,8 +12,8 @@
   "duration":194.5004,
   "name":"MP3_Hopeful_Main",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

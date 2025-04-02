@@ -38,9 +38,3 @@ enum INPUT
 	UP,
 	DOWN
 }
-
-enum REWARD
-{
-	CHARACTER,
-	HEALTH
-}

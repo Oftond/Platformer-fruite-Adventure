@@ -1,6 +1,7 @@
 if (!instance_exists(follow) || global.shake)
 	exit;
 
+if (follow.is_death) exit;
 var _target_x = follow.x - (camera_width / 2);
 var _target_y = follow.y - (camera_height / 2);
 

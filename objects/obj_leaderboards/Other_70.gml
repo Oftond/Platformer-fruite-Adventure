@@ -1,6 +1,6 @@
 if (not isMap(async_load))
 {
-
+	instance_destroy(self);
 }
 else
 {
@@ -8,7 +8,7 @@ else
 	{
         switch (async_load[? "event"]) {	
 			case "leaderboardsInit":
-				//YaGames_Leaderboards_setScore("highScore", global.Score);
+				YaGames_Leaderboards_setScore("highScore", global.Score);
 				set_up = true;
 			break;
 			
@@ -26,6 +26,12 @@ else
                 var errMessage = async_load[? "message"];
 				instance_destroy(self);
             break;
+			
+			default:
+				instance_destroy(self);
+			break;
         }
    }
+   else
+	   instance_destroy(self);
 }
