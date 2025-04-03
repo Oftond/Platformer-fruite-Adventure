@@ -4,6 +4,8 @@ text =
 	"Your balance is too small. Would you like to watch a short video and increase your balance by 30?"
 ];
 
+depth = -999;
+
 with (obj_button_buyCharacter)
 {
 	image_blend = c_grey;

@@ -28,6 +28,7 @@ global.FruitsCountInRoom = array_create(global.NumLevels, -1);
 global.RespownX = -1;
 global.RespownY = -1;
 
+global.TouchFruit = undefined;
 global.RoomData = { };
 
 global.BoughtMaskDude = false;

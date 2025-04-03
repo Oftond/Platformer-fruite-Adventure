@@ -2,6 +2,7 @@ event_inherited();
 
 index = 2;
 
+cancelWindow_sequence = undefined;
 acceptWindow_sequence = undefined;
 button_is_cooldown = false;
 
@@ -9,7 +10,12 @@ health_cost = 100;
 
 button_press = function()
 {
-	if (button_is_cooldown && obj_menu_manager.is_keyboard_control)
+	if (global.MaxHP >= global.TotalMaxHP)
+	{
+		cancelWindow_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_cancelMenu);
+		return;
+	}
+	else if (button_is_cooldown && obj_menu_manager.is_keyboard_control)
 	{
 		button_is_cooldown = false;
 		return;
@@ -33,6 +39,26 @@ button_press = function()
 
 delete_seq = function()
 {
+	if (cancelWindow_sequence != undefined)
+	{
+		layer_sequence_destroy(cancelWindow_sequence);
+		cancelWindow_sequence = undefined;
+		obj_button_play.image_blend = c_white;
+		obj_button_levels.image_blend = c_white;
+		image_blend = c_white;
+		obj_next.image_blend = c_white;
+		obj_previous.image_blend = c_white;
+		obj_button_volume.image_blend = c_white;
+		with (obj_button_buyCharacter)
+		{
+			image_blend = c_white;
+		}
+		obj_menu_manager.selected_index = index;
+		obj_button_play.can_press = true;
+		obj_button_levels.can_press = true;
+		return;
+	}
+	
 	if (acceptWindow_sequence == undefined) return;
 	layer_sequence_destroy(acceptWindow_sequence);
 	acceptWindow_sequence = undefined;

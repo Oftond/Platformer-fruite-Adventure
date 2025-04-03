@@ -9,3 +9,15 @@ if (input_pressed(INPUT.LEFT))
 
 if (input_pressed(INPUT.RIGHT))
 	selected_index = max(selected_index - 1, 0);
+	
+var _mouse_gui_x = device_mouse_x_to_gui(0);
+var _mouse_gui_y = device_mouse_y_to_gui(0);
+
+var _button_to_check = collision_point(_mouse_gui_x, _mouse_gui_y, obj_button_parent, false, false);
+if (_button_to_check != noone && !global.IsMovedCursor && _button_to_check.index != -1)
+{
+	global.IsMovedCursor = true;
+	is_keyboard_control = false;
+	selected_index = _button_to_check.index;
+}
+else if (_button_to_check == noone) global.IsMovedCursor = false;

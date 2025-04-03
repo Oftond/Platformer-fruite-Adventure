@@ -13,6 +13,14 @@ button_press = function()
 	
 	with (obj_button_buyHealth)
 	{
+		if (cancelWindow_sequence != undefined)
+		{
+			if (obj_menu_manager.is_keyboard_control)
+				button_is_cooldown = true;
+			delete_seq();
+			break;
+		}
+		
 		if (acceptWindow_sequence == undefined) break;
 		if (obj_menu_manager.is_keyboard_control)
 			button_is_cooldown = true;

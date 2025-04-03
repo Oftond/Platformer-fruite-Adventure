@@ -4,9 +4,9 @@ text =
 	"you lose!\nwould you like to watch the video with the reward for respawn at the last checkpoint?"
 ];
 
-depth = 999;
+depth = -999;
 
 is_keyboard_control = false;
-selected_index = 0;
+selected_index = 8;
 
 if (global.IsPause) unpause();

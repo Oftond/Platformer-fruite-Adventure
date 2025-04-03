@@ -12,6 +12,6 @@ if (global.IsPause)
 
 with (obj_player)
 {
-	if (is_death && other.sequence_loseMenu == undefined)
+	if (is_death && other.sequence_loseMenu == undefined && other.is_checkpoint)
 		other.sequence_loseMenu = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_loseWindow);
 }

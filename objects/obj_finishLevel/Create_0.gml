@@ -4,7 +4,7 @@ text =
 	$"the level completed!\n\nscore:   {score}"
 ];
 
-depth = 999;
+depth = -999;
 
 is_keyboard_control = false;
 selected_index = 0;

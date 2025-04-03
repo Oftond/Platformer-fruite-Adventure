@@ -132,7 +132,8 @@ function SaveRoom()
 		playerScore : score,
 		blocksNumber : instance_number(obj_block),
 		blocks : array_create(instance_number(obj_block), undefined),
-		playerMoneys : obj_game_manager.moneys
+		playerMoneys : obj_game_manager.moneys,
+		touch_fruit : global.TouchFruit
 	};
 
 	for (var i = 0; i < _room_struct.fruitNumber; i++)
@@ -246,6 +247,7 @@ function LoadRoom()
 	
 	score = global.RoomData.playerScore;
 	obj_game_manager.moneys = global.RoomData.playerMoneys;
+	global.TouchFruit = global.RoomData.touch_fruit;
 }
 
 global.SaveSystemManager = new GameManager();
