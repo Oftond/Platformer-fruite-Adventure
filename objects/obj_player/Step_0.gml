@@ -371,13 +371,13 @@ move_y = clamp(move_y, -max_y_speed, max_y_speed);
 if (is_graunded && move_x != 0)
 {
 	if (place_meeting(x, y + 1, obj_game_manager.collision_tilemap))
-		dust_create(part_dust, image_xscale, self);
+		dust_create(part_dust, image_xscale, self, _dir);
 	else if (place_meeting(x, y + 1, obj_game_manager.traps_layer_sand))
-		dust_create(part_sand, image_xscale, self);
-	else if (place_meeting(x, y + 1, obj_game_manager.traps_layer_ice))
-		dust_create(part_ice, image_xscale, self);
+		dust_create(part_sand, image_xscale, self, _dir, max_cooldown_time + 8);
+	else if (place_meeting(x, y + 1, obj_game_manager.traps_layer_ice) && abs(move_x) > 3)
+		dust_create(part_ice, image_xscale, self, _dir);
 	else if (place_meeting(x, y + 1, obj_parent_move_platform))
-		dust_create(part_dust, image_xscale, self);
+		dust_create(part_dust, image_xscale, self, _dir);
 }
 
 x += move_x;

@@ -1,4 +1,5 @@
 SetMusicPlay(MP3_Welcome_Home_Main);
+global.IsWatchVideo = false;
 
 text =
 [

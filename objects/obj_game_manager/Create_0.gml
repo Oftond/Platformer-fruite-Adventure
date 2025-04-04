@@ -3,7 +3,19 @@ etherial_main = MP3_Ethereal_Main;
 heroic_main = MP3_Heroic_Main;
 hight_tempo_main = MP3_High_Tempo_Main;
 
-instance_create_depth(x, y, depth, obj_button_showFullscreenAds);
+if (global.CurrentLevel > 0 && global.CurrentLevel < 6)
+	SetMusicPlay(etherial_main);
+else if (global.CurrentLevel > 5 && global.CurrentLevel < 11)
+	SetMusicPlay(hight_tempo_main);
+else if (global.CurrentLevel > 10 && global.CurrentLevel < 15)
+	SetMusicPlay(heroic_main);
+else if (global.CurrentLevel == global.NumLevels)
+	SetMusicPlay(driving_main);
+
+if (!global.IsWatchVideo)
+	instance_create_depth(x, y, depth, obj_button_showFullscreenAds);
+else if (global.IsWatchVideo)
+	global.IsWatchVideo = false;
 
 is_checkpoint = false;
 moneys = 0;

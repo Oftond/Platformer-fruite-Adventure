@@ -1,4 +1,4 @@
-function dust_create(_part, _dir, _obj)
+function dust_create(_part, _dir, _obj, _isWalk, _max_cooldown_time = 10)
 {
 	if (cooldown_parts > 0) return;
 	
@@ -22,8 +22,9 @@ function dust_create(_part, _dir, _obj)
 	if (_dir == -1 && part_system_exists(part_system)) part_particles_create(part_system, _obj.bbox_right - 20, _obj.bbox_bottom, part_type, 1);
 	if (_dir == 1 && part_system_exists(part_system)) part_particles_create(part_system, _obj.bbox_left + 20, _obj.bbox_bottom, part_type, 1);
 	
-	cooldown_parts = max_cooldown_time;
-	SetSoundPlay(_sound_of_walk);
+	cooldown_parts = _max_cooldown_time;
+	if (_isWalk != 0)
+		SetSoundPlay(_sound_of_walk);
 }
 
 function dust_jump_create(_part, _obj)

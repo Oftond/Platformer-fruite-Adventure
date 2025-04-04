@@ -66,8 +66,12 @@ function GameManager() : SaveSystem() constructor
 	///Логика сохранения всех данных об игре
 	GetData = function()
 	{
-		if (global.Score > 0)
-			instance_create_depth(0, 0, 0, obj_leaderboards);
+		if (score > 0 && instance_exists(obj_game_manager))
+		{
+			if (obj_game_manager.is_end_level)
+				instance_create_depth(0, 0, 0, obj_leaderboards);
+		}
+		
 		var _player_struct =
 		{
 			max_hp : global.MaxHP,
@@ -78,8 +82,6 @@ function GameManager() : SaveSystem() constructor
 			score_in_level : global.ScoreInLevel,
 			is_on_valume : global.IsOnValume,
 			friuts_count_in_room : global.FruitsCountInRoom,
-			volume_music : global.ValumeMusic,
-			volume_sound : global.ValumeSound,
 			moneys : global.Moneys,
 			bought_maskDude : global.BoughtMaskDude,
 			bought_pinkMan : global.BoughtPinkMan,
@@ -105,8 +107,6 @@ function GameManager() : SaveSystem() constructor
 		global.ScoreInLevel = _data_struct.score_in_level;
 		global.IsOnValume = _data_struct.is_on_valume;
 		global.FruitsCountInRoom = _data_struct.friuts_count_in_room;
-		global.ValumeMusic = _data_struct.volume_music;
-		global.ValumeSound = _data_struct.volume_sound;
 		global.BoughtMaskDude = _data_struct.bought_maskDude;
 		global.BoughtPinkMan = _data_struct.bought_pinkMan;
 		global.BoughtVirtualGuy = _data_struct.bought_virtualGuy;
@@ -114,6 +114,12 @@ function GameManager() : SaveSystem() constructor
 		global.IsHelpsFirst = _data_struct.is_helps_first;
 		global.IsHelpsSecond = _data_struct.is_helps_second;
 		global.IsHelpsThird = _data_struct.is_helps_third;
+		
+		if (!global.IsOnValume)
+		{
+			global.CurrentPlayingMusic = 0;
+			global.CurrentPlayingSound = 0;
+		}
 	}
 }
 

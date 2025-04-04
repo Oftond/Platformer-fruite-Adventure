@@ -2,7 +2,9 @@ if (global.CurrentLevel == 1 && !instance_exists(obj_transition))
 {
 	draw_helps_move();
 	draw_helps_jump();
+	depth = 99999;
 	draw_helps_enemyHit();
+	depth = -9999;
 }
 else if (global.CurrentLevel == 3 && !instance_exists(obj_transition))
 {

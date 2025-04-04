@@ -7,6 +7,7 @@ function draw_helps_move()
 		"двигаться",
 		"move"
 	];
+	
 	draw_sprite_ext(spr_keyboard_moveKey_right, 0, 576, 860, size_move, size_move, 0, c_white, 0.85);
 	draw_sprite_ext(spr_keyboard_moveKey_left, 0, 416, 860, size_move, size_move, 0, c_white, 0.85);
 	draw_set_font(fnt_main);
@@ -47,15 +48,17 @@ function draw_helps_enemyHit()
 	static size_enemyHit = 0;
 	var _text =
 	[
-		"прыгай на врага",
-		"jump on the enemy"
+		"прыгай на врага, чтобы нанести ему урон",
+		"jump on the enemy to inflict damage on him"
 	];
 	if (obj_player.x < 970 && size_enemyHit == 0) return;
-	draw_sprite_ext(spr_mushroom_hit, 0, 1184, 280, size_enemyHit, size_enemyHit, 0, c_white, 0.85);
+	
+	draw_sprite_ext(spr_mushroom_idle, 0, 1184, 280, size_enemyHit, size_enemyHit, 0, c_white, 0.85);
+	draw_sprite_ext(spr_ninjaFrog_jump, 0, 1184, 290 - sprite_get_height(spr_ninjaFrog_jump), -size_enemyHit, size_enemyHit, 0, c_white, 0.85);
 	draw_set_font(fnt_main);
-	draw_set_valign(fa_bottom);
+	draw_set_valign(fa_top);
 	draw_set_halign(fa_center);
-	draw_text_transformed_color(1184, 280 + sprite_get_height(spr_mushroom_hit) + 8, _text[global.Language], size_enemyHit, size_enemyHit, 0, c_white, c_white, c_white, c_white, 0.95);
+	draw_text_ext_transformed_color(1184, 280 + sprite_get_height(spr_mushroom_hit) + 8, _text[global.Language], 70, 800, size_enemyHit, size_enemyHit, 0, c_white, c_white, c_white, c_white, 0.95);
 	if (size_enemyHit < 1)
 	{
 		size_enemyHit += 0.1;

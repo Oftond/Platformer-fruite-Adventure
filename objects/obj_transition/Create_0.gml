@@ -1,3 +1,6 @@
+room_to_go = undefined;
+current_room = room;
+
 transition_layer = layer_create(-10000);
 
 transition_filter = fx_create("_filter_pixelate");

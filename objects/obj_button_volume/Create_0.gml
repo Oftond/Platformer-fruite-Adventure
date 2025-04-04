@@ -18,6 +18,7 @@ button_press = function()
 
 set_image = function()
 {
+	if (instance_exists(obj_transition)) return;
 	if (global.IsOnValume)
 	{
 		image_index = 0;

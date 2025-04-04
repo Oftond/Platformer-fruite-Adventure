@@ -12,3 +12,10 @@ else
 {
 	alarm[1] = 1;
 }
+
+if (!global.IsOnValume) exit;
+
+if (global.ValumeMusic < 0.5)
+	global.ValumeMusic += 0.02;
+
+audio_sound_gain(global.CurrentPlayingMusic, global.ValumeMusic, 0);

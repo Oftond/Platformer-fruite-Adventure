@@ -6,7 +6,7 @@ cancelWindow_sequence = undefined;
 acceptWindow_sequence = undefined;
 button_is_cooldown = false;
 
-health_cost = 100;
+health_cost = obj_menu_manager.health_price;
 
 button_press = function()
 {

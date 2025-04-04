@@ -1,1 +1,0 @@
-global.SaveSystemManager.Delete();

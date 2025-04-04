@@ -14,13 +14,14 @@ else
 			
             case "rewardReceived":
 				unpause_music();
-				if (instance_exists(obj_accept_get_moneys_menu))
+				if (instance_exists(obj_menu_manager) && !instance_exists(obj_game_manager))
 				{
 					global.Moneys += reward;
 					global.SaveSystemManager.Save();
 				}
-				else if (instance_exists(obj_loseMenu))
+				else if (instance_exists(obj_game_manager) && !instance_exists(obj_menu_manager))
 				{
+					global.IsWatchVideo = true;
 					global.RespownX = obj_game_manager.temp_player_respown_X;
 					global.RespownY = obj_game_manager.temp_player_respown_y;
 					SaveRoom();

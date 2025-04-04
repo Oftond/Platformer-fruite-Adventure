@@ -46,3 +46,5 @@ global.Keyboard = ds_map_create();
 global.IsMovedCursor = false;
 
 global.HeartsParts = undefined;
+
+global.IsWatchVideo = false;
