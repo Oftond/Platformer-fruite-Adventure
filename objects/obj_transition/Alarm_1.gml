@@ -16,6 +16,6 @@ else
 if (!global.IsOnValume) exit;
 
 if (global.ValumeMusic < 0.5)
-	global.ValumeMusic += 0.02;
+	global.ValumeMusic += 0.01;
 
 audio_sound_gain(global.CurrentPlayingMusic, global.ValumeMusic, 0);

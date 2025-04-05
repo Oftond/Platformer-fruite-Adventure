@@ -1,5 +1,8 @@
-global.ValumeMusic = 0.5;
-global.ValumeSound = 0.15;
+global.MaxValumeMusic = 0.5;
+global.MaxValumeSound = 0.15;
+
+global.ValumeMusic = global.MaxValumeMusic;
+global.ValumeSound = global.MaxValumeSound;
 
 global.CurrentPlayingMusic = noone;
 global.CurrentPlayingSound = noone;

@@ -117,8 +117,8 @@ function GameManager() : SaveSystem() constructor
 		
 		if (!global.IsOnValume)
 		{
-			global.CurrentPlayingMusic = 0;
-			global.CurrentPlayingSound = 0;
+			global.ValumeMusic = 0;
+			global.ValumeSound = 0;
 		}
 	}
 }

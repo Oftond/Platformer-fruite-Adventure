@@ -1,6 +1,7 @@
 function draw_helps_move()
 {
 	if (global.IsHelpsFirst) return;
+	
 	static size_move = 0;
 	var _text =
 	[
@@ -23,8 +24,17 @@ function draw_helps_move()
 function draw_helps_jump()
 {
 	if (!instance_exists(obj_player) || global.IsHelpsFirst) return;
-	static size_jump = 0;
 	var _text =
+	[
+		"прыгни на кубок, чтобы перейти к следующему уровню",
+		"jump on the cup to advance to the next level"
+	];
+	draw_sprite_ext(spr_ninjaFrog_fall, 0, 9120, 500, 1, 1, 0, c_white, 0.85);
+	draw_set_valign(fa_bottom);
+	draw_set_halign(fa_center);
+	draw_text_ext_transformed_color(9120, 550 - sprite_get_height(spr_ninjaFrog_fall), _text[global.Language], 70, 550, 1, 1, 0, c_white, c_white, c_white, c_white, 0.95);
+	static size_jump = 0;
+	_text =
 	[
 		"прыжок",
 		"jump"
@@ -44,21 +54,20 @@ function draw_helps_jump()
 function draw_helps_enemyHit()
 {
 	if (!instance_exists(obj_player) || global.IsHelpsFirst) return;
-	
 	static size_enemyHit = 0;
 	var _text =
 	[
 		"прыгай на врага, чтобы нанести ему урон",
 		"jump on the enemy to inflict damage on him"
 	];
-	if (obj_player.x < 970 && size_enemyHit == 0) return;
+	if (obj_player.x < 1248 && size_enemyHit == 0) return;
 	
-	draw_sprite_ext(spr_mushroom_idle, 0, 1184, 280, size_enemyHit, size_enemyHit, 0, c_white, 0.85);
-	draw_sprite_ext(spr_ninjaFrog_jump, 0, 1184, 290 - sprite_get_height(spr_ninjaFrog_jump), -size_enemyHit, size_enemyHit, 0, c_white, 0.85);
+	draw_sprite_ext(spr_mushroom_idle, 0, 2050, 560, size_enemyHit, size_enemyHit, 0, c_white, 0.85);
+	draw_sprite_ext(spr_ninjaFrog_fall, 0, 2050, 570 - sprite_get_height(spr_ninjaFrog_jump), -size_enemyHit, size_enemyHit, 0, c_white, 0.85);
 	draw_set_font(fnt_main);
-	draw_set_valign(fa_top);
+	draw_set_valign(fa_bottom);
 	draw_set_halign(fa_center);
-	draw_text_ext_transformed_color(1184, 280 + sprite_get_height(spr_mushroom_hit) + 8, _text[global.Language], 70, 800, size_enemyHit, size_enemyHit, 0, c_white, c_white, c_white, c_white, 0.95);
+	draw_text_ext_transformed_color(1634, 500 + sprite_get_height(spr_mushroom_hit) + 8, _text[global.Language], 70, 800, size_enemyHit, size_enemyHit, 0, c_white, c_white, c_white, c_white, 0.95);
 	if (size_enemyHit < 1)
 	{
 		size_enemyHit += 0.1;
