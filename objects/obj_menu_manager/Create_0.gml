@@ -43,7 +43,7 @@ text_maxHP =
 instance_create_layer(x, y, "Managers", obj_charactersShop_manager);
 instance_create_layer(x, y, "Managers", obj_shake);
 
-instance_create_layer(1664, 96, "GUI", obj_button_volume);
+instance_create_layer(1664, 256, "GUI", obj_button_volume);
 instance_create_layer(736, 832, "GUI", obj_button_play);
 instance_create_layer(1184, 832, "GUI", obj_button_levels);
 instance_create_layer(672, 544, "GUI", obj_previous);

@@ -115,6 +115,7 @@ get_damage = function(_damage)
 		StopMusicPlay();
 		SetSoundPlay(sound_of_lose);
 		if (!obj_game_manager.is_checkpoint) alarm[1] = 80;
+		global.RoomData = { };
 	}
 }
 

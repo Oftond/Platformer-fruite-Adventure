@@ -27,7 +27,11 @@ button_press = function()
 		if (number == 2 && price > global.Moneys)
 		{
 			ShakeStart(10, 8);
-			other.acceptWindow_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_acceptWindow);
+			if (other.acceptWindow_sequence == undefined)
+			{
+				other.acceptWindow_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_acceptWindow);
+				obj_menu_manager.selected_index = 8;
+			}
 		}
 		else if (number == 2 && price < global.Moneys)
 		{
@@ -42,7 +46,6 @@ button_press = function()
 			global.Moneys -= price;
 		}
 	}
-	obj_menu_manager.selected_index = 8;
 }
 
 delete_seq = function()

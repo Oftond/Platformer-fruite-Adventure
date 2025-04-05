@@ -19,7 +19,7 @@ global.TotalMaxHP = 8;
 global.Score = 0;
 global.ScoreInLevel = array_create(global.NumLevels, 0);
 
-global.Moneys = 0;
+global.Moneys = 2000;
 
 global.IsOnValume = true;
 

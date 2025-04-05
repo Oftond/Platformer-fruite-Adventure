@@ -7,7 +7,7 @@ if (x != current_x_pos)
 		disAppear_effect();
 }
 
-if (number == 2 && is_bought && !instance_exists(obj_accept_get_moneys_menu))
+if (number == 2 && is_bought && !instance_exists(obj_accept_get_moneys_menu) && !instance_exists(obj_maxHealth))
 {
 	obj_button_play.can_press = true;
 	obj_button_play.image_blend = c_white;
@@ -16,7 +16,7 @@ if (number == 2 && is_bought && !instance_exists(obj_accept_get_moneys_menu))
 	if (instance_exists(obj_button_buyCharacter))
 		instance_destroy(obj_button_buyCharacter);
 }
-else if (number == 2 && !is_bought && !instance_exists(obj_accept_get_moneys_menu))
+else if (number == 2 && !is_bought && !instance_exists(obj_accept_get_moneys_menu) && !instance_exists(obj_maxHealth))
 {
 	obj_button_play.can_press = false;
 	obj_button_play.image_blend = c_grey;

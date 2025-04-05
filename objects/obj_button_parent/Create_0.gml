@@ -12,7 +12,7 @@ button_press = function()
 mouse_enter = function()
 {
 	if (room == rm_menu)
-		if (instance_exists(obj_accept_get_moneys_menu))
+		if (instance_exists(obj_accept_get_moneys_menu) || instance_exists(obj_maxHealth))
 			exit;
 	image_xscale = koef_scale;
 	image_yscale = koef_scale;

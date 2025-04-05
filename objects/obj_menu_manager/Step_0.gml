@@ -6,6 +6,8 @@ if (!is_keyboard_control && (input_pressed(INPUT.DOWN) || input_pressed(INPUT.LE
 	if (!global.IsMovedCursor) exit;
 }
 
+if (instance_exists(obj_maxHealth)) exit;
+
 if (input_pressed(INPUT.LEFT) && instance_exists(obj_button_buyCharacter))
 {
 	if (instance_exists(obj_accept_get_moneys_menu))

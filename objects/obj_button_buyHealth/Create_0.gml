@@ -12,7 +12,11 @@ button_press = function()
 {
 	if (global.MaxHP >= global.TotalMaxHP)
 	{
-		cancelWindow_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_cancelMenu);
+		if (cancelWindow_sequence == undefined)
+		{
+			cancelWindow_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_cancelMenu);
+			obj_menu_manager.selected_index = 7;
+		}
 		return;
 	}
 	else if (button_is_cooldown && obj_menu_manager.is_keyboard_control)
@@ -27,14 +31,15 @@ button_press = function()
 	{
 		ShakeStart(10, 8);
 		other.acceptWindow_sequence = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_acceptWindow);
+		obj_menu_manager.selected_index = 7;
 	}
 	else
 	{
 		global.Moneys -= health_cost;
 		global.MaxHP++;
 		global.CurrentHP = global.MaxHP;
+		global.SaveSystemManager.Save();
 	}
-	obj_menu_manager.selected_index = 8;
 }
 
 delete_seq = function()
@@ -79,7 +84,7 @@ delete_seq = function()
 
 mouse_enter = function()
 {
-	if (acceptWindow_sequence != undefined) return;
+	if (acceptWindow_sequence != undefined || instance_exists(obj_maxHealth)) return;
 	if (instance_exists(obj_button_buyCharacter))
 	{
 		if (obj_button_buyCharacter.acceptWindow_sequence != undefined)
