@@ -1,3 +1,9 @@
+if (global.is_touch)
+{
+	layer_destroy("Borders");
+	mobile_sittings_menu_and_levelsMenu_set();
+}
+
 global.SaveSystemManager.Load();
 global.CurrentHP = global.MaxHP;
 global.RespownX = -1;

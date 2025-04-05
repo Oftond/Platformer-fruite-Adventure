@@ -1,3 +1,5 @@
+if (instance_exists(obj_transition)) exit;
+
 draw_self();
 draw_set_font(fnt_big);
 draw_set_valign(fa_middle);

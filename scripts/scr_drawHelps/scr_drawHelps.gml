@@ -84,12 +84,18 @@ function draw_helps_doubleJump()
 		"нажми еще раз в воздухе, чтобы подпрыгнуть еще выше",
 		"tap again in the air to jump even higher"
 	];
-	if (obj_player.x < 1610 && obj_player.y > 1056 && size_doubleJump == 0) return;
-	draw_sprite_ext(spr_keyboard_moveKey_up, 0, 1632, 700, size_doubleJump, size_doubleJump, 0, c_white, 0.7);
+	var _pos_y = 1244;
+	if (obj_player.x < 400 && size_doubleJump == 0) return;
+	draw_set_font(fnt_big);
+	draw_set_valign(fa_middle);
+	draw_set_halign(fa_center);
+	draw_sprite_ext(spr_keyboard_moveKey_up, 0, 660, _pos_y, size_doubleJump, size_doubleJump, 0, c_white, 0.7);
+	draw_sprite_ext(spr_keyboard_moveKey_up, 0, 852, _pos_y, size_doubleJump, size_doubleJump, 0, c_white, 0.7);
+	draw_text_ext_transformed_color(756, _pos_y, "+", 40, 600, size_doubleJump, size_doubleJump, 0, c_white, c_white, c_white, c_white, 0.7);
 	draw_set_font(fnt_main);
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_center);
-	draw_text_ext_transformed_color(1632, 700 + sprite_get_height(spr_keyboard_moveKey_up) - 32, _text[global.Language], 40, 600, size_doubleJump, size_doubleJump, 0, c_white, c_white, c_white, c_white, 0.7);
+	draw_text_ext_transformed_color(756, _pos_y + sprite_get_height(spr_keyboard_moveKey_up) - 32, _text[global.Language], 40, 600, size_doubleJump, size_doubleJump, 0, c_white, c_white, c_white, c_white, 0.7);
 	if (size_doubleJump < 1)
 	{
 		size_doubleJump += 0.1;
@@ -107,6 +113,9 @@ function draw_helps_crushBlocks()
 	];
 	
 	draw_sprite_ext(spr_block_idle, 0, 3072, 1216, 1, 1, 0, c_white, 0.7);
+	draw_sprite_ext(spr_ninjaFrog_jump, 0, 2208, 1344, -1, 1, 0, c_white, 0.7);
+	draw_sprite_ext(spr_block_part_1, 2, 2208, 1280, -1, 1, 0, c_white, 0.7);
+	draw_sprite_ext(spr_block_part_2, 2, 2208, 1248, -1, 1, 0, c_white, 0.7);
 	draw_set_font(fnt_main);
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_center);
@@ -119,13 +128,14 @@ function draw_helps_wallJump()
 	
 	var _text =
 	[
-		"прислонись к стене, когда будешь падать, чтобы зацепиться за стену и отпрыгнуть от нее",
-		"lean against the wall as you fall to grab onto the wall and jump away from it."
+		"цепляйтесь за стену и отпрыгивайте от нее, чтобы подняться еще выше",
+		"cling to the wall and jump away from it to get even higher"
 	];
 	
-	draw_sprite_ext(spr_ninjaFrog_wallJump, 0, 4736, 1664, 1, 1, 0, c_white, 0.7);
+	draw_sprite_ext(spr_ninjaFrog_wallJump, 0, 4384, 1760, 1, 1, 0, c_white, 0.7);
+	draw_sprite_ext(spr_ninjaFrog_wallJump, 0, 4384, 1536, 1, 1, 0, c_white, 0.7);
 	draw_set_font(fnt_main);
-	draw_set_valign(fa_top);
+	draw_set_valign(fa_middle);
 	draw_set_halign(fa_center);
-	draw_text_ext_transformed_color(4736, 1664 + sprite_get_height(spr_ninjaFrog_wallJump) - 48, _text[global.Language], 40, 600, 1, 1, 0, c_white, c_white, c_white, c_white, 0.7);
+	draw_text_ext_transformed_color(4000, 1632 + sprite_get_height(spr_ninjaFrog_wallJump) - 48, _text[global.Language], 40, 600, 1, 1, 0, c_white, c_white, c_white, c_white, 0.7);
 }

@@ -1,3 +1,6 @@
+if (global.is_touch)
+	mobile_settings_levels_game();
+
 depth = 900;
 
 driving_main = MP3_Driving_Main;
@@ -9,6 +12,9 @@ if (!global.IsWatchVideo)
 	instance_create_depth(x, y, depth, obj_button_showFullscreenAds);
 else if (global.IsWatchVideo)
 	global.IsWatchVideo = false;
+
+var _slash_pos = string_last_pos("_", room_get_name(room));
+global.CurrentLevel = real(string_copy(room_get_name(room), _slash_pos + 1, string_length(room_get_name(room)) - _slash_pos));
 
 is_checkpoint = false;
 moneys = 0;
@@ -54,12 +60,6 @@ secret_walls = layer_tilemap_get_id("SecretWall");
 collision_tilemap = layer_tilemap_get_id("CollisionTiles");
 traps_layer_sand = layer_tilemap_get_id("TrapsLayerSand");
 traps_layer_ice = layer_tilemap_get_id("TrapsLayerIce");
-
-var _slash_pos = string_last_pos("_", room_get_name(room));
-global.CurrentLevel = real(string_copy(room_get_name(room), _slash_pos + 1, string_length(room_get_name(room)) - _slash_pos));
-
-if (global.FruitsCountInRoom[global.CurrentLevel - 1] == -1)
-	global.FruitsCountInRoom[global.CurrentLevel - 1] = instance_number(obj_parent_fruit);
 
 if (global.CurrentLevel > 0 && global.CurrentLevel < 6)
 	SetMusicPlay(etherial_main);

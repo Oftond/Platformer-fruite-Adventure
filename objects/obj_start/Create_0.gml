@@ -1,9 +1,3 @@
-global.CameraWidth = camera_get_view_width(view_camera[0]);
-global.CameraHeight = camera_get_view_height(view_camera[0]);
-
-//camera_set_view_size(view_camera[0], 960, 540);
-//camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]), camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]));
-
 if (os_type == os_android || os_type == os_ios)
 {
 	global.is_touch = true;
@@ -12,6 +6,12 @@ else
 {
 	global.is_touch = false;
 }
+
+if (global.is_touch)
+	mobile_sittings_menu_and_levelsMenu_set();
+
+global.CameraWidth = camera_get_view_width(view_camera[0]);
+global.CameraHeight = camera_get_view_height(view_camera[0]);
 
 if (os_browser != browser_not_a_browser)
 {

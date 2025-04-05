@@ -372,6 +372,7 @@
     {"id":{"name":"scr_inputController","path":"scripts/scr_inputController/scr_inputController.yy",},},
     {"id":{"name":"scr_isMap","path":"scripts/scr_isMap/scr_isMap.yy",},},
     {"id":{"name":"scr_loadBar","path":"scripts/scr_loadBar/scr_loadBar.yy",},},
+    {"id":{"name":"scr_mobile_set","path":"scripts/scr_mobile_set/scr_mobile_set.yy",},},
     {"id":{"name":"scr_pause","path":"scripts/scr_pause/scr_pause.yy",},},
     {"id":{"name":"scr_player_partsDust","path":"scripts/scr_player_partsDust/scr_player_partsDust.yy",},},
     {"id":{"name":"scr_reset_default_params","path":"scripts/scr_reset_default_params/scr_reset_default_params.yy",},},
