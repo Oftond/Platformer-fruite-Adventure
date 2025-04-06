@@ -8,7 +8,5 @@ button_press = function()
 		
 	global.SaveSystemManager.Save();
 	
-	window_enable_borderless_fullscreen(true);
-	
 	window_set_position(window_get_x(), window_get_y() - 10);
 }

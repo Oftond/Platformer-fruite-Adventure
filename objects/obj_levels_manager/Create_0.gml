@@ -49,8 +49,18 @@ offset = 100;
 space = (sprite_get_width(_01) * koef_scale) + offset;
 col = global.NumLevels / 3;
 row = global.NumLevels / 5;
-x_pos = (room_width / 2) - ((col * space - offset) / 2);
-y_pos = 320;
+x_pos = 0;
+y_pos = 0;
+if (!global.is_touch)
+{
+	x_pos = ((room_width / 2) + offset / 2) - ((col * space - offset) / 2);
+	y_pos = 320;
+}
+else
+{
+	x_pos = ((room_width / 2) + offset / 2) - ((col * space - offset) / 2) - offset * 3;
+	y_pos = 320 - space;
+}
 
 for (var i = 0; i < row; i++)
 {
@@ -74,9 +84,19 @@ for (var i = 0; i < row; i++)
 
 instance_create_layer(x, y, "Managers", obj_shake);
 
-with (instance_create_layer(1696, 960, "GUI", obj_back))
+if (!global.is_touch)
 {
-	index = instance_number(obj_level);
+	with (instance_create_layer(1696, 960, "GUI", obj_back))
+	{
+		index = instance_number(obj_level);
+	}
+}
+else
+{
+	with (instance_create_layer(1184, 640, "GUI", obj_back))
+	{
+		index = instance_number(obj_level);
+	}
 }
 
 set_random_background();

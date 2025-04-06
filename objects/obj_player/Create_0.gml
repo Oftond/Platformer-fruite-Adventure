@@ -198,8 +198,17 @@ check_squeezing = function(_move_x, _move_y)
 
 instance_create_layer(x, y, "Managers", obj_camera);
 
+var _offxet_x = 100;
+var _max_in_row = 0;
+if (global.is_touch)
+	_max_in_row = 4;
+else
+	_max_in_row = 8;
+
 for (var i = 0; i < current_hp; i++)
 {
-	var _obj = instance_create_layer(100 + (i * 70), 100, "GUI", object_heart);
+	var _col = i mod _max_in_row;
+	var _pos = _offxet_x + (_col * 70);
+	var _obj = instance_create_layer(_pos, i + 1 > _max_in_row ? 180 : 100, "GUI", object_heart);
 	_obj.number = i + 1;
 }

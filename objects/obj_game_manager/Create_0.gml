@@ -53,7 +53,8 @@ else if (global.RespownX != start_player_x && global.RespownY != start_player_y)
 instance_create_layer(global.RespownX, global.RespownY, "Player", obj_player_appear);
 if (instance_exists(obj_player))
 	instance_destroy(obj_player);
-instance_create_layer(1824, 96, "GUI", obj_button_settings);
+
+instance_create_layer(camera_get_view_width(view_camera[0]) - 96, 96, "GUI", obj_button_settings);
 instance_create_layer(x, y, "Managers", obj_shake);
 
 secret_walls = layer_tilemap_get_id("SecretWall");

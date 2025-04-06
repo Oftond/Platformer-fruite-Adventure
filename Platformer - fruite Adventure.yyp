@@ -363,6 +363,7 @@
     {"id":{"name":"rm_level_8","path":"rooms/rm_level_8/rm_level_8.yy",},},
     {"id":{"name":"rm_level_9","path":"rooms/rm_level_9/rm_level_9.yy",},},
     {"id":{"name":"rm_levels_map","path":"rooms/rm_levels_map/rm_levels_map.yy",},},
+    {"id":{"name":"rm_menu_1","path":"rooms/rm_menu_1/rm_menu_1.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"scr_audio_settings","path":"scripts/scr_audio_settings/scr_audio_settings.yy",},},
@@ -373,6 +374,7 @@
     {"id":{"name":"scr_isMap","path":"scripts/scr_isMap/scr_isMap.yy",},},
     {"id":{"name":"scr_loadBar","path":"scripts/scr_loadBar/scr_loadBar.yy",},},
     {"id":{"name":"scr_mobile_set","path":"scripts/scr_mobile_set/scr_mobile_set.yy",},},
+    {"id":{"name":"scr_mouse_check","path":"scripts/scr_mouse_check/scr_mouse_check.yy",},},
     {"id":{"name":"scr_pause","path":"scripts/scr_pause/scr_pause.yy",},},
     {"id":{"name":"scr_player_partsDust","path":"scripts/scr_player_partsDust/scr_player_partsDust.yy",},},
     {"id":{"name":"scr_reset_default_params","path":"scripts/scr_reset_default_params/scr_reset_default_params.yy",},},
@@ -752,6 +754,7 @@
     {"roomId":{"name":"rm_level_13","path":"rooms/rm_level_13/rm_level_13.yy",},},
     {"roomId":{"name":"rm_level_14","path":"rooms/rm_level_14/rm_level_14.yy",},},
     {"roomId":{"name":"rm_level_15","path":"rooms/rm_level_15/rm_level_15.yy",},},
+    {"roomId":{"name":"rm_menu_1","path":"rooms/rm_menu_1/rm_menu_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

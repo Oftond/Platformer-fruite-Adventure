@@ -43,11 +43,23 @@ text_maxHP =
 instance_create_layer(x, y, "Managers", obj_charactersShop_manager);
 instance_create_layer(x, y, "Managers", obj_shake);
 
-instance_create_layer(1664, 256, "GUI", obj_button_volume);
-instance_create_layer(736, 832, "GUI", obj_button_play);
-instance_create_layer(1184, 832, "GUI", obj_button_levels);
-instance_create_layer(672, 544, "GUI", obj_previous);
-instance_create_layer(1248, 544, "GUI", obj_next);
-instance_create_layer(342, 544, "GUI", obj_button_buyHealth);
+if (!global.is_touch)
+{
+	instance_create_layer(1632, 288, "GUI", obj_button_volume);
+	instance_create_layer(736, 832, "GUI", obj_button_play);
+	instance_create_layer(1184, 832, "GUI", obj_button_levels);
+	instance_create_layer(672, 544, "GUI", obj_previous);
+	instance_create_layer(1248, 544, "GUI", obj_next);
+	instance_create_layer(342, 544, "GUI", obj_button_buyHealth);
+}
+else
+{
+	instance_create_layer(1184, 108, "GUI", obj_button_volume);
+	instance_create_layer(416, 652, "GUI", obj_button_play);
+	instance_create_layer(864, 652, "GUI", obj_button_levels);
+	instance_create_layer(352, 364, "GUI", obj_previous);
+	instance_create_layer(928, 364, "GUI", obj_next);
+	instance_create_layer(128, 364, "GUI", obj_button_buyHealth);
+}
 
 set_random_background();
