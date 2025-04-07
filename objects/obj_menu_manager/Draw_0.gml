@@ -15,7 +15,7 @@ if (!global.is_touch)
 }
 else
 {
-	draw_text(468, 428, $"{text_health[global.Language]}: {health_price}");
+	draw_text(478, 428, $"{text_health[global.Language]}: {health_price}");
 	draw_set_halign(fa_left);
 	if (global.MaxHP < global.TotalMaxHP)
 		draw_text(468, 320, global.MaxHP);

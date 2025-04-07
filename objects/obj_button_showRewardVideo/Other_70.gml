@@ -16,7 +16,7 @@ else
 				unpause_music();
 				if (instance_exists(obj_menu_manager) && !instance_exists(obj_game_manager))
 				{
-					global.Moneys += reward;
+					global.Moneys += obj_menu_manager.moneys_bonus;
 					global.SaveSystemManager.Save();
 				}
 				else if (instance_exists(obj_game_manager) && !instance_exists(obj_menu_manager))

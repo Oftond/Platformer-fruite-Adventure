@@ -1,6 +1,6 @@
 function draw_helps_move()
 {
-	if (global.IsHelpsFirst) return;
+	if (global.IsHelpsFirst || global.is_touch) return;
 	
 	static size_move = 0;
 	var _text =
@@ -33,6 +33,7 @@ function draw_helps_jump()
 	draw_set_valign(fa_bottom);
 	draw_set_halign(fa_center);
 	draw_text_ext_transformed_color(9120, 550 - sprite_get_height(spr_ninjaFrog_fall), _text[global.Language], 70, 550, 1, 1, 0, c_white, c_white, c_white, c_white, 0.95);
+	if (global.is_touch) return;
 	static size_jump = 0;
 	_text =
 	[
@@ -81,16 +82,21 @@ function draw_helps_doubleJump()
 	static size_doubleJump = 0;
 	var _text =
 	[
-		"нажми еще раз в воздухе, чтобы подпрыгнуть еще выше",
-		"tap again in the air to jump even higher"
+		"прыгни в воздухе, чтобы подлететь еще выше",
+		"jump in the air to fly even higher"
+	];
+	var _jump_button =
+	[
+		spr_keyboard_moveKey_up,
+		spr_button_mobile_up
 	];
 	var _pos_y = 1244;
 	if (obj_player.x < 400 && size_doubleJump == 0) return;
 	draw_set_font(fnt_big);
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_center);
-	draw_sprite_ext(spr_keyboard_moveKey_up, 0, 660, _pos_y, size_doubleJump, size_doubleJump, 0, c_white, 0.7);
-	draw_sprite_ext(spr_keyboard_moveKey_up, 0, 852, _pos_y, size_doubleJump, size_doubleJump, 0, c_white, 0.7);
+	draw_sprite_ext(_jump_button[global.is_touch], 0, 660, _pos_y, size_doubleJump, size_doubleJump, 0, c_white, 0.7);
+	draw_sprite_ext(_jump_button[global.is_touch], 0, 852, _pos_y, size_doubleJump, size_doubleJump, 0, c_white, 0.7);
 	draw_text_ext_transformed_color(756, _pos_y, "+", 40, 600, size_doubleJump, size_doubleJump, 0, c_white, c_white, c_white, c_white, 0.7);
 	draw_set_font(fnt_main);
 	draw_set_valign(fa_top);

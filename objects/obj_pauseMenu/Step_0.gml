@@ -1,7 +1,7 @@
 image_xscale = room_width;
 image_yscale = room_height;
 
-if (!is_keyboard_control && (input_pressed(INPUT.DOWN) || input_pressed(INPUT.LEFT) || input_pressed(INPUT.UP) || input_pressed(INPUT.RIGHT) || input_pressed(INPUT.ACCEPT)))
+if (!is_keyboard_control && (input_pressed(INPUT.DOWN) || input_pressed(INPUT.LEFT) || input_pressed(INPUT.UP) || input_pressed(INPUT.RIGHT) || input_pressed(INPUT.ACCEPT)) && !global.is_touch)
 {
 	is_keyboard_control = true;
 	if (!global.IsMovedCursor) exit;

@@ -40,6 +40,9 @@ levels_icon =
 	_25
 ];
 
+time_to_show_levels = 60;
+room_to_return = rm_menu;
+
 is_keyboard_control = false;
 selected_index = 0;
 
@@ -58,8 +61,8 @@ if (!global.is_touch)
 }
 else
 {
-	x_pos = ((room_width / 2) + offset / 2) - ((col * space - offset) / 2) - offset * 3;
-	y_pos = 320 - space;
+	x_pos = ((room_width / 2) + offset / 2) - ((col * space - offset) / 2) - offset * 4;
+	y_pos = 320 - round(space / 1.5);
 }
 
 for (var i = 0; i < row; i++)
@@ -81,8 +84,6 @@ for (var i = 0; i < row; i++)
 		}
 	}
 }
-
-instance_create_layer(x, y, "Managers", obj_shake);
 
 if (!global.is_touch)
 {

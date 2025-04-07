@@ -22,6 +22,8 @@ else if (number == 2 && !is_bought && !instance_exists(obj_accept_get_moneys_men
 	obj_button_play.image_blend = c_grey;
 	obj_button_levels.can_press = false;
 	obj_button_levels.image_blend = c_grey;
-	if (!instance_exists(obj_button_buyCharacter))
+	if (!instance_exists(obj_button_buyCharacter) && !global.is_touch)
+		instance_create_layer(960, 704, "GUI", obj_button_buyCharacter);
+	else if (!instance_exists(obj_button_buyCharacter) && global.is_touch)
 		instance_create_layer(640, 524, "GUI", obj_button_buyCharacter);
 }

@@ -30,6 +30,7 @@ text_health =
 ];
 
 health_price = 150;
+moneys_bonus = 50;
 
 is_keyboard_control = false;
 selected_index = 0;
@@ -41,7 +42,6 @@ text_maxHP =
 ];
 
 instance_create_layer(x, y, "Managers", obj_charactersShop_manager);
-instance_create_layer(x, y, "Managers", obj_shake);
 
 if (!global.is_touch)
 {
@@ -59,7 +59,7 @@ else
 	instance_create_layer(864, 652, "GUI", obj_button_levels);
 	instance_create_layer(352, 364, "GUI", obj_previous);
 	instance_create_layer(928, 364, "GUI", obj_next);
-	instance_create_layer(128, 364, "GUI", obj_button_buyHealth);
+	instance_create_layer(160, 364, "GUI", obj_button_buyHealth);
 }
 
 set_random_background();

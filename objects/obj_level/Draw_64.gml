@@ -1,3 +1,5 @@
+if (instance_exists(obj_transition))
+	exit;
 draw_self();
 if (global.FruitsCountInRoom[number_level - 1] == -1)
 	exit;

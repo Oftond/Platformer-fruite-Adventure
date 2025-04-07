@@ -10,6 +10,15 @@ health_cost = obj_menu_manager.health_price;
 
 button_press = function()
 {
+
+	if (button_is_cooldown && obj_menu_manager.is_keyboard_control)
+	{
+		button_is_cooldown = false;
+		return;
+	}
+	else
+		button_is_cooldown = false;
+	
 	if (global.MaxHP >= global.TotalMaxHP)
 	{
 		if (cancelWindow_sequence == undefined)
@@ -19,13 +28,6 @@ button_press = function()
 		}
 		return;
 	}
-	else if (button_is_cooldown && obj_menu_manager.is_keyboard_control)
-	{
-		button_is_cooldown = false;
-		return;
-	}
-	else
-		button_is_cooldown = false;
 	
 	if (global.Moneys < health_cost)
 	{

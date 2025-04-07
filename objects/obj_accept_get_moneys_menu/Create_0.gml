@@ -1,7 +1,7 @@
 text =
 [
-	"У вас слишком маленький баланс. Хотите посмотреть короткий видеоролик и увеличить баланс на 30?",
-	"Your balance is too small. Would you like to watch a short video and increase your balance by 30?"
+	$"У вас слишком маленький баланс. Хотите посмотреть короткий видеоролик и увеличить баланс на {obj_menu_manager.moneys_bonus}?",
+	$"Your balance is too small. Would you like to watch a short video and increase your balance by {obj_menu_manager.moneys_bonus}?"
 ];
 
 depth = -999;

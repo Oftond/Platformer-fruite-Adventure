@@ -8,6 +8,10 @@ etherial_main = MP3_Ethereal_Main;
 heroic_main = MP3_Heroic_Main;
 hight_tempo_main = MP3_High_Tempo_Main;
 
+sequence_mobile_buttons = undefined;
+if (global.is_touch && sequence_mobile_buttons == undefined)
+	sequence_mobile_buttons = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_mobile_control);
+
 if (!global.IsWatchVideo)
 	instance_create_depth(x, y, depth, obj_button_showFullscreenAds);
 else if (global.IsWatchVideo)

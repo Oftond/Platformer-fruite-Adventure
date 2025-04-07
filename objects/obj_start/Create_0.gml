@@ -6,8 +6,7 @@ if (os_type == os_android || os_type == os_ios)
 }
 else
 {
-	//global.is_touch = false;
-	global.is_touch = true;
+	global.is_touch = false;
 }
 
 if (global.is_touch)
