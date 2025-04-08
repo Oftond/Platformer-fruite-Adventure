@@ -38,18 +38,7 @@ InputBind(global.Mobile, INPUT.LEFT, INPUT.LEFT);
 
 function input_pressed(_action)
 {
-	if (global.is_touch)
-	{
-		var _key = ds_map_find_value(global.Mobile, _action);
-		var _mouse_gui_x = device_mouse_x_to_gui(0);
-		var _mouse_gui_y = device_mouse_y_to_gui(0);
-		var _mobile_button = collision_point(_mouse_gui_x, _mouse_gui_y, obj_button_mobile_parent, false, false);
-		if (_mobile_button == noone) return false;
-		
-		if (device_mouse_check_button_pressed(0, mb_left) && _mobile_button.action == _key)
-			return true;
-		return false;
-	}
+	if (global.is_touch) return mobile_touch_pressed(_action);
 	
 	var _keys = ds_map_find_value(global.Keyboard, _action);
 	for (var i = 0; i < array_length(_keys); i++)
@@ -59,21 +48,44 @@ function input_pressed(_action)
 
 function input_held(_action)
 {
-	if (global.is_touch)
-	{
-		var _key = ds_map_find_value(global.Mobile, _action);
-		var _mouse_gui_x = device_mouse_x_to_gui(0);
-		var _mouse_gui_y = device_mouse_y_to_gui(0);
-		var _mobile_button = collision_point(_mouse_gui_x, _mouse_gui_y, obj_button_mobile_parent, false, false);
-		if (_mobile_button == noone) return false;
-
-		if (device_mouse_check_button(0, mb_left) && _mobile_button.action == _key)
-			return true;
-		return false;
-	}
+	if (global.is_touch) return mobile_touch_held(_action);
 	
 	var _keys = ds_map_find_value(global.Keyboard, _action);
 	for (var i = 0; i < array_length(_keys); i++)
 		if (keyboard_check(_keys[i])) return true;
+	return false;
+}
+
+function mobile_touch_pressed(_action)
+{
+	for (var i = 0; i < 4; i++)
+	{
+		var _key = ds_map_find_value(global.Mobile, _action);
+		var _mouse_gui_x = device_mouse_x_to_gui(i);
+		var _mouse_gui_y = device_mouse_y_to_gui(i);
+		
+		var _mobile_button = collision_point(_mouse_gui_x, _mouse_gui_y, obj_button_mobile_parent, false, false);
+		if (_mobile_button != noone && device_mouse_check_button_pressed(i, mb_left))
+		{
+			if (_mobile_button.action == _key) return true;
+		}
+	}
+	return false;
+}
+
+function mobile_touch_held(_action)
+{
+	for (var i = 0; i < 4; i++)
+	{
+		var _key = ds_map_find_value(global.Mobile, _action);
+		var _mouse_gui_x = device_mouse_x_to_gui(i);
+		var _mouse_gui_y = device_mouse_y_to_gui(i);
+		
+		var _mobile_button = collision_point(_mouse_gui_x, _mouse_gui_y, obj_button_mobile_parent, false, false);
+		if (_mobile_button != noone && device_mouse_check_button(i, mb_left))
+		{
+			if (_mobile_button.action == _key) return true;
+		}
+	}
 	return false;
 }
