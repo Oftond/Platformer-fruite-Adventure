@@ -26,11 +26,11 @@ function ImageLoadBar_hook(ctx, width, height, total, current, image) {
 		} else return d;
 	}
 	// get parameters:
-	var backgroundColor = getc("background_color", "#000000");
-	var barBackgroundColor = getc("bar_background_color", "#000000");
-	var barForegroundColor = getc("bar_foreground_color", "#FFFFFF");
-	var barBorderColor = getc("bar_border_color", "#FFFFFF");
-	var barWidth = getf("bar_width", Math.round(width * 0.6));
+	var backgroundColor = getc("background_color", "#FFFFFF");
+	var barBackgroundColor = getc("bar_background_color", "#FFFFFF");
+	var barForegroundColor = getc("bar_foreground_color", "#000000");
+	var barBorderColor = getc("bar_border_color", "#000000");
+	var barWidth = getf("bar_width", Math.round(width * 0.4));
 	var barHeight = getf("bar_height", 20);
 	var barBorderWidth = getf("bar_border_width", 2);
 	var barOffset = getf("bar_offset", 10);

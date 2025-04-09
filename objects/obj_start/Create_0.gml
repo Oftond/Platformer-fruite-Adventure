@@ -1,5 +1,3 @@
-gpu_set_texfilter(false);
-
 if (os_type == os_android || os_type == os_ios)
 {
 	global.is_touch = true;
