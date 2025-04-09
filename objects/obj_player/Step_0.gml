@@ -378,6 +378,10 @@ if (is_graunded && move_x != 0)
 		dust_create(part_ice, image_xscale, self, _dir);
 	else if (place_meeting(x, y + 1, obj_parent_move_platform))
 		dust_create(part_dust, image_xscale, self, _dir);
+	else if (place_meeting(x, y + 1, obj_fire))
+		dust_create(part_dust, image_xscale, self, _dir);
+	else if (place_meeting(x, y + 1, obj_block))
+		dust_create(part_dust, image_xscale, self, _dir);
 }
 
 x += move_x;
