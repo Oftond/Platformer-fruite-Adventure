@@ -157,15 +157,10 @@ check_collision_enemy = function()
 		{
 			if ((other.bbox_bottom - other.move_y) < (bbox_top - move_y))
 			{
-				if (other.state != STATES.HIT)
-					current_hp -= other.damage;
+				get_damage(other.damage);
 				other.move_y = 0;
 				other.move_y -= other.jump_spd + 5;
 				other.current_jumps = 1;
-				if (state != STATES.HIT)
-					image_index = 0;
-				state = STATES.HIT;
-				score += score_drop;
 				return;
 			}
 		}

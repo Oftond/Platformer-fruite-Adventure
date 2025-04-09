@@ -8,3 +8,4 @@ dir = choose(1, -1);
 wait_timer = 0;
 wait_time = 80;
 name = "angrypig";
+score_drop = 40;

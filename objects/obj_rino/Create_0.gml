@@ -9,3 +9,4 @@ wait_timer = 50;
 move_spd = 0;
 dir = 1;
 max_spd = 14;
+score_drop = 45;

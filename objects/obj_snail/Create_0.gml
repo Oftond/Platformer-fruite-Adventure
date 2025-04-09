@@ -12,3 +12,4 @@ grav = 1;
 jump = -2;
 dir = 1;
 name = "snail";
+score_drop = 20;

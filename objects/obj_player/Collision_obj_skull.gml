@@ -1,23 +1,16 @@
-if (is_death || flashing > 0 || state == STATES.HIT || global.IsPause)
-	exit;
-	
-if (other.is_death)
+if (is_death || flashing > 0 || state == STATES.HIT || global.IsPause || other.is_death)
 	exit;
 
 if (move_y >= 0 && !other.is_fire)
 {
 	if ((bbox_bottom - move_y) < bbox_bottom)
 	{
-		if (state != STATES.HIT)
-			other.current_hp -= damage;
 		move_y = 0;
 		move_y -= jump_spd + 5;
 		current_jumps = 1;
 		with (other)
 		{
-			if (state != STATES.HIT)
-				image_index = 0;
-			state = STATES.HIT;
+			get_damage(other.damage);
 		}
 		exit;
 	}

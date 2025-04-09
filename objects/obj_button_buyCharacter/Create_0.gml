@@ -65,7 +65,7 @@ delete_seq = function()
 
 mouse_enter = function()
 {
-	if (acceptWindow_sequence != undefined) exit;
+	if (instance_exists(obj_accept_get_moneys_menu) || instance_exists(obj_maxHealth)) exit;
 
 	image_xscale = koef_scale;
 	image_yscale = koef_scale;

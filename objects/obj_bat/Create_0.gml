@@ -10,3 +10,4 @@ dir_y = 1;
 detection_distance = 250;
 detected_player = false;
 name = "bat";
+score_drop = 30;

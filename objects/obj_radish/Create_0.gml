@@ -18,6 +18,8 @@ curve = curv_fly_blueBird;
 curvPosition = 0;
 curvSpeed = 0.01;
 
+score_drop = 25;
+
 walk = function()
 {
 	move_x = move_spd * dir;

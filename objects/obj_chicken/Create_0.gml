@@ -8,6 +8,7 @@ distance_detection = 1000;
 move_spd = 7;
 max_spd = move_spd;
 is_detected_player = false;
+score_drop = 15;
 
 dected_player = function()
 {

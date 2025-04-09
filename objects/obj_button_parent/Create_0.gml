@@ -4,6 +4,12 @@ index = -1;
 
 depth = -1000;
 
+start_x = x;
+start_y = y;
+
+in_room_pos_x = x;
+in_room_pos_y = y;
+
 button_press = function()
 {
 	return;

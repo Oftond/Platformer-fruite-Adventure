@@ -8,6 +8,7 @@ shoot_timer = 0;
 max_shoot_timer = 50;
 spd = 0;
 move_spd = 0.02;
+score_drop = 35;
 
 xx = x;
 yy = y;

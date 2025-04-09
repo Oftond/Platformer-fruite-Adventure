@@ -13,6 +13,7 @@ jump_height = 0;
 jump_spd = 22;
 move_spd = 6;
 name = "duck";
+score_drop = 20;
 
 try_change_dir = function()
 {

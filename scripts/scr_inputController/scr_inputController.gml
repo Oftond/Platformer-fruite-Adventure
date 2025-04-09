@@ -38,6 +38,8 @@ InputBind(global.Mobile, INPUT.LEFT, INPUT.LEFT);
 
 function input_pressed(_action)
 {
+	if (instance_exists(obj_transition)) return false;
+	
 	if (global.is_touch) return mobile_touch_pressed(_action);
 	
 	var _keys = ds_map_find_value(global.Keyboard, _action);
@@ -48,6 +50,8 @@ function input_pressed(_action)
 
 function input_held(_action)
 {
+	if (instance_exists(obj_transition)) return false;
+	
 	if (global.is_touch) return mobile_touch_held(_action);
 	
 	var _keys = ds_map_find_value(global.Keyboard, _action);
@@ -58,6 +62,8 @@ function input_held(_action)
 
 function mobile_touch_pressed(_action)
 {
+	if (instance_exists(obj_transition)) return false;
+	
 	for (var i = 0; i < 4; i++)
 	{
 		var _key = ds_map_find_value(global.Mobile, _action);
@@ -75,6 +81,8 @@ function mobile_touch_pressed(_action)
 
 function mobile_touch_held(_action)
 {
+	if (instance_exists(obj_transition)) return false;
+	
 	for (var i = 0; i < 4; i++)
 	{
 		var _key = ds_map_find_value(global.Mobile, _action);

@@ -9,6 +9,7 @@ wait_time = 120;
 death_time = 5;
 name = "rock1";
 create_middle_rocks = false;
+score_drop = 40;
 
 walk = function()
 {

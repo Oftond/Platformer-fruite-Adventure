@@ -14,3 +14,4 @@ attack_timer = 0;
 detected_player = false;
 detection_distance = sprite_width - 60;
 name = "chamelion";
+score_drop = 50;

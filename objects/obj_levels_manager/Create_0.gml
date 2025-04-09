@@ -72,6 +72,11 @@ for (var i = 0; i < row; i++)
 		var _x_pos = x_pos + (j * space);
 		var _y_pos = y_pos + (i * space);
 		var _level_obj = instance_create_layer(_x_pos, _y_pos, "Levels", obj_level);
+		if (global.is_touch)
+		{
+			_level_obj.in_room_pos_x = ((((room_width / 2) + offset / 2) - ((col * space - offset) / 2)) + (j * space)) - 80;
+			_level_obj.in_room_pos_y = 320 + (i * space) + 37;
+		}
 		var _number = (i * col + j) + 1;
 		_level_obj.number_level = _number;
 		_level_obj.sprite_index = levels_icon[_number - 1];
@@ -94,10 +99,11 @@ if (!global.is_touch)
 }
 else
 {
-	with (instance_create_layer(1184, 640, "GUI", obj_back))
+	with (instance_create_layer(1184, 624, "GUI", obj_back))
 	{
 		index = instance_number(obj_level);
+		in_room_pos_x = camera_get_view_x(view_camera[0]) + global.CameraWidth - 96;
+		in_room_pos_y = camera_get_view_y(view_camera[0]) + global.CameraHeight - 96;
 	}
 }
-
 set_random_background();

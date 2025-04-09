@@ -28,6 +28,8 @@ switch (state)
 	case STATES.WALK:
 		sprite_index = run_sprites[global.ChooseCharacter];
 		image_speed = 1;
+		if (place_meeting(x, y + 1, obj_game_manager.traps_layer_sand))
+			image_speed = image_speed * 0.65;
 	break;
 	
 	case STATES.WALL_JUMP:

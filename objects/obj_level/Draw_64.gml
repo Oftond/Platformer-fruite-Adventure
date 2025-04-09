@@ -1,6 +1,14 @@
 if (instance_exists(obj_transition))
 	exit;
+	
+if (x != start_x || y != start_y)
+{
+	x = start_x;
+	y = start_y;
+}
+
 draw_self();
+
 if (global.FruitsCountInRoom[number_level - 1] == -1)
 	exit;
 

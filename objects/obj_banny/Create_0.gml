@@ -12,6 +12,7 @@ jump_height = -22;
 name = "banny";
 is_detected_player = false;
 distance_detection = 1000;
+score_drop = 30;
 
 dected_player = function()
 {

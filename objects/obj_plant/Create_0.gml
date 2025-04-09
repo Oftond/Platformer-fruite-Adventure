@@ -9,6 +9,7 @@ shoot_range = 1000;
 shoot_timer = 120;
 max_shoot_timer = 120;
 name = "plant";
+score_drop = 45;
 
 change_dir = function()
 {
