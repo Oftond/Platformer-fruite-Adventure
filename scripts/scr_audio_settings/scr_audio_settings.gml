@@ -16,8 +16,17 @@ function SetMusicPlay(_music)
 		}
 		else
 		{
-			StopMusicPlay();
-			global.CurrentPlayingMusic = audio_play_sound(_music, 8, true, global.ValumeMusic);
+			if (audio_is_paused(global.CurrentPlayingMusic))
+			{
+				StopMusicPlay();
+				global.CurrentPlayingMusic = audio_play_sound(_music, 8, true, global.ValumeMusic);
+				pause_music();
+			}
+			else
+			{
+				StopMusicPlay();
+				global.CurrentPlayingMusic = audio_play_sound(_music, 8, true, global.ValumeMusic);
+			}
 		}
 	}
 }
