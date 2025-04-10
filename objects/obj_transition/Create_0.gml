@@ -12,8 +12,3 @@ cellSize = 1;
 fx_set_parameter(transition_filter, "g_CellSize", cellSize);
 
 alarm[0] = 1;
-
-if (!global.IsWatchVideo)
-	instance_create_depth(0, 0, depth, obj_button_showFullscreenAds);
-else if (global.IsWatchVideo)
-	global.IsWatchVideo = false;

@@ -36,6 +36,7 @@ button_press = function()
 	
 	if (!instance_exists(obj_menu_manager) && instance_exists(obj_game_manager) && !instance_exists(obj_transition))
 	{
+		instance_create_depth(0, 0, depth, obj_button_showFullscreenAds);
 		instance_create_layer(0, 0, "GUI", obj_transition);
 		alarm[0] = 80;
 	}

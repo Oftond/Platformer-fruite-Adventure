@@ -1,4 +1,4 @@
-cellSize += 2;
+cellSize++;
 
 fx_set_parameter(transition_filter, "g_CellSize", cellSize);
 

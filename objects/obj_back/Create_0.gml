@@ -11,5 +11,6 @@ button_press = function()
 			room_to_go = rm_menu;
 		}
 		alarm[0] = time_to_show_levels;
+		instance_create_depth(0, 0, depth, obj_button_showFullscreenAds);
 	}
 }
