@@ -12,11 +12,6 @@ sequence_mobile_buttons = undefined;
 if (global.is_touch && sequence_mobile_buttons == undefined)
 	sequence_mobile_buttons = layer_sequence_create("GUI", global.CameraWidth / 2, global.CameraHeight / 2, seq_mobile_control);
 
-if (!global.IsWatchVideo)
-	instance_create_depth(x, y, depth, obj_button_showFullscreenAds);
-else if (global.IsWatchVideo)
-	global.IsWatchVideo = false;
-
 var _slash_pos = string_last_pos("_", room_get_name(room));
 global.CurrentLevel = real(string_copy(room_get_name(room), _slash_pos + 1, string_length(room_get_name(room)) - _slash_pos));
 

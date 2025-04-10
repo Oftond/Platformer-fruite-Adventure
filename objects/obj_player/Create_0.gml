@@ -112,8 +112,6 @@ get_damage = function(_damage)
 	if (!game_over && current_hp <= 0)
 	{
 		game_over = true;
-		StopMusicPlay();
-		SetSoundPlay(sound_of_lose);
 		if (!obj_game_manager.is_checkpoint) alarm[1] = 80;
 		global.RoomData = { };
 	}
