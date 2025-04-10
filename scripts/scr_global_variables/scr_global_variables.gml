@@ -2,7 +2,7 @@ global.MobileButtonLeft = false;
 global.MobileButtonRight = false;
 global.MobileButtonUp = false;
 
-global.MaxValumeMusic = 0.5;
+global.MaxValumeMusic = 0.38;
 global.MaxValumeSound = 0.15;
 
 global.ValumeMusic = global.MaxValumeMusic;

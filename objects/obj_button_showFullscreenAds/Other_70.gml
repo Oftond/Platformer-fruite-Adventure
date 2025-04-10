@@ -16,7 +16,6 @@ else
             break;
             case "adOpened":
 				pause_music();
-				instance_destroy(self);
             break;
             case "offlineMode":
 				unpause_music();
