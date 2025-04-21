@@ -120,7 +120,7 @@
     {"name":"Sparkle","path":"particlelib/Sparkle/Sparkle.yy",},
   ],
   "MetaData":{
-    "IDEVersion":"2024.13.0.190",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"Platformer - fruite Adventure",
   "resources":[

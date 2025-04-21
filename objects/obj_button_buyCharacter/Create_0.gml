@@ -33,7 +33,7 @@ button_press = function()
 				obj_menu_manager.selected_index = 8;
 			}
 		}
-		else if (number == 2 && price < global.Moneys)
+		else if (number == 2 && price <= global.Moneys)
 		{
 			if (name == "virtualGuy")
 				global.BoughtVirtualGuy = true;
