@@ -13,7 +13,7 @@ score_drop = 45;
 
 change_dir = function()
 {
-	var _length = 200;
+	var _length = 250;
 	if (collision_line(x, y, x - _length, y, obj_game_manager.collision_tilemap, false, false) || (place_empty(x - _length, y + 1, obj_game_manager.collision_tilemap) && place_empty(x - _length, y + 1, obj_game_manager.traps_layer_sand) && place_empty(x - _length, y + 1, obj_game_manager.traps_layer_ice)))
 	{
 		dir = -1;

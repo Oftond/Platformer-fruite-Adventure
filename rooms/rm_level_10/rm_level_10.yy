@@ -57,8 +57,6 @@
     {"name":"inst_11DBA96E","path":"rooms/rm_level_10/rm_level_10.yy",},
     {"name":"inst_27600C6E","path":"rooms/rm_level_10/rm_level_10.yy",},
     {"name":"inst_18CB26A0","path":"rooms/rm_level_10/rm_level_10.yy",},
-    {"name":"inst_2F276539","path":"rooms/rm_level_10/rm_level_10.yy",},
-    {"name":"inst_1F17DEA5","path":"rooms/rm_level_10/rm_level_10.yy",},
     {"name":"inst_5D1FA039","path":"rooms/rm_level_10/rm_level_10.yy",},
     {"name":"inst_7A3DD237","path":"rooms/rm_level_10/rm_level_10.yy",},
     {"name":"inst_171B4BD1","path":"rooms/rm_level_10/rm_level_10.yy",},
@@ -172,6 +170,8 @@
     {"name":"inst_16CA2478","path":"rooms/rm_level_10/rm_level_10.yy",},
     {"name":"inst_4172393D_1_1_1_1_1_1_1_1_1_1","path":"rooms/rm_level_10/rm_level_10.yy",},
     {"name":"inst_3AA7B2D5","path":"rooms/rm_level_10/rm_level_10.yy",},
+    {"name":"inst_2F276539","path":"rooms/rm_level_10/rm_level_10.yy",},
+    {"name":"inst_1F17DEA5","path":"rooms/rm_level_10/rm_level_10.yy",},
   ],
   "isDnd":false,
   "layers":[

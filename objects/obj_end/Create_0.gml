@@ -39,7 +39,8 @@ press = function()
 		global.Moneys += obj_game_manager.moneys;
 		global.ScoreInLevel[global.CurrentLevel - 1] = obj_game_manager.moneys;
 		
-		global.CurrentLevel++;
+		if (global.CurrentLevel < global.NumLevels)
+			global.CurrentLevel++;
 		
 		global.SaveSystemManager.Save();
 		
