@@ -4,10 +4,11 @@ if (not isMap(async_load))
 }
 else
 {
-    if ((async_load[? "type"] == "YaGames") and (async_load[? "request_id"] == req_id))
+    if ((async_load[? "type"] == "YaGames") && (async_load[? "request_id"] == req_id))
 	{
         var _msg = json_encode(async_load);
-        switch (async_load[? "event"]) {	
+        switch (async_load[? "event"])
+		{	
             case "adClosed":
 				unpause_music();
                 var _data = async_load[? "data"];

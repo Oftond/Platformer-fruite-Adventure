@@ -12,4 +12,5 @@ if (os_browser != browser_not_a_browser)
 	window_center();
 }
 
-instance_create_depth(x, y, depth, obj_button_getEnvironment);
+instance_create_depth(0, 0, 0, obj_button_getEnvironment);
+instance_create_depth(0, 0, 0, obj_playerInit);

@@ -1,0 +1,1 @@
+if (is_set_up) instance_destroy(self);
