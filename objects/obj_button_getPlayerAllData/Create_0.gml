@@ -37,7 +37,6 @@ if (file_exists(file))
 	
 	instance_create_depth(0, 0, 0, obj_button_setPlayerData);
 	is_set_up = true;
-	exit;
 }
-
-req_id = YaGames_Player_GetAllData();
+else
+	req_id = YaGames_Player_GetAllData();
