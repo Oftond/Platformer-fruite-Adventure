@@ -1,3 +1,11 @@
+function ReadFromFile(_file)
+{
+	var _buffer = buffer_load(_file);
+	var _content = buffer_read(_buffer, buffer_string);
+	buffer_delete(_buffer);
+	return _content;
+}
+
 function SaveSystem() constructor
 {
 	Save = function()
@@ -151,3 +159,32 @@ function LoadRoom()
 }
 
 global.SaveSystemManager = new SaveSystem();
+
+function GetStringFromArray(_array)
+{
+	var _splitter = " ";
+	var _result_string = "";
+	
+	for (var i = 0; i < array_length(_array); i++)
+	{
+		_result_string += string(_array[i]);
+		if (i < array_length(_array) - 1)
+			_result_string += _splitter;
+	}
+	
+	return _result_string;
+}
+
+function GetArrayFromString(_string)
+{
+	var _splitter = " ";
+	var _result_array = [];
+	var _array = string_split(_string, _splitter);
+	
+	for (var i = 0; i < array_length(_array); i++)
+	{
+		_result_array[i] = real(_array[i]);
+	}
+	
+	return _result_array;
+}

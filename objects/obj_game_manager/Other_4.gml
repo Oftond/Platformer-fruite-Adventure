@@ -3,4 +3,6 @@ if (global.ScoreInLevel[global.CurrentLevel - 1] > global.FruitsCountInRoom[glob
 	global.ScoreInLevel[global.CurrentLevel - 1] = global.FruitsCountInRoom[global.CurrentLevel - 1];
 global.TouchFruit = undefined;
 global.HeartsParts = undefined;
+
+global.SaveSystemManager.Save();
 LoadRoom();

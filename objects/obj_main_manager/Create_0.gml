@@ -13,4 +13,3 @@ if (os_browser != browser_not_a_browser)
 }
 
 instance_create_depth(0, 0, 0, obj_button_getEnvironment);
-instance_create_depth(0, 0, 0, obj_playerInit);

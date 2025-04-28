@@ -1,21 +1,20 @@
 var _flush = 1;
-var _player_struct =
-{
-	max_hp : global.MaxHP,
-	choose_character : global.ChooseCharacter,
-	current_level : global.CurrentLevel,
-	open_levels : global.OpenLevels,
-	player_score : global.Score,
-	score_in_level : global.ScoreInLevel,
-	is_on_valume : global.IsOnValume,
-	friuts_count_in_room : global.FruitsCountInRoom,
-	moneys : global.Moneys,
-	bought_maskDude : global.BoughtMaskDude,
-	bought_pinkMan : global.BoughtPinkMan,
-	bought_virtualGuy : global.BoughtVirtualGuy,
-	is_helps_first : global.IsHelpsFirst,
-	is_helps_second : global.IsHelpsSecond,
-	is_helps_third : global.IsHelpsThird
-};
-var data = json_stringify(_player_struct);
+var _player_struct = ds_map_create();
+_player_struct[? "max_hp"] = global.MaxHP;
+_player_struct[? "choose_character"] = global.ChooseCharacter;
+_player_struct[? "current_level"] = global.CurrentLevel;
+_player_struct[? "open_levels"] = global.OpenLevels;
+_player_struct[? "player_score"] = global.Score;
+_player_struct[? "score_in_level"] = GetStringFromArray(global.ScoreInLevel);
+_player_struct[? "is_on_valume"] = global.IsOnValume;
+_player_struct[? "friuts_count_in_room"] = GetStringFromArray(global.FruitsCountInRoom);
+_player_struct[? "moneys"] = global.Moneys;
+_player_struct[? "bought_maskDude"] = global.BoughtMaskDude;
+_player_struct[? "bought_pinkMan"] = global.BoughtPinkMan;
+_player_struct[? "bought_virtualGuy"] = global.BoughtVirtualGuy;
+_player_struct[? "is_helps_first"] = global.IsHelpsFirst;
+_player_struct[? "is_helps_second"] = global.IsHelpsSecond;
+_player_struct[? "is_helps_third"] = global.IsHelpsThird;
+
+var data = json_encode(_player_struct);
 req_id = YaGames_Player_SetData(data, _flush);

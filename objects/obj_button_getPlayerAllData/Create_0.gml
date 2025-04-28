@@ -1,11 +1,13 @@
 is_set_up = false;
+req_id = -1;
 
 fileName = "SaveFile_1";
 fileEnding = ".json";
-file = $"{_fileName}{_fileEnding}";
+file = $"{fileName}{fileEnding}";
+
 if (file_exists(file))
 {
-	var _data = ReadFromFile();
+	var _data = ReadFromFile(file);
 	
 	var _data_struct = json_parse(_data);
 	
@@ -32,20 +34,10 @@ if (file_exists(file))
 	}
 	
 	file_delete(file);
-	is_set_up = true;
 	
 	instance_create_depth(0, 0, 0, obj_button_setPlayerData);
-	show_message("Все данные были прочитаны с файла!!")
+	is_set_up = true;
 	exit;
 }
 
 req_id = YaGames_Player_GetAllData();
-
-ReadFromFile = function()
-{
-	var _buffer = buffer_load(file);
-	var _content = buffer_read(_buffer, buffer_string);
-	
-	buffer_delete(_buffer);
-	return _content;
-}

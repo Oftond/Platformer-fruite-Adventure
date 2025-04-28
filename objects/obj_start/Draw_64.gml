@@ -1,0 +1,1 @@
+draw_fullscreen_tricolor_gradient(#4CAF50, #FFEB3B, #F4A460);

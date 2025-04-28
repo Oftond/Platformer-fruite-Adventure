@@ -69,5 +69,3 @@ else if (global.CurrentLevel > 10 && global.CurrentLevel < global.NumLevels)
 	SetMusicPlay(heroic_main);
 else
 	SetMusicPlay(driving_main);
-
-global.SaveSystemManager.Save();

@@ -10,8 +10,11 @@ else
         switch (async_load[? "event"])
 		{
             case "playerInit":
-				show_message("Игрок успешно проинициализирован!")
+				global.SaveSystemManager.Load();
             break;
+			
+			default:
+				room_goto_next();
         }
    }
 }

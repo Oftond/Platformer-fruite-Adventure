@@ -1,7 +1,7 @@
 if (YaGames_getInitStatus())
 {
 	YaGames_GameReadyOn();
-	room_goto_next();
+	instance_create_depth(0, 0, 0, obj_playerInit);
 }
 
 if (os_browser != browser_not_a_browser)
