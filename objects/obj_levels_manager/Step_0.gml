@@ -1,5 +1,8 @@
 check_mouse_enter_to_gui();
 
+if (!instance_exists(obj_button_showFullscreenAds))
+	SetMusicPlay(MP3_Welcome_Home_Main);
+
 if (!is_keyboard_control && (input_pressed(INPUT.DOWN) || input_pressed(INPUT.LEFT) || input_pressed(INPUT.UP) || input_pressed(INPUT.RIGHT) || input_pressed(INPUT.ACCEPT)))
 {
 	is_keyboard_control = true;

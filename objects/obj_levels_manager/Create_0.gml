@@ -1,7 +1,6 @@
 if (global.is_touch)
 	mobile_sittings_menu_and_levelsMenu_set();
 
-SetMusicPlay(MP3_Welcome_Home_Main);
 global.IsWatchVideo = false;
 
 text =
