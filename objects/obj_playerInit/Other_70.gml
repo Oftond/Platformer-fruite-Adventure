@@ -10,11 +10,14 @@ else
         switch (async_load[? "event"])
 		{
             case "playerInit":
+				set_up = true;
 				global.SaveSystemManager.Load();
+				instance_destroy(self);
             break;
 			
 			default:
-				room_goto_next();
+				if (!set_up)
+					room_goto_next();
         }
    }
 }

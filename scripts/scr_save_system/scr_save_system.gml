@@ -2,6 +2,7 @@ function ReadFromFile(_file)
 {
 	var _buffer = buffer_load(_file);
 	var _content = buffer_read(_buffer, buffer_string);
+	
 	buffer_delete(_buffer);
 	return _content;
 }

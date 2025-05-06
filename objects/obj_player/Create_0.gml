@@ -1,3 +1,8 @@
+if (global.CurrentHP <= 0)
+{
+	global.CurrentHP = global.MaxHP;
+}
+
 if (instance_exists(obj_player_appear)) exit;
 
 text_score =

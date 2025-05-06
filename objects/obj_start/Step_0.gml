@@ -1,7 +1,8 @@
-if (YaGames_getInitStatus())
+if (YaGames_getInitStatus() && !set_up)
 {
 	YaGames_GameReadyOn();
 	instance_create_depth(0, 0, 0, obj_playerInit);
+	set_up = true;
 }
 
 if (os_browser != browser_not_a_browser)

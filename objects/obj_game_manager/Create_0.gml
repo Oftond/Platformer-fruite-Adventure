@@ -1,5 +1,10 @@
 if (global.is_touch)
 	mobile_settings_levels_game();
+	
+if (global.CurrentHP <= 0)
+{
+	global.CurrentHP = global.MaxHP;
+}
 
 depth = 900;
 

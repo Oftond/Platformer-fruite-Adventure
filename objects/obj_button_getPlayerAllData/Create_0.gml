@@ -8,8 +8,18 @@ file = $"{fileName}{fileEnding}";
 if (file_exists(file))
 {
 	var _data = ReadFromFile(file);
+	var _data_struct = { };
 	
-	var _data_struct = json_parse(_data);
+	try
+	{
+		_data_struct = json_parse(_data);
+	}
+	catch(e)
+	{
+		req_id = YaGames_Player_GetAllData();
+		file_delete(file);
+		exit;
+	}
 	
 	global.MaxHP = _data_struct.max_hp;
 	global.ChooseCharacter = _data_struct.choose_character;
@@ -37,6 +47,7 @@ if (file_exists(file))
 	
 	instance_create_depth(0, 0, 0, obj_button_setPlayerData);
 	is_set_up = true;
+	
+	instance_destroy(self);
 }
-else
-	req_id = YaGames_Player_GetAllData();
+else req_id = YaGames_Player_GetAllData();

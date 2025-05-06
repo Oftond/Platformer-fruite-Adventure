@@ -44,8 +44,11 @@ else
 						global.ValumeSound = 0;
 					}
 				
-					is_set_up = true;
-					room_goto_next();
+					if (!is_set_up)
+					{
+						is_set_up = true;
+						room_goto_next();
+					}
 				}
             break;
 			

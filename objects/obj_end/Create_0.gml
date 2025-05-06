@@ -37,7 +37,9 @@ press = function()
 			global.IsHelpsThird = true;
 		}
 		global.Moneys += obj_game_manager.moneys;
-		global.ScoreInLevel[global.CurrentLevel - 1] = obj_game_manager.moneys;
+		
+		if (global.ScoreInLevel[global.CurrentLevel - 1] < obj_game_manager.moneys)
+			global.ScoreInLevel[global.CurrentLevel - 1] = obj_game_manager.moneys;
 		
 		if (global.CurrentLevel < global.NumLevels)
 			global.CurrentLevel++;
