@@ -42,6 +42,16 @@ else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_game_manager.tra
 	if (state != STATES.HIT)
 		state = STATES.ATTACK;
 }
+else if (place_meeting(x, y + (move_y + 10 * sign(move_y)), obj_parent_trap) && state == STATES.FALL && state != STATES.HIT)
+{
+	y = round(y);
+	var _pixel_check = _sub_pixel * sign(move_y);
+	while (!place_meeting(x, y + _pixel_check, obj_parent_trap))
+		y += _pixel_check;
+	move_y = 0;
+	if (state != STATES.HIT)
+		state = STATES.ATTACK;
+}
 
 if (state == STATES.IDLE && player_detected)
 {
