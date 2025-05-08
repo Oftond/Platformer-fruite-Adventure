@@ -13,6 +13,8 @@ function SetMusicPlay(_music)
 		if (!audio_is_playing(global.CurrentPlayingMusic))
 		{
 			global.CurrentPlayingMusic = audio_play_sound(_music, 8, true, global.ValumeMusic);
+			if (instance_exists(obj_button_showFullscreenAds))
+				pause_music();
 		}
 		else
 		{
