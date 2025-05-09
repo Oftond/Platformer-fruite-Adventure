@@ -25,39 +25,33 @@ else
 					global.RespownY = obj_game_manager.temp_player_respown_y;
 					SaveRoom();
 				}
-				instance_destroy();
             break;
 			
             case "rewardClosed":
 				unpause_music();
-				instance_destroy();
+				instance_destroy(self);
             break;
 			
-            case "rewardError":
+			case "rewardError":
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
                 var errMessage = async_load[? "message"];
 				unpause_music();
-				instance_destroy();
+				instance_destroy(self);
             break;
 			
             case "notInitSDK":
 				unpause_music();
-				instance_destroy();
+				instance_destroy(self);
             break;
 			
             case "RuntimeError":
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
                 var errMessage = async_load[? "message"];
-				instance_destroy();
 				unpause_music();
+				instance_destroy(self);
             break;
-			
-			default:
-				instance_destroy();
-				unpause_music();
-			break;
         }
    }
 }
